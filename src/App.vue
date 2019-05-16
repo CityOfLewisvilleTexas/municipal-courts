@@ -5,7 +5,7 @@
                     <v-layout row wrap>
                        <navbar></navbar>
                         <v-container>
-                            <i-want-to :options="options"></i-want-to>
+                            <i-want-to :options="options" :selectedOption="selectedOption"></i-want-to>
                             <mission-statement></mission-statement>
                         </v-container>
                         
@@ -16,14 +16,16 @@
                         <v-flex xs0 md1 lg1 class="spacer">
                         </v-flex>
 
+                        <v-flex xs0 md1 lg1 class="spacer">
+                        </v-flex>
+                            <judge-card></judge-card>
+                        <v-flex xs0 md1 lg1 class="spacer">
+                        </v-flex>
 
                         <v-flex xs12>
                             <v-alert :value="isError" type="error">
                                 {{ errorMessage }}.
                             </v-alert>
-                        </v-flex>
-                        <v-flex xs12 align-center>
-
                         </v-flex>
                     </v-layout>
                 </v-container>
@@ -39,6 +41,7 @@
  import CourtUpdates from './components/CourtUpdates'
  import UpcomingEvents from './components/UpcomingEvents'
  import Snackbar from './components/Snackbar'
+ import JudgeCard from './components/JudgeCard'
 
 export default {
   components: {
@@ -47,7 +50,8 @@ export default {
     "mission-statement": MissionCard,
     "court-updates": CourtUpdates,
     "upcoming-events": UpcomingEvents,
-    "snackbar": Snackbar
+    "snackbar": Snackbar,
+    "judge-card": JudgeCard
   },
   data() {
     return {

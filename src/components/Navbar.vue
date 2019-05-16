@@ -2,11 +2,11 @@
    <v-toolbar :height="125" dark color="#1855B0">
         <img src="http://metrics.cityoflewisville.com/assets/pmartin_dark.png" style="color:white"
             width="75" />
-        <v-toolbar-title class="white--text"><span
+        <v-toolbar-title lg-only class="white--text"><span
                 style="font-family:Times New Roman,Serif;font-size:24px;font-weight:500;">Lewisville
                 Municipal Court</span></v-toolbar-title>
         <v-spacer></v-spacer>
-          <v-toolbar-items class="hidden-sm-and-down">
+          <v-toolbar-items lg-and-down class="hidden-sm-and-down">
               <router-link to="">
                 <v-btn flat>Coming to Court</v-btn>
                 </router-link>
