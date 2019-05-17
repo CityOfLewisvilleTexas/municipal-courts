@@ -1,64 +1,72 @@
 <template>
-   <v-flex xs12 m12 lg5>
-    <v-card class="upcoming-events">    
-        <div class="headline events">Upcoming Events</div>
-            <v-spacer></v-spacer>
-            <v-container>
-                <v-card v-for="(event,index) in events" :key="index" id="event" :class="'event' + ' ' + index">
-                    <v-card-title primary-title>
-                        <div text-xs-center text-md-left text-lg-left>
-                            <span class="date" style="display:inline-block;vertical-align:middle;text-align:center;">
-                                {{event.date.substr(0, event.date.indexOf(' '))}}
-                                <br/>
-                                <b>{{event.date.substr(event.date.indexOf(' '))}}</b>
-                                </span>
-                            <div style="display:inline-block" class="headline">{{event.event}}</div>
-                        </div>
-                    </v-card-title>
-            </v-card>
-        </v-container>
+  <v-flex xs12 m12 lg5>
+    <v-card class="upcoming-events">
+      <div class="headline events">Upcoming Events</div>
+      <v-spacer></v-spacer>
+      <v-container>
+        <v-card
+          v-for="(event, index) in events"
+          :key="index"
+          id="event"
+          :class="'event' + ' ' + index"
+        >
+          <v-card-title primary-title>
+            <div text-xs-center text-md-left text-lg-left>
+              <span
+                class="date"
+                style="display:inline-block;vertical-align:middle;text-align:center;"
+              >
+                {{ event.date.substr(0, event.date.indexOf(" ")) }}
+                <br />
+                <b>{{ event.date.substr(event.date.indexOf(" ")) }}</b>
+              </span>
+              <div style="display:inline-block" class="headline">
+                {{ event.event }}
+              </div>
+            </div>
+          </v-card-title>
+        </v-card>
+      </v-container>
     </v-card>
-</v-flex>
+  </v-flex>
 </template>
 
 <script>
 export default {
-    props: ['events'],
-    methods: {
-        
-}
-}
+  props: ["events"],
+  methods: {}
+};
 </script>
 
 <style scoped>
 .upcoming-events {
-    border: none;
-    box-shadow: none;
-    background-color: inherit !important;
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
-}    
+  border: none;
+  box-shadow: none;
+  background-color: inherit !important;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
+}
 .headline.events {
-    padding-top: 20px;
-    font-weight: 600;
-    text-align: left;
-    padding-left: 45px;
-    font-size:2rem !important;
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
+  padding-top: 20px;
+  font-weight: 600;
+  text-align: left;
+  padding-left: 45px;
+  font-size: 2rem !important;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
 }
 .event {
-    text-align: left;
-    margin-left: 18px;
-    margin-right: 22px;
-    margin-bottom: 12px;
-    border: none !important;
-    box-shadow: none !important;
-    background-color: inherit !important;
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
+  text-align: left;
+  margin-left: 18px;
+  margin-right: 22px;
+  margin-bottom: 12px;
+  border: none !important;
+  box-shadow: none !important;
+  background-color: inherit !important;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
 }
 .date {
-    margin-right: 25px;
-    font-size:1.7rem;
-    background-color:#E0B008;
-    width:65px;
+  margin-right: 25px;
+  font-size: 1.7rem;
+  background-color: #e0b008;
+  width: 65px;
 }
 </style>

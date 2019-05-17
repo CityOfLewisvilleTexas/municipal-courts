@@ -1,9 +1,7 @@
 <template>
-  <v-flex lg5 pa-5 text-sm-left>
-    <h1 text-sm-left>Meet your Judge, Honorable Gavel Judge</h1>
-    <router-link to="/">
-      <h2 text-sm-left>Learn about the court</h2>
-    </router-link>
+  <v-flex lg7 pa-5>
+    <iframe width="auto" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+    </iframe>
   </v-flex>
 </template>
 
