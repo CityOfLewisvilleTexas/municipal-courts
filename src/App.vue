@@ -12,27 +12,39 @@
             <mission-statement></mission-statement>
           </v-container>
 
-          <v-flex xs0 md1 lg1 class="spacer"> </v-flex>
+          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
           <court-updates :updates="updates"></court-updates>
           <upcoming-events :events="events"></upcoming-events>
-          <v-flex xs0 md1 lg1 class="spacer"> </v-flex>
+          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
 
-          <v-flex xs0 md1 lg1 class="spacer"> </v-flex>
-          <v-flex xs12 sm12 m10 lg10 id="judge-card">
+          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
+          <v-flex xs12 sm12 md0 lg10 id="judge-card">
             <v-layout row fluid wrap>
               <judge-card></judge-card>
               <video-card></video-card>
             </v-layout>
           </v-flex>
-          <v-flex xs0 md1 lg1 class="spacer"> </v-flex>
+          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
 
-          <v-flex xs0 md1 lg1 class="spacer"> </v-flex>
+          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
           <v-flex xs12 sm12 m10 lg10>
             <court-metrics></court-metrics>
           </v-flex>
-          <v-flex xs0 md1 lg1 class="spacer"> </v-flex>
+          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
+
+          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
+          <v-flex xs12 sm12 m10 lg10>
+            <support></support>
+          </v-flex>
+          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
+
+          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
+            <feedback></feedback>
+          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
         </v-layout>
       </v-container>
+
+      
 
       <snackbar :snackbar="snackbar"></snackbar>
     </v-app>
@@ -49,6 +61,8 @@ import Snackbar from "./components/Snackbar";
 import JudgeCard from "./components/JudgeCard";
 import VideoCard from "./components/VideoCard";
 import CourtMetrics from "./components/CourtMetrics";
+import Support from './components/Support';
+import Feedback from './components/Feedback';
 
 export default {
   components: {
@@ -57,10 +71,12 @@ export default {
     "mission-statement": MissionCard,
     "court-updates": CourtUpdates,
     "upcoming-events": UpcomingEvents,
-    snackbar: Snackbar,
+    "snackbar": Snackbar,
     "judge-card": JudgeCard,
     "video-card": VideoCard,
-    "court-metrics": CourtMetrics
+    "court-metrics": CourtMetrics,
+    "support":Support,
+    "feedback":Feedback
   },
   data() {
     return {

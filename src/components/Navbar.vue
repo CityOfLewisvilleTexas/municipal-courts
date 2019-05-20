@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar :height="125" dark color="#1855B0">
+  <v-toolbar :height="125" dark color="#1855B0" fixed mb-5>
     <img
       src="http://metrics.cityoflewisville.com/assets/pmartin_dark.png"
       style="color:white"
