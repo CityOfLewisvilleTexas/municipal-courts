@@ -27,16 +27,13 @@
           <v-flex xs0 md1 lg1 class="spacer"> </v-flex>
 
           <v-flex xs0 md1 lg1 class="spacer"> </v-flex>
-          <court-metrics></court-metrics>
-          <v-flex xs0 md1 lg1 class="spacer"> </v-flex>
-
-          <v-flex xs12>
-            <v-alert :value="isError" type="error">
-              {{ errorMessage }}.
-            </v-alert>
+          <v-flex xs12 sm12 m10 lg10>
+            <court-metrics></court-metrics>
           </v-flex>
+          <v-flex xs0 md1 lg1 class="spacer"> </v-flex>
         </v-layout>
       </v-container>
+
       <snackbar :snackbar="snackbar"></snackbar>
     </v-app>
   </div>

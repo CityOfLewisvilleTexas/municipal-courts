@@ -1,14 +1,14 @@
 <template>
-  <v-layout pt-5 pb-5 lg-10 mr-1 ml-1 wrap fluid class="metric-row">
-    <v-flex xs4 text-xs-center class="metric-col">
+  <v-layout row fluid wrap pa-5 class="metric-row">
+    <v-flex xs12 lg4 text-xs-center>
       <div class="metric-title">Number of Cases in Past 1 Year</div>
       <div class="metric-value">{{ metrics.CaseCountPast1Year }}</div>
     </v-flex>
-    <v-flex xs4 text-xs-center class="metric-col">
+    <v-flex xs12 m12 lg4 text-xs-center>
       <div class="metric-title">Days to Case Resolution</div>
       <div class="metric-value">{{ metrics.DaysToCaseResolution }}</div>
     </v-flex>
-    <v-flex xs4 text-xs-center class="metric-col">
+    <v-flex xs12 lg4 text-xs-center>
       <div class="metric-title">TBD</div>
       <div class="metric-value">{{ metrics.CaseCountPast1Year }}</div>
     </v-flex>
@@ -16,6 +16,8 @@
 </template>
 
 <script>
+//try wrapping <v-layout> in a v-flex lg-10 for fixing width ?
+
 import axios from "axios";
 
 export default {
@@ -49,10 +51,16 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+/* .flex.row {
+    display:inline-block;
+} */
 .metric-row {
   background-color: #e0b008;
 }
+/* .metric-col {
+    display: inline-block;
+} */
 .metric-title {
   font-size: 16px;
   color: white;
