@@ -43,9 +43,7 @@
           <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
 
           <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-            <v-flex xs12 sm12 m10 lg10>
-            <footer></footer>
-            </v-flex>
+            
           <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
         </v-layout>
       </v-container>
@@ -69,7 +67,7 @@ import VideoCard from "./components/VideoCard";
 import CourtMetrics from "./components/CourtMetrics";
 import Support from './components/Support';
 import Feedback from './components/Feedback';
-import Footer from './components/Footer'
+import Map from './components/Map'
 
 export default {
   components: {
@@ -84,7 +82,7 @@ export default {
     "court-metrics": CourtMetrics,
     "support":Support,
     "feedback":Feedback,
-    "footer":Footer
+    "court-map": Map
   },
   data() {
     return {
