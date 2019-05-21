@@ -64,8 +64,10 @@
 }
 
 @media only screen and (max-width:1264px) {
-    .speech-bubble {
+      .speech-bubble {
         position:initial !important;
+         padding: 15px;
+         width: 100%;
     }
 
     .support--right {
