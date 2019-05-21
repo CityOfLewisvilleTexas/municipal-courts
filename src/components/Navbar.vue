@@ -1,31 +1,24 @@
 <template>
   <v-toolbar :height="125" dark color="#1855B0" fixed mb-5>
-    <img
+    <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>
+    <img class="hidden-md-and-down"
       src="http://metrics.cityoflewisville.com/assets/pmartin_dark.png"
       style="color:white"
       width="75"
     />
-    <v-toolbar-title lg-only class="white--text"
+    <v-toolbar-title class="white--text"
       ><span
         style="font-family:Times New Roman,Serif;font-size:24px;font-weight:500;"
         >Lewisville Municipal Court</span
       ></v-toolbar-title
     >
     <v-spacer></v-spacer>
-    <v-toolbar-items lg-and-down class="hidden-sm-and-down">
-      <router-link to="">
-        <v-btn flat>Coming to Court</v-btn>
-      </router-link>
-      <router-link to="">
-        <v-btn flat>Responding to a Citation</v-btn>
-      </router-link>
-      <router-link to="">
-        <v-btn flat>Jury Summons</v-btn>
-      </router-link>
-      <router-link to="">
-        <v-btn flat>Your Rights</v-btn>
-      </router-link>
-      <v-btn flat>ESPA&#xd1;OL</v-btn>
+    <v-toolbar-items class="hidden-md-and-down">
+        <v-btn flat><router-link to="">Coming to Court </router-link></v-btn>
+        <v-btn flat><router-link to="">Responding to a Citation </router-link></v-btn>
+        <v-btn flat> <router-link to="">Jury Summons</router-link></v-btn>
+        <v-btn flat><router-link to="">Your Rights </router-link></v-btn>
+        <v-btn flat>ESPA&#xd1;OL</v-btn>
     </v-toolbar-items>
   </v-toolbar>
 </template>
