@@ -4,7 +4,7 @@
       <v-list class="white--text dark">
         <v-list-tile>
           <v-list-tile-content>
-            <v-btn flat><router-link to="">Coming to Court </router-link></v-btn>
+            <v-btn flat><router-link to="/coming-to-court">Coming to Court</router-link></v-btn>
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile>
@@ -45,7 +45,7 @@
     >
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn flat><router-link to="">Coming to Court </router-link></v-btn>
+        <v-btn flat><router-link to="/coming-to-court">Pay Court Fines</router-link></v-btn>
         <v-btn flat><router-link to="">Responding to a Citation </router-link></v-btn>
         <v-btn flat> <router-link to="">Jury Summons</router-link></v-btn>
         <v-btn flat><router-link to="">Your Rights </router-link></v-btn>

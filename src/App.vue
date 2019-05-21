@@ -56,22 +56,23 @@
 </template>
 
 <script>
-import Navbar from "./components/Navbar";
-import Select from "./components/Select";
-import MissionCard from "./components/MissionCard";
-import CourtUpdates from "./components/CourtUpdates";
-import UpcomingEvents from "./components/UpcomingEvents";
-import Snackbar from "./components/Snackbar";
-import JudgeCard from "./components/JudgeCard";
-import VideoCard from "./components/VideoCard";
-import CourtMetrics from "./components/CourtMetrics";
-import Support from './components/Support';
-import Feedback from './components/Feedback';
-import Map from './components/Map'
+//widgets
+import Navbar from "./components/widgets/Navbar";
+import Select from "./components/widgets/Select";
+import MissionCard from "./components/widgets/MissionCard";
+import CourtUpdates from "./components/widgets/CourtUpdates";
+import UpcomingEvents from "./components/widgets/UpcomingEvents";
+import Snackbar from "./components/widgets/Snackbar";
+import JudgeCard from "./components/widgets/JudgeCard";
+import VideoCard from "./components/widgets/VideoCard";
+import CourtMetrics from "./components/widgets/CourtMetrics";
+import Support from './components/widgets/Support';
+import Feedback from './components/widgets/Feedback';
+import Map from './components/widgets/Map'
 
 export default {
   components: {
-    navbar: Navbar,
+    "navbar": Navbar,
     "i-want-to": Select,
     "mission-statement": MissionCard,
     "court-updates": CourtUpdates,
