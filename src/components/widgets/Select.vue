@@ -1,7 +1,6 @@
 <template>
   <v-flex pa-4 mb-5 mt-5>
     <v-container mt-5>
-        <div mt-5>&nbsp;</div>
       <span style="display:inline-block;font-size:22px;">
         <h1>I want to&nbsp;&nbsp;</h1>
       </span>

@@ -4,23 +4,27 @@
       <v-list class="white--text dark">
         <v-list-tile>
           <v-list-tile-content>
-            <v-btn flat><router-link to="/coming-to-court">Coming to Court</router-link></v-btn>
+            <v-btn flat>
+              <router-link to="/coming-to-court">Coming to Court</router-link></v-btn>
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile>
-        <v-list-tile-content>
-          <v-btn flat><router-link to="">Responding to a Citation </router-link></v-btn>
-        </v-list-tile-content>
+          <v-list-tile-content>
+            <v-btn flat>
+              <router-link to="">Responding to a Citation </router-link></v-btn>
+          </v-list-tile-content>
         </v-list-tile>
         <v-list-tile>
-        <v-list-tile-content>
-          <v-btn flat> <router-link to="">Jury Summons</router-link></v-btn>
-        </v-list-tile-content>
+          <v-list-tile-content>
+            <v-btn flat> 
+              <router-link to="">Jury Summons</router-link></v-btn>
+          </v-list-tile-content>
         </v-list-tile>
         <v-list-tile>
-        <v-list-tile-content>
-          <v-btn flat><router-link to="">Your Rights </router-link></v-btn>
-        </v-list-tile-content>
+          <v-list-tile-content>
+            <v-btn flat>
+              <router-link to="">Your Rights </router-link></v-btn>
+          </v-list-tile-content>
         </v-list-tile>
         <v-list-tile>
         <v-list-tile-content>
@@ -30,7 +34,7 @@
       </v-list>
     </v-navigation-drawer>
 
-  <v-toolbar :height="125" dark color="#1855B0" fixed mb-5>
+  <v-toolbar :height="125" dark color="#1855B0" fixed>
     <v-toolbar-side-icon class="hidden-lg-and-up" @click="sidebar = !sidebar"></v-toolbar-side-icon>
     <img class="hidden-md-and-down"
       src="http://metrics.cityoflewisville.com/assets/pmartin_dark.png"
@@ -45,7 +49,7 @@
     >
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn flat><router-link to="/coming-to-court">Pay Court Fines</router-link></v-btn>
+        <v-btn flat><router-link to="/coming-to-court">Coming to Court</router-link></v-btn>
         <v-btn flat><router-link to="">Responding to a Citation </router-link></v-btn>
         <v-btn flat> <router-link to="">Jury Summons</router-link></v-btn>
         <v-btn flat><router-link to="">Your Rights </router-link></v-btn>

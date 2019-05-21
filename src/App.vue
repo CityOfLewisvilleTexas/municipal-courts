@@ -2,54 +2,14 @@
   <div id="app">
     <v-app>
       <v-container fixed grid-list-xl text-md-center>
-        <v-layout row wrap>
-          <navbar></navbar>
-          <v-container>
-            <i-want-to
-              :options="options"
-              :selectedOption="selectedOption"
-            ></i-want-to>
-            <mission-statement></mission-statement>
-          </v-container>
-
-          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-          <court-updates :updates="updates"></court-updates>
-          <upcoming-events :events="events"></upcoming-events>
-          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-
-          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-          <v-flex xs12 sm12 md0 lg10 id="judge-card">
-            <v-layout row fluid wrap>
-              <judge-card></judge-card>
-              <video-card></video-card>
-            </v-layout>
-          </v-flex>
-          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-
-          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-          <v-flex xs12 sm12 m10 lg10>
-            <court-metrics></court-metrics>
-          </v-flex>
-          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-
-          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-          <v-flex xs12 sm12 m10 lg10>
-            <support></support>
-          </v-flex>
-          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-
-          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-            <feedback></feedback>
-          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-
-          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-            
-          <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-        </v-layout>
+        <navbar></navbar>
+        <router-view>
+          <home :options="options" :selectedOption="selectedOption" :updates="updates" :events="events"></home>
+        </router-view>
+        <router-view>
+          <coming-to-court></coming-to-court>
+        </router-view>
       </v-container>
-
-      
-
       <snackbar :snackbar="snackbar"></snackbar>
     </v-app>
   </div>
@@ -58,32 +18,17 @@
 <script>
 //widgets
 import Navbar from "./components/widgets/Navbar";
-import Select from "./components/widgets/Select";
-import MissionCard from "./components/widgets/MissionCard";
-import CourtUpdates from "./components/widgets/CourtUpdates";
-import UpcomingEvents from "./components/widgets/UpcomingEvents";
-import Snackbar from "./components/widgets/Snackbar";
-import JudgeCard from "./components/widgets/JudgeCard";
-import VideoCard from "./components/widgets/VideoCard";
-import CourtMetrics from "./components/widgets/CourtMetrics";
-import Support from './components/widgets/Support';
-import Feedback from './components/widgets/Feedback';
-import Map from './components/widgets/Map'
+import Snackbar from './components/widgets/Snackbar';
+//pages
+import Home from './components/pages/Home'
+import ComingToCourt from './components/pages/ComingToCourt'
 
 export default {
   components: {
     "navbar": Navbar,
-    "i-want-to": Select,
-    "mission-statement": MissionCard,
-    "court-updates": CourtUpdates,
-    "upcoming-events": UpcomingEvents,
-    "snackbar": Snackbar,
-    "judge-card": JudgeCard,
-    "video-card": VideoCard,
-    "court-metrics": CourtMetrics,
-    "support":Support,
-    "feedback":Feedback,
-    "court-map": Map
+    "home": Home,
+    "coming-to-court": ComingToCourt,
+    "snackbar":Snackbar
   },
   data() {
     return {
