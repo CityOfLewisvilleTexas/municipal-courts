@@ -1,16 +1,13 @@
 <template>
      <v-layout row wrap>
           <v-container>
-            <i-want-to
-              :options="options"
-              :selectedOption="selectedOption"
-            ></i-want-to>
+            <i-want-to></i-want-to>
             <mission-statement></mission-statement>
           </v-container>
 
           <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-          <court-updates :updates="updates"></court-updates>
-          <upcoming-events :events="events"></upcoming-events>
+          <court-updates></court-updates>
+          <upcoming-events></upcoming-events>
           <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
 
           <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
@@ -57,7 +54,7 @@ import Feedback from '../widgets/Feedback';
 //import Map from '../widgets/Map'
 
 export default {
-    props: ['options','selectedOption','updates','events'],
+    props: [],
     components: {
     "i-want-to": Select,
     "mission-statement": MissionCard,

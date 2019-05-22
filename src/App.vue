@@ -4,7 +4,7 @@
       <v-container fixed grid-list-xl text-md-center>
         <navbar></navbar>
         <router-view>
-          <home :options="options" :selectedOption="selectedOption" :updates="updates" :events="events"></home>
+          <home></home>
         </router-view>
       </v-container>
       <snackbar :snackbar="snackbar"></snackbar>

@@ -25,9 +25,20 @@
 
 <script>
 export default {
-  props: ["updates"],
+  props: [],
   data() {
-    return {};
+    return {
+       updates: [
+        {
+          date: "Jan 21, 2019",
+          slogan: "All court forms are now available online"
+        },
+        {
+          date: "Jan 1, 2019",
+          slogan: "Happy New Year!"
+        }
+      ],
+    };
   }
 };
 </script>

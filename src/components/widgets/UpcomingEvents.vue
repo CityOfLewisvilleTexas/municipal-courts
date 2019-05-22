@@ -33,7 +33,25 @@
 
 <script>
 export default {
-  props: ["events"],
+  props: [],
+  data() {
+    return {
+      events: [
+        {
+          date: "Jan 30",
+          event: "Community Board Meeting"
+        },
+        {
+          date: "Feb 1",
+          event: "Family Neighborhood Potluck"
+        },
+        {
+          date: "Feb 12",
+          event: "Court Closed for Lincoln's Birthday"
+        }
+      ],
+    }
+  },
   methods: {}
 };
 </script>

@@ -2,7 +2,7 @@
   <v-flex pa-4 mb-5 mt-5>
     <v-container mt-5>
       <span style="display:inline-block;font-size:22px;">
-        <h1>I want to&nbsp;&nbsp;</h1>
+        <h1>I want to...&nbsp;&nbsp;</h1>
       </span>
       <v-select
         :items="options"
@@ -21,9 +21,18 @@
 
 <script>
 export default {
-  props: ["options", "selectedOption"],
+  props: [],
   data() {
-    return {};
+    return {
+      options: [
+        "find the court hours",
+        "find a lawyer",
+        "respond to a citation",
+        "learn my rights",
+        "know what to expect at court"
+      ],
+      selectedOption: "",
+    };
   }
 };
 </script>
