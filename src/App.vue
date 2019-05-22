@@ -6,9 +6,6 @@
         <router-view>
           <home :options="options" :selectedOption="selectedOption" :updates="updates" :events="events"></home>
         </router-view>
-        <router-view>
-          <coming-to-court></coming-to-court>
-        </router-view>
       </v-container>
       <snackbar :snackbar="snackbar"></snackbar>
     </v-app>
@@ -21,13 +18,11 @@ import Navbar from "./components/widgets/Navbar";
 import Snackbar from './components/widgets/Snackbar';
 //pages
 import Home from './components/pages/Home'
-import ComingToCourt from './components/pages/ComingToCourt'
 
 export default {
   components: {
     "navbar": Navbar,
     "home": Home,
-    "coming-to-court": ComingToCourt,
     "snackbar":Snackbar
   },
   data() {
@@ -88,6 +83,9 @@ button {
 }
 hr {
   border-color: #ffffff42 !important;
+}
+div.application--wrap {
+  min-height:1px !important;
 }
 @media only screen and (max-width: 750px) {
   #statement {
