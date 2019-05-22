@@ -85,7 +85,7 @@ hr {
   border-color: #ffffff42 !important;
 }
 div.application--wrap {
-  min-height:1px !important;
+  min-height:100px !important;
 }
 @media only screen and (max-width: 750px) {
   #statement {

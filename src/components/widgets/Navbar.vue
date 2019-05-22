@@ -73,16 +73,15 @@
     </v-navigation-drawer>
   <v-toolbar :height="125" dark color="#1855B0" fixed>
     <v-toolbar-side-icon class="hidden-lg-and-up" @click="sidebar = !sidebar"></v-toolbar-side-icon>
-    <img class="hidden-md-and-down"
+      <img class="hidden-md-and-down"
       src="http://metrics.cityoflewisville.com/assets/pmartin_dark.png"
       style="color:white"
       width="75"
-    />
+      />
     <v-toolbar-title class="white--text hidden-md-only"
-      ><span
-        style="font-family:Times New Roman,Serif;font-size:24px;font-weight:500;"
-        >Lewisville Municipal Court <!--{{window.width}} , {{window.height}}--></span
-      ></v-toolbar-title>
+      ><router-link to="/"><span id="lmc">Lewisville Municipal Court</span>
+        </router-link>
+        </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
             <v-menu text-xs-center offset-y open-on-hover>
@@ -133,10 +132,31 @@
 </template>
 
 <script>
+import PayCourtFines from '../pages/PayCourtFines'
+import CourtCosts from '../pages/CourtCosts'
+import TrialProcedures from '../pages/TrialProcedures'
+import TrialAlternatives from '../pages/TrialAlternatives'
+import TeenCourtInfo from '../pages/TeenCourtInfo'
+import TeenCourtContact from '../pages/TeenCourtContact'
+import TeenCourtVolunteer from '../pages/TeenCourtVolunteer'
+import TeenCourtJobs from '../pages/TeenCourtJobs'
+import TeenCourtDocket from '../pages/TeenCourtDocket'
+import TeenCourtTalks from '../pages/TeenCourtTalks'
+import CourtForms from '../pages/CourtForms'
 
 export default {
 components: {
-
+'pay-court-fines':PayCourtFines,
+'court-costs':CourtCosts,
+'trial-procedures':TrialProcedures,
+'trial-alternatives':TrialAlternatives,
+'teen-court-info':TeenCourtInfo,
+'teen-court-contact':TeenCourtContact,
+'teen-court-volunteer':TeenCourtVolunteer,
+'teen-court-jobs':TeenCourtJobs,
+'teen-court-docket':TeenCourtDocket,
+'teen-court-talks':TeenCourtTalks,
+'court-forms':CourtForms
 },
 data() {
     return {
@@ -194,7 +214,7 @@ data() {
           },
           {
             title: 'Court Forms',
-            route: 'court-forms'
+            route: '/court-forms'
           },
           {
             title: 'Court Dockets',
@@ -285,5 +305,14 @@ v-list-title > v-list-title-tile > a {
 }
 #app > div > aside > div.v-list.white--text.dark.theme--light > div:nth-child(5) > div > div > button > div > a {
   color: #000;
+}
+#lmc {
+  font-family:Times New Roman,Serif;
+  font-size:24px;
+  font-weight:500;
+  color:white;
+}
+#lmc:hover {
+  text-decoration:none !important;
 }
 </style>
