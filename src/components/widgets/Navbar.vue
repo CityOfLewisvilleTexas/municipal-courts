@@ -139,7 +139,6 @@ import TrialAlternatives from '../pages/TrialAlternatives'
 import TeenCourtInfo from '../pages/TeenCourtInfo'
 import TeenCourtContact from '../pages/TeenCourtContact'
 import TeenCourtVolunteer from '../pages/TeenCourtVolunteer'
-import TeenCourtJobs from '../pages/TeenCourtJobs'
 import TeenCourtDocket from '../pages/TeenCourtDocket'
 import TeenCourtTalks from '../pages/TeenCourtTalks'
 import CourtForms from '../pages/CourtForms'
@@ -153,7 +152,6 @@ components: {
 'teen-court-info':TeenCourtInfo,
 'teen-court-contact':TeenCourtContact,
 'teen-court-volunteer':TeenCourtVolunteer,
-'teen-court-jobs':TeenCourtJobs,
 'teen-court-docket':TeenCourtDocket,
 'teen-court-talks':TeenCourtTalks,
 'court-forms':CourtForms
@@ -193,10 +191,6 @@ data() {
           {
             title: 'Volunteer for Teen Court',
             route: '/teen-court-volunteer'
-          },
-          {
-            title: 'Teen Court Job Descriptions',
-            route: '/teen-court-jobs'
           },
           {
             title: 'Teen Court Docket',

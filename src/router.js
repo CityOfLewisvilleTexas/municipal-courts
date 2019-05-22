@@ -8,7 +8,6 @@ import TrialAlternatives from './components/pages/TrialAlternatives'
 import TeenCourtInfo from './components/pages/TeenCourtInfo'
 import TeenCourtContact from './components/pages/TeenCourtContact'
 import TeenCourtVolunteer from './components/pages/TeenCourtVolunteer'
-import TeenCourtJobs from './components/pages/TeenCourtJobs'
 import TeenCourtDocket from './components/pages/TeenCourtDocket'
 import TeenCourtTalks from './components/pages/TeenCourtTalks'
 import CourtForms from './components/pages/CourtForms'
@@ -57,11 +56,6 @@ export default new Router({
       path:'/teen-court-volunteer',
       name: 'TeenCourtVolunteer',
       component: TeenCourtVolunteer
-    },
-    {
-      path:'/teen-court-jobs',
-      name: 'TeenCourtJobs',
-      component: TeenCourtJobs
     },
     {
       path:'/teen-court-docket',

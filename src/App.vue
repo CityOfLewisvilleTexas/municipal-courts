@@ -77,6 +77,9 @@ export default {
 * {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
+body {
+  background-color:#FAFAFA;
+}
 button {
   text-transform: capitalize !important;
   font-size: 1.3rem;
