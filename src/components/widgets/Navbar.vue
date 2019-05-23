@@ -24,7 +24,7 @@
               </template>
                 <v-list>
                   <v-list-title v-for="(item, index) in navItems.trialOptions" :key="index" :id="index">
-                    <v-list-title-tile><router-link to="item.link">{{ item.title }}</router-link></v-list-title-tile>
+                    <v-list-title-tile><router-link to="item.route">{{ item.title }}</router-link></v-list-title-tile>
                   </v-list-title>
                 </v-list>
             </v-menu>
@@ -38,7 +38,7 @@
               </template>
                 <v-list>
                   <v-list-title v-for="(item, index) in navItems.teenCourtOptions" :key="index" :id="index">
-                    <v-list-title-tile><router-link to="item.link">{{ item.title }}</router-link></v-list-title-tile>
+                    <v-list-title-tile><router-link to="item.route">{{ item.title }}</router-link></v-list-title-tile>
                   </v-list-title>
                 </v-list>
             </v-menu>
