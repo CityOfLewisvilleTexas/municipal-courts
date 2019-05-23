@@ -4,18 +4,18 @@
             <h1 class="pt-3">Court Forms</h1>
                 <p>Here are a list of commonly used forms needed when working with the Lewisville Municipal Court.</p>
             <ul>
-                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=352">Driving Safety Course request form and Affidavit [PDF]</a></li>
-                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=11041">Deferred Disposition request form and Affidavit [PDF]</a></li>
-                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=17800">Municipal Court Informational/Fine Brochure 2019 [PDF}</a></li>
-                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=332">Driver Record Request Form [PDF]</a></li>
-                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=348">Financial Information for Court - English [PDF]</a></li>
-                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=347">Formulario Por Corte De Indigentes [PDF]</a></li>
-                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=346">Insurance Affidavit [PDF]</a></li>
-                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=2449">Motion for Continuance Form [PDF]</a></li>
-                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=344">Plea Form [PDF]</a></li>
-                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=343">Surety Appearance Bond* [PDF]</a></li>
-                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=4295">Teen Court Brochure [PDF]</a></li>
-                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=4294">Teen Court Volunteer Brochure  [PDF]</a></li>
+                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=352" target="_blank">Driving Safety Course request form and Affidavit [PDF]</a></li>
+                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=11041" target="_blank">Deferred Disposition request form and Affidavit [PDF]</a></li>
+                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=17800" target="_blank">Municipal Court Informational/Fine Brochure 2019 [PDF}</a></li>
+                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=332" target="_blank">Driver Record Request Form [PDF]</a></li>
+                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=348" target="_blank">Financial Information for Court - English [PDF]</a></li>
+                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=347" target="_blank">Formulario Por Corte De Indigentes [PDF]</a></li>
+                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=346" target="_blank">Insurance Affidavit [PDF]</a></li>
+                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=2449" target="_blank">Motion for Continuance Form [PDF]</a></li>
+                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=344" target="_blank">Plea Form [PDF]</a></li>
+                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=343" target="_blank">Surety Appearance Bond* [PDF]</a></li>
+                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=4295" target="_blank">Teen Court Brochure [PDF]</a></li>
+                <li class="my-2"><a href="https://www.cityoflewisville.com/home/showdocument?id=4294" target="_blank">Teen Court Volunteer Brochure  [PDF]</a></li>
             </ul>
 
                 <p>* Any bond company or attorney that wishes to act as a Surety on any Lewisville Class C misdemeanor warrant or instantiated citation will be required to follow these procedures. A Lewisville Surety appearance bond form will need to be completed for each violation and then turned in along with the necessary attachments. Surety appearance bonds that are not official Lewisville bonds, bonds that are incomplete or faxed bonds will not be accepted.</p>
