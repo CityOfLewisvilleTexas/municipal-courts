@@ -35,7 +35,7 @@ export default {
       var _this = this;
 
       axios
-        .post("https://query.cityoflewisville.com/v2", {
+        .post("http://query.cityoflewisville.com/v2", {
           webservice: "Court_WebsiteMetrics"
         })
         .then(function(_results) {
