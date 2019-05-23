@@ -51,8 +51,26 @@
                 <v-btn flat primary--text v-on="on">Additional Services</v-btn>
               </template>
                 <v-list>
-                  <v-list-title v-for="(item, index) in navItems.additionalServices" :key="index" :id="index">
-                    <v-list-title-tile><router-link to="item.link">{{ item.title }}</router-link></v-list-title-tile>
+                  <v-list-title>
+                    <v-list-title-tile>
+                      <a href="https://www.cityoflewisville.com/about-us/departments-services/municipal-court/active-warrants" target="_blank">Active Warrants</a>
+                    </v-list-title-tile>
+                  </v-list-title>
+                  <v-list-title>  
+                    <v-list-title-tile>
+                      <a href="http://eservices.cityoflewisville.com/courtsservices/dockets.html" target="_blank">Court Dockets</a></v-list-title-tile>
+                  </v-list-title>
+                  <v-list-title>  
+                    <v-list-title-tile>
+                      <a href="https://www.cityoflewisville.com/about-us/city-departments/information-technology-services/performance-dashboard-1841" target="_blank">Performance Dashboard</a></v-list-title-tile>
+                  </v-list-title>
+                  <v-list-title>  
+                    <v-list-title-tile>
+                      <a href="https://www.cityoflewisville.com/about-us/city-departments/municipal-court/texas-court-help" target="_blank">Texas Court Help</a></v-list-title-tile>
+                  </v-list-title>
+                  <v-list-title>  
+                    <v-list-title-tile>
+                      <router-link to="/court-forms">Court Forms</router-link></v-list-title-tile>
                   </v-list-title>
                 </v-list>
             </v-menu>
@@ -119,8 +137,26 @@
                 <v-btn flat dark v-on="on">Additional Services</v-btn>
               </template>
                 <v-list>
-                  <v-list-title v-for="(item, index) in navItems.additionalServices" :key="index" :id="index">
-                    <v-list-title-tile><router-link :to="item.route">{{ item.title }}</router-link></v-list-title-tile>
+                  <v-list-title>
+                    <v-list-title-tile>
+                      <a href="https://www.cityoflewisville.com/about-us/departments-services/municipal-court/active-warrants" target="_blank">Active Warrants</a>
+                    </v-list-title-tile>
+                  </v-list-title>
+                  <v-list-title>  
+                    <v-list-title-tile>
+                      <a href="http://eservices.cityoflewisville.com/courtsservices/dockets.html" target="_blank">Court Dockets</a></v-list-title-tile>
+                  </v-list-title>
+                  <v-list-title>  
+                    <v-list-title-tile>
+                      <a href="https://www.cityoflewisville.com/about-us/city-departments/information-technology-services/performance-dashboard-1841" target="_blank">Performance Dashboard</a></v-list-title-tile>
+                  </v-list-title>
+                  <v-list-title>  
+                    <v-list-title-tile>
+                      <a href="https://www.cityoflewisville.com/about-us/city-departments/municipal-court/texas-court-help" target="_blank">Texas Court Help</a></v-list-title-tile>
+                  </v-list-title>
+                  <v-list-title>  
+                    <v-list-title-tile>
+                      <router-link to="/court-forms">Court Forms</router-link></v-list-title-tile>
                   </v-list-title>
                 </v-list>
             </v-menu>
@@ -142,6 +178,7 @@ import TeenCourtVolunteer from '../pages/TeenCourtVolunteer'
 import TeenCourtDocket from '../pages/TeenCourtDocket'
 import TeenCourtTalks from '../pages/TeenCourtTalks'
 import CourtForms from '../pages/CourtForms'
+import JurySummons from '../pages/JurySummons'
 
 export default {
 components: {
@@ -154,7 +191,8 @@ components: {
 'teen-court-volunteer':TeenCourtVolunteer,
 'teen-court-docket':TeenCourtDocket,
 'teen-court-talks':TeenCourtTalks,
-'court-forms':CourtForms
+'court-forms':CourtForms,
+'jury-summons':JurySummons
 },
 data() {
     return {
@@ -199,28 +237,6 @@ data() {
           {
             title: 'Teen Talks',
             route: '/teen-court-talks'
-          }
-        ],
-        additionalServices: [
-          {
-            title: 'Active Warrants',
-            route: 'https://www.cityoflewisville.com/about-us/departments-services/municipal-court/active-warrants'
-          },
-          {
-            title: 'Court Forms',
-            route: '/court-forms'
-          },
-          {
-            title: 'Court Dockets',
-            route: 'http://eservices.cityoflewisville.com/courtsservices/dockets.html'
-          },
-          {
-            title: 'Performance Dashboard',
-            route: 'https://www.cityoflewisville.com/about-us/city-departments/information-technology-services/performance-dashboard-1841'
-          },
-          {
-            title: 'Texas Court Help',
-            route: 'https://www.cityoflewisville.com/about-us/city-departments/municipal-court/texas-court-help'
           }
         ]
       },

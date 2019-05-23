@@ -11,6 +11,8 @@ import TeenCourtVolunteer from './components/pages/TeenCourtVolunteer'
 import TeenCourtDocket from './components/pages/TeenCourtDocket'
 import TeenCourtTalks from './components/pages/TeenCourtTalks'
 import CourtForms from './components/pages/CourtForms'
+import JurySummons from './components/pages/JurySummons'
+
 Vue.use(Router);
 
 export default new Router({
@@ -71,6 +73,11 @@ export default new Router({
       path:'/court-forms',
       name: 'CourtForms',
       component: CourtForms
+    },
+     {
+      path:'/jury-summons',
+      name: 'JurySummons',
+      component: JurySummons
     }
   ]
 });

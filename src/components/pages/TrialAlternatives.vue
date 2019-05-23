@@ -83,7 +83,7 @@
     </v-container>  
 </template>
 
-<style>
+<style scoped>
 h1 {
     color: #54258a;
     text-decoration:underline;
