@@ -20,64 +20,76 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '/', //todo try adding ?lang=en, etc,
       name: 'Home',
-      component: Home
+      component: Home,
+      props: true
     },
     {
-      path:'/pay-court-fines',
+      path:'/pay-court-fines', //todo try adding ?lang=en, etc,
       name: 'PayCourtFines',
-      component: PayCourtFines
+      component: PayCourtFines,
+      props: true
     },
     {
-      path:'/court-costs',
+      path:'/court-costs', //todo try adding ?lang=en, etc,
       name: 'CourtCosts',
-      component: CourtCosts
+      component: CourtCosts,
+      props: true
     },
     {
-      path:'/trial-procedures',
+      path:'/trial-procedures', //todo try adding ?lang=en, etc,
       name: 'TrialProcedures',
-      component: TrialProcedures
+      component: TrialProcedures,
+      props: true
     },
     {
-      path:'/trial-alternatives',
+      path:'/trial-alternatives', //todo try adding ?lang=en, etc,
       name: 'TrialAlternatives',
-      component: TrialAlternatives
+      component: TrialAlternatives,
+      props: true
     },
     {
-      path:'/teen-court-info',
+      path:'/teen-court-info', //todo try adding ?lang=en, etc,
       name: 'TeenCourtInfo',
-      component: TeenCourtInfo
+      component: TeenCourtInfo,
+      props: true
     },
     {
-      path:'/teen-court-contact',
+      path:'/teen-court-contact', //todo try adding ?lang=en, etc,
       name: 'TeenCourtContact',
-      component: TeenCourtContact
+      component: TeenCourtContact,
+      props: true
     },
     {
-      path:'/teen-court-volunteer',
+      path:'/teen-court-volunteer', //todo try adding ?lang=en, etc,
       name: 'TeenCourtVolunteer',
-      component: TeenCourtVolunteer
+      component: TeenCourtVolunteer,
+      props: true
     },
     {
-      path:'/teen-court-docket',
+      path:'/teen-court-docket', //todo try adding ?lang=en, etc,
       name: 'TeenCourtDocket',
-      component: TeenCourtDocket
+      component: TeenCourtDocket,
+      props: true
     },
     {
-      path:'/teen-court-talks',
+      path:'/teen-court-talks', //todo try adding ?lang=en, etc,
       name: 'TeenCourtTalks',
-      component: TeenCourtTalks
+      component: TeenCourtTalks,
+      props: true
     },
     {
-      path:'/court-forms',
+      path:'/court-forms', //todo try adding ?lang=en, etc,
       name: 'CourtForms',
-      component: CourtForms
+      component: CourtForms,
+      props: true
     },
      {
-      path:'/jury-summons',
+      path:'/jury-summons', //todo try adding ?lang=en, etc,
       name: 'JurySummons',
-      component: JurySummons
+      component: JurySummons,
+      props: true
     }
   ]
 });

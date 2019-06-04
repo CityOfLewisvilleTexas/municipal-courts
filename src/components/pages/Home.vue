@@ -54,7 +54,7 @@ import Feedback from '../widgets/Feedback';
 //import Map from '../widgets/Map'
 
 export default {
-    props: [],
+    props: ['lang'],
     components: {
     "i-want-to": Select,
     "mission-statement": MissionCard,

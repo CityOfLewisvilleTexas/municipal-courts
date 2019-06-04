@@ -82,7 +82,16 @@
         </v-container>
     </v-container>  
 </template>
+<script>
+export default {
+    props: ['lang'],
+    data() {
+        return {
 
+        }
+    }
+}
+</script>
 <style scoped>
 
 </style>

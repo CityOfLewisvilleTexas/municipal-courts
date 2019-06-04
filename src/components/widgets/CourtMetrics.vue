@@ -16,7 +16,6 @@
 </template>
 
 <script>
-//try wrapping <v-layout> in a v-flex lg-10 for fixing width ?
 
 import axios from "axios";
 

@@ -10,7 +10,7 @@
               </template>
                 <v-list>
                   <v-list-title v-for="(item, index) in navItems.costsOptions" :key="index" :id="index">
-                    <v-list-title-tile><router-link :to="item.route">{{ item.title }}</router-link></v-list-title-tile>
+                    <v-list-title-tile><router-link :to="item.path + `?lang=${lang}`">{{ item.title }}</router-link></v-list-title-tile>
                   </v-list-title>
                 </v-list>
             </v-menu>
@@ -24,7 +24,7 @@
               </template>
                 <v-list>
                   <v-list-title v-for="(item, index) in navItems.trialOptions" :key="index" :id="index">
-                    <v-list-title-tile><router-link :to="item.route">{{ item.title }}</router-link></v-list-title-tile>
+                    <v-list-title-tile><router-link :to="item.path + `?lang=${lang}`">{{ item.title }}</router-link></v-list-title-tile>
                   </v-list-title>
                 </v-list>
             </v-menu>
@@ -38,7 +38,7 @@
               </template>
                 <v-list>
                   <v-list-title v-for="(item, index) in navItems.teenCourtOptions" :key="index" :id="index">
-                    <v-list-title-tile><router-link :to="item.route">{{ item.title }}</router-link></v-list-title-tile>
+                    <v-list-title-tile><router-link :to="item.path + `?lang=${lang}`">{{ item.title }}</router-link></v-list-title-tile>
                   </v-list-title>
                 </v-list>
             </v-menu>
@@ -70,7 +70,7 @@
                   </v-list-title>
                   <v-list-title>  
                     <v-list-title-tile>
-                      <router-link to="/court-forms">Court Forms</router-link></v-list-title-tile>
+                      <router-link :to="navItems.courtForms.path  + `?lang=${lang}`">Court Forms</router-link></v-list-title-tile>
                   </v-list-title>
                 </v-list>
             </v-menu>
@@ -79,12 +79,15 @@
         <v-list-tile>
           <v-list-tile-content>
             <v-btn flat> 
-              <router-link to="jury-summons">Jury Summons</router-link></v-btn>
+              <router-link :to="navItems.jurySummons.path  + `?lang=${lang}`">Jury Summons</router-link></v-btn>
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile>
         <v-list-tile-content>
-          <v-btn flat>ESPA&#xd1;OL</v-btn>
+          <v-btn flat @click="changeLang">
+          <span v-if="lang == 'en'">ESPA&#xd1;OL&nbsp;<flag iso="es"></flag></span>
+          <span v-else>ENGLISH&nbsp;<flag iso="us"></flag>&nbsp;</span>
+        </v-btn>
         </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -97,7 +100,7 @@
       width="75"
       />
     <v-toolbar-title class="white--text hidden-md-only"
-      ><router-link to="/"><span id="lmc">Lewisville Municipal Court</span>
+      ><router-link :to="navItems.home.path + `?lang=${lang}`"><span id="lmc">Lewisville Municipal Court</span>
         </router-link>
         </v-toolbar-title>
     <v-spacer></v-spacer>
@@ -108,7 +111,7 @@
               </template>
                 <v-list>
                   <v-list-title v-for="(item, index) in navItems.costsOptions" :key="index" :id="index">
-                    <v-list-title-tile><router-link :to="item.route">{{ item.title }}</router-link></v-list-title-tile>
+                    <v-list-title-tile><router-link :to="item.path + `?lang=${lang}`">{{ item.title }}</router-link></v-list-title-tile>
                   </v-list-title>
                 </v-list>
             </v-menu>
@@ -118,7 +121,7 @@
               </template>
                 <v-list>
                   <v-list-title v-for="(item, index) in navItems.trialOptions" :key="index" :id="index">
-                    <v-list-title-tile><router-link :to="item.route">{{ item.title }}</router-link></v-list-title-tile>
+                    <v-list-title-tile><router-link :to="item.path + `?lang=${lang}`">{{ item.title }}</router-link></v-list-title-tile>
                   </v-list-title>
                 </v-list>
             </v-menu>
@@ -128,7 +131,7 @@
               </template>
                 <v-list>
                   <v-list-title v-for="(item, index) in navItems.teenCourtOptions" :key="index" :id="index">
-                    <v-list-title-tile><router-link :to="item.route">{{ item.title }}</router-link></v-list-title-tile>
+                    <v-list-title-tile><router-link :to="item.path + `?lang=${lang}`">{{ item.title }}</router-link></v-list-title-tile>
                   </v-list-title>
                 </v-list>
             </v-menu>
@@ -156,89 +159,94 @@
                   </v-list-title>
                   <v-list-title>  
                     <v-list-title-tile>
-                      <router-link to="/court-forms">Court Forms</router-link></v-list-title-tile>
+                      <router-link :to="navItems.courtForms.path  + `?lang=${lang}`">Court Forms</router-link></v-list-title-tile>
                   </v-list-title>
                 </v-list>
             </v-menu>
-        <v-btn flat> <router-link to="/jury-summons">Jury Summons</router-link></v-btn>
-        <v-btn flat>ESPA&#xd1;OL</v-btn>
+        <v-btn flat> <router-link :to="navItems.jurySummons.path  + `?lang=${lang}`">Jury Summons</router-link></v-btn>
+        <v-btn flat @click="changeLang">
+          <span v-if="lang == 'en'">ESPA&#xd1;OL&nbsp;<flag iso="es"></flag></span>
+          <span v-else>ENGLISH&nbsp;<flag iso="us"></flag>&nbsp;</span>
+        </v-btn>
     </v-toolbar-items>
   </v-toolbar>
 </v-app>
 </template>
 
 <script>
-import PayCourtFines from '../pages/PayCourtFines'
-import CourtCosts from '../pages/CourtCosts'
-import TrialProcedures from '../pages/TrialProcedures'
-import TrialAlternatives from '../pages/TrialAlternatives'
-import TeenCourtInfo from '../pages/TeenCourtInfo'
-import TeenCourtContact from '../pages/TeenCourtContact'
-import TeenCourtVolunteer from '../pages/TeenCourtVolunteer'
-import TeenCourtDocket from '../pages/TeenCourtDocket'
-import TeenCourtTalks from '../pages/TeenCourtTalks'
-import CourtForms from '../pages/CourtForms'
-import JurySummons from '../pages/JurySummons'
-
 export default {
-components: {
-'pay-court-fines':PayCourtFines,
-'court-costs':CourtCosts,
-'trial-procedures':TrialProcedures,
-'trial-alternatives':TrialAlternatives,
-'teen-court-info':TeenCourtInfo,
-'teen-court-contact':TeenCourtContact,
-'teen-court-volunteer':TeenCourtVolunteer,
-'teen-court-docket':TeenCourtDocket,
-'teen-court-talks':TeenCourtTalks,
-'court-forms':CourtForms,
-'jury-summons':JurySummons
-},
+
+props: ['lang'],
 data() {
     return {
       navItems: {
+        home: {
+          title: 'Home',
+          component: 'Home',
+          path: `/`
+        },
+        courtForms: {
+          title: 'courtForms',
+          component: 'CourtForms',
+          path: `/court-forms`
+        },
+        jurySummons: {
+          title: 'jurySummons',
+          component: 'JurySummons',
+          path: `/jury-summons`
+        },
         costsOptions: [
           {
             title: 'Pay Court Fines',
-            route: '/pay-court-fines'
+            component: 'PayCourtFines',
+            path: '/pay-court-fines'
           },
           {
             title: 'Fines/Court Costs',
-            route: '/court-costs'
+            component: 'CourtCosts',
+            path: '/court-costs'
           }
         ],
         trialOptions: [
           {
             title: 'Trial Procedures',
-            route: '/trial-procedures'
+            component: 'TrialProcedures',
+            path: '/trial-procedures'
           },
           {
             title: 'Alternatives to Trial ',
-            route: '/trial-alternatives'
+            component: 'TrialAlternatives',
+            path: '/trial-alternatives'
           }
         ],
         teenCourtOptions: [
           {
             title: 'What is Teen Court?',
-            route: '/teen-court-info'
+            component: 'TeenCourtInfo',
+            path: '/teen-court-info'
           },
           {
             title: 'Teen Court Contact Information',
-            route: '/teen-court-contact'
+            component: 'TeenCourtContact',
+            path: '/teen-court-contact'
           },
           {
             title: 'Volunteer for Teen Court',
-            route: '/teen-court-volunteer'
+            component: 'TeenCourtVolunteer',
+            path: '/teen-court-volunteer'
           },
           {
             title: 'Teen Court Docket',
-            route: '/teen-court-docket'
+            component: 'TeenCourtDocket',
+            path: '/teen-court-docket'
           },
           {
             title: 'Teen Talks',
-            route: '/teen-court-talks'
+            component: 'TeenCourtTalks',
+            path: '/teen-talks'
           }
-        ]
+        ],
+      
       },
     sidebar: false,
     window: {
@@ -258,7 +266,12 @@ data() {
     handleResize() {
       this.window.width = window.innerWidth;
       this.window.height = window.innerHeight;
+    },
+    changeLang() {
+      this.$emit('change', 'es')
     }
+  },
+  updated: {
   }
 };
 </script>

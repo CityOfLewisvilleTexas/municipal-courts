@@ -1,6 +1,94 @@
 <template>
   <v-container>
-        <div class="py-3 text-xs-left">
+        <div class="py-3 text-xs-left" v-if="$router.history.current.query.lang == 'es'">
+        <h1 class="pt-3">Servicio de jurado</h1>
+        <v-container>
+            <h2> ¿Por qué es importante el servicio de jurado? </h2>
+                <p> La Constitución de los Estados Unidos y la Constitución de Texas garantizan a todas las personas el derecho a ser juzgados por un jurado imparcial de sus pares, independientemente de su raza, religión, sexo, origen nacional o situación económica. </p>
+
+                <h2> ¿Cuál es mi deber como jurado? </h2>
+                <p> Como miembro del jurado, debe ser justo e imparcial. Sus acciones y decisiones también deben estar libres de cualquier sesgo o prejuicio porque sus acciones y decisiones son la base de nuestro sistema judicial. </p>
+
+                <h2> ¿Cómo me seleccionaron? </h2>
+                <p> Fue seleccionado al azar de una lista de registros de votantes y una lista de registros de conductores del condado en el que vive. </p>
+
+                <h2> ¿Soy elegible? </h2>
+                <p class = "mt-3"> Los jurados deben ser: </p>
+                <ul>
+                <li> ciudadano de los Estados Unidos. </li>
+                <li> un residente de la Ciudad de Lewisville. </li>
+                <li> al menos 18 años de edad. </li>
+                <li> capaz de leer y escribir el idioma inglés. </li>
+                <li> de la mente sana. </li>
+                </ul>
+
+                <p class="mt-3"> No puede participar en un jurado si: </p>
+                <ul>
+                <li> han sido condenados por un delito grave o por cualquier tipo de delito de robo (a menos que se hayan restablecido sus derechos); </li>
+                <li> ahora están en libertad condicional o adjudicación diferida por un delito grave o por cualquier tipo de robo; o </li>
+                <li> ahora están bajo acusación por un delito grave o ahora están bajo cargos penales por cualquier tipo de robo. </li>
+                <li> Si tiene alguna duda, o cree que no está calificado para formar parte de un jurado por alguna de las razones anteriores o por alguna otra razón, notifique al juez. </li>
+                </ul>
+
+                <h2 class="mt-3"> ¿Quién puede ser excusado del Servicio de Jurado? </h2>
+                <p class="mt-3"> Usted tiene derecho a ser excusado como miembro del jurado si: </p>
+                <ul>
+                <li> son mayores de 70 años de edad; </li>
+                <li> tener la custodia legal de un niño menor de 12 años y el servicio de jurado dejaría al niño sin supervisión; </li>
+                <li> son estudiantes en clase; </li>
+                <li> es el cuidador de una persona que no puede cuidarse a sí misma (un inválido); o </li>
+                <li> puede mostrar un impedimento físico o mental o una incapacidad para comprender o comunicarse en inglés. </li>
+                </ul>
+                <p> Existe una sanción para los jurados que no responden a una citación. Un jurado puede recibir una multa de hasta $ 100 si: 1) no asiste a la corte en desobediencia al aviso sin una excusa razonable; o 2) presenta un reclamo falso de exención del servicio de jurado. </p>
+
+                <h2 class="mt-3"> ¿Cuáles son los diferentes tipos de casos? </h2>
+                <p> Hay dos tipos básicos de casos, criminales y civiles (incluidos los casos familiares). </p>
+
+                <h2 class="mt-3"> Casos criminales: </h2>
+                <p> Un caso criminal resulta cuando una persona es acusada de cometer un crimen. Usted, como jurado, debe decidir si la persona acusada es culpable o no. Se presume que el acusado es inocente, y el Estado, representado por el fiscal de la ciudad, debe probar que el acusado es culpable "más allá de una duda razonable". </p>
+
+                <h2 class="mt-3"> Casos civiles: </h2>
+                <p> Un caso civil resulta de un desacuerdo o disputa entre dos o más partes privadas. En un caso civil, usted, como miembro del jurado, debe responder preguntas sobre hechos disputados basándose en el testimonio y las pruebas admitidas por el juez. Las respuestas a estas preguntas se denominan veredicto. Nota: el Tribunal Municipal no atiende casos civiles. </p>
+
+                <h2 class="mt-3"> ¿Me pagarán por ser un miembro del jurado? </h2>
+                <p> Sí. Si lo seleccionan para formar parte del jurado, se le pagará $ 10.00 por cada día que realmente preste servicio. El Tribunal de Adolescentes de Lewisville solicita donaciones para su fondo de becas anuales y usted puede, pero no está obligado a hacerlo, aportar su cuota de jurado a este fondo. Para obtener más información, consulte al alguacil u otro personal de la corte. </p>
+
+                <h2 class="mt-3"> ¿Mi empleador debe pagarme mientras estoy en servicio de jurado? </h2>
+                <p> Su empleador no está obligado a pagarle mientras esté en servicio de jurado. Sin embargo, los empleadores tienen prohibido por ley despedir a un empleado por servir como miembro del jurado. Un empleado cuyo empleo termina en violación de esta sección tiene derecho a regresar al mismo empleo que tenía cuando fue convocado para un servicio de jurado si el empleado, tan pronto como sea práctico después de la liberación del servicio de jurado, le da al empleador un aviso real que el empleado pretende regresar. (Código de Práctica Civil y Recursos, art. 122.001). </p>
+            
+                <h2 class="mt-3"> ¿Quién puede tener un juicio con jurado? </h2>
+                <p> Cualquier persona acusada de un delito o cualquier parte en un caso civil tiene derecho a un juicio por jurado. Todas las partes son iguales ante la ley y cada una tiene derecho al mismo trato justo. </p>
+
+                <h2 class="mt-3"> ¿Existen reglas sobre la conducta del jurado? </h2>
+                <p> Sí. La Corte Suprema de Texas tiene reglas para ayudarlo en su conducta como miembro del jurado que le será entregada por el juez. </p>
+
+                <h2 class="mt-3"> ¿Cómo se selecciona un jurado para un caso particular? </h2>
+                <p> Los casos serán escuchados por jurados de 6 jurados. Un grupo más grande, llamado panel, será enviado a la corte de primera instancia (sala de audiencias) donde se interrogará a los jurados bajo la supervisión del juez.
+                <br/> <br/>
+                Un jurado puede ser excusado del panel si se demuestra que el jurado no puede actuar imparcialmente con respecto al caso que se va a escuchar. Además, a cada lado se le permite eliminar un número determinado de jurados del panel sin tener que mostrar ninguna razón. El jurado de primera instancia será el primero de los 6 jurados restantes en el panel.
+                </p>
+
+                <h2 class="mt-3"> ¿Qué es Voir Dire o Questioning Of The Jury Panel? </h2>
+                <p> Es una forma para que las partes seleccionen un jurado justo e imparcial. Bajo el sistema de justicia, puede ser interrogado por cada uno de los abogados antes de que decidan remover a un cierto número de jurados del panel de jurados.
+                <br/> <br/>
+                Por ejemplo, el abogado puede hacerle preguntas para ver si está relacionado con el juicio o si tiene algún prejuicio o sesgo hacia alguien en el juicio. Estas preguntas no pretenden avergonzarlo, sino ayudar a los abogados en el proceso de selección del jurado. Puede pedirle al juez que le permita responder algunas preguntas lejos de los otros miembros del jurado.
+                </p>
+
+                <h2 class="mt-3"> ¿Qué sucede si tengo una necesidad especial o una emergencia? </h2>
+                <p> Una vez que haya sido seleccionado como miembro del jurado en un panel de prueba, si tiene una necesidad especial o una emergencia, infórmeselo al alguacil. </p>
+
+                <h2 class="mt-3"> ¿Cómo actuamos durante el juicio? </h2>
+                <p> Una sesión de la corte comienza cuando el oficial de la corte raps por orden. Todos en la corte se levantan. El juez toma su lugar en el banco, y el oficial de la corte anuncia la apertura de la corte. Un procedimiento similar se utiliza cuando la corte aplaza. La cortesía y la cortesía comunes son guías seguras sobre la forma en que deben actuar los jurados. Por supuesto, no se le permitirá leer los periódicos o revistas en la sala del tribunal, ni debe mantener una conversación con otro miembro del jurado en la sala del tribunal durante el juicio.
+                <br/> <br/>
+                Usted será tratado con consideración y su comodidad y conveniencia serán servidas siempre que sea posible. Si hay una emergencia o un asunto que afecta su servicio, debe informarlo al juez. En el caso de una emergencia personal, notifique al Juez a través de cualquier personal de la corte, o puede pedir ver al Juez en privado.
+                <br/> <br/>
+                Debes prestar mucha atención al testimonio. Usted ha jurado hacer caso omiso de sus prejuicios y seguir las instrucciones de la Corte emitiendo un veredicto de acuerdo con su mejor criterio. Debes mantener una mente abierta. La experiencia humana muestra que, una vez que una persona llega a una conclusión preliminar de un conjunto de hechos, vacila en cambiar su opinión.
+                <br/> <br/>
+                Del mismo modo, los jurados no deben discutir el caso ni siquiera entre ellos hasta que finalmente se concluya. Por lo tanto, es prudente que ni siquiera intente tomar una decisión con respecto a los hechos de un caso hasta que se le haya presentado toda la evidencia y se le haya informado sobre la ley aplicable al caso. También tenga en cuenta que se requiere ropa adecuada. Todas las personas que ingresen a la sala del tribunal deben vestirse con ropa que se ajuste a la dignidad y solemnidad de los procedimientos judiciales (por ejemplo, no se permiten sombreros, pantalones cortos, camisetas sin mangas ni camisetas).
+                </p>
+        </v-container>
+        </div>
+        <div class="py-3 text-xs-left" v-else>
             <h1 class="pt-3">Jury Service</h1>
             <v-container>
                 <h2>Why is Jury Service important? </h2>

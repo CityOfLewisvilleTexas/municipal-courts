@@ -2,9 +2,9 @@
   <div id="app">
     <v-app>
       <v-container fixed grid-list-xl text-md-center>
-        <navbar></navbar>
+        <navbar :lang="lang" @change="setLang"></navbar>
         <router-view>
-          <home></home>
+          <home :lang="lang"></home>
         </router-view>
       </v-container>
       <snackbar :snackbar="snackbar"></snackbar>
@@ -18,6 +18,7 @@ import Navbar from "./components/widgets/Navbar";
 import Snackbar from './components/widgets/Snackbar';
 //pages
 import Home from './components/pages/Home'
+import router from './router'
 
 export default {
   components: {
@@ -27,6 +28,7 @@ export default {
   },
   data() {
     return {
+      lang: 'en',
       options: [
         "find the court hours",
         "find a lawyer",
@@ -67,7 +69,21 @@ export default {
       }
     };
   },
-  methods: {}
+  methods: {
+    setLang() {
+      this.lang = this.lang == 'en' ? this.lang = 'es' : this.lang = 'en'
+      this.$router.push(
+        { 
+          query: {
+        lang: this.lang
+          }
+        }
+      )
+    }
+  },
+  created() {
+    this.$router.push({ query: {lang:this.lang}})
+  }
 };
 </script>
 
