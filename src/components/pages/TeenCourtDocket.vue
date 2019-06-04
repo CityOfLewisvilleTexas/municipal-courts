@@ -1,6 +1,171 @@
 <template>
   <v-container>
-    <div class="py-3 text-xs-left">
+    <div
+      class="py-3 text-xs-left"
+      v-if="$router.history.current.query.lang == 'es'"
+    >
+      <h1 class="pt-3">Expediente del Tribunal Juvenil</h1>
+
+      <p>
+        ** NOTA: Debe comunicarse con Pam Everitt por correo electrónico
+        <a href="peveritt@cityoflewisville.com"
+          >peveritt@cityoflewisville.com</a
+        >
+        o por teléfono 972.219.3671 al menos 24 horas antes de la fecha de corte
+        para reservar un lugar para un período de jurado.
+      </p>
+      <v-container>
+        <table>
+          <tr>
+            <td>4 de diciembre</td>
+            <td>Montículo de flores</td>
+          </tr>
+          <tr>
+            <td>18 de diciembre</td>
+            <td>Lewisville</td>
+          </tr>
+          <tr>
+            <td>8 de enero</td>
+            <td>Lewisville</td>
+          </tr>
+          <tr>
+            <td>22 de enero</td>
+            <td>Lewisville</td>
+          </tr>
+          <tr>
+            <td>5 de febrero</td>
+            <td>Montículo de flores</td>
+          </tr>
+          <tr>
+            <td>19 de febrero</td>
+            <td>Montículo de flores</td>
+          </tr>
+          <tr>
+            <td>5 de marzo</td>
+            <td>Lewisville</td>
+          </tr>
+          <tr>
+            <td>19 de marzo</td>
+            <td>Lewisville</td>
+          </tr>
+          <tr>
+            <td>2 de abril</td>
+            <td>Lewisville</td>
+          </tr>
+          <tr>
+            <td>16 de abril</td>
+            <td>Montículo de flores</td>
+          </tr>
+          <tr>
+            <td>7 de mayo</td>
+            <td>Montículo de flores</td>
+          </tr>
+          <tr>
+            <td>21 de mayo-CANCELADO</td>
+            <td>Lewisville</td>
+          </tr>
+          <tr>
+            <td>4 de junio</td>
+            <td>Montículo de flores</td>
+          </tr>
+          <tr>
+            <td>18 de junio</td>
+            <td>Montículo de flores</td>
+          </tr>
+          <tr>
+            <td>9 de julio</td>
+            <td>Lewisville</td>
+          </tr>
+          <tr>
+            <td>23 de julio</td>
+            <td>Lewisville</td>
+          </tr>
+          <tr>
+            <td>6 de agosto</td>
+            <td>Montículo de flores</td>
+          </tr>
+          <tr>
+            <td>20 de agosto</td>
+            <td>Montículo de flores</td>
+          </tr>
+          <tr>
+            <td>3 de septiembre</td>
+            <td>Lewisville</td>
+          </tr>
+          <tr>
+            <td>17 de septiembre</td>
+            <td>Lewisville</td>
+          </tr>
+          <tr>
+            <td>1 de octubre</td>
+            <td>Montículo de flores</td>
+          </tr>
+          <tr>
+            <td>15 de octubre</td>
+            <td>Lewisville</td>
+          </tr>
+          <tr>
+            <td>5 de noviembre</td>
+            <td>Montículo de flores</td>
+          </tr>
+          <tr>
+            <td>19 de noviembre</td>
+            <td>Lewisville</td>
+          </tr>
+          <tr>
+            <td>3 de diciembre</td>
+            <td>Montículo de flores</td>
+          </tr>
+          <tr>
+            <td>17 de diciembre</td>
+            <td>Montículo de flores</td>
+          </tr>
+        </table>
+      </v-container>
+
+      <p>
+        Todas las sesiones de la corte comienzan a las 5:30 p.m. los martes por
+        la noche.
+      </p>
+
+      <p>
+        El uso de teléfonos celulares o dispositivos electrónicos está prohibido
+        en la sala del tribunal.
+      </p>
+
+      <p>
+        Puede trabajar tranquilamente en la tarea en el tribunal. La corte de
+        adolescentes El coordinador lo despedirá cuando ya no sea necesario para
+        formar parte de un jurado. Una noche cuenta como un período de jurado,
+        incluso si se le pide que sirva en múltiples jurados
+      </p>
+
+      <p>
+        Código de vestimenta estrictamente aplicado: solo vaqueros apropiados
+        para la escuela, NO pantalones cortos, chancletas. Su ropa debe reflejar
+        respeto por la corte. Las personas que no estén vestidas apropiadamente
+        no podrán ingresar el tribunal
+      </p>
+
+      <p>
+        <b> Ubicación del montículo de flores: </b> <br />
+        Tribunal Municipal de Flower Mound <br />
+        4150 Kirkpatrick Lane (en FM 1171 / Cross Timbers) <br />
+        Montículo de flores, Texas 75028 <br />
+        Sólo direcciones: 972.874.3370
+      </p>
+
+      <p></p>
+
+      <p>
+        <b> Ubicación de Lewisville: </b> <br />
+        Lewisville Municipal Annex - Municipal Court <br />
+        1197 W. Main Street (en Civic Circle) <br />
+        Lewisville, Texas 75067 <br />
+        972.219.3671
+      </p>
+    </div>
+    <div class="py-3 text-xs-left" v-else>
       <h1 class="pt-3">Teen Court Docket</h1>
 
       <p>
