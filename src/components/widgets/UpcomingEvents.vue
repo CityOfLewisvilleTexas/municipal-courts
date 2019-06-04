@@ -49,8 +49,8 @@ export default {
           date: "Feb 12",
           event: "Court Closed for Lincoln's Birthday"
         }
-      ],
-    }
+      ]
+    };
   },
   methods: {}
 };

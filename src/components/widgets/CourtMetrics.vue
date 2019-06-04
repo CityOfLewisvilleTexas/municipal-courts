@@ -16,7 +16,6 @@
 </template>
 
 <script>
-
 import axios from "axios";
 
 export default {
@@ -34,10 +33,12 @@ export default {
       var _this = this;
 
       axios
-        .post("https://query.cityoflewisville.com/v2/?webservice=Court_WebsiteMetrics")
+        .post(
+          "https://query.cityoflewisville.com/v2/?webservice=Court_WebsiteMetrics"
+        )
         .then(function(_results) {
           if (typeof _results.data[0][0] != "undefined") {
-            console.log(_results.data[0][0])
+            console.log(_results.data[0][0]);
             _this.metrics = _results.data[0][0];
           }
         })

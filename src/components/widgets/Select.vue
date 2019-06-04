@@ -31,7 +31,7 @@ export default {
         "learn my rights",
         "know what to expect at court"
       ],
-      selectedOption: "",
+      selectedOption: ""
     };
   }
 };

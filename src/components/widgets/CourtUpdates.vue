@@ -28,7 +28,7 @@ export default {
   props: [],
   data() {
     return {
-       updates: [
+      updates: [
         {
           date: "Jan 21, 2019",
           slogan: "All court forms are now available online"
@@ -37,7 +37,7 @@ export default {
           date: "Jan 1, 2019",
           slogan: "Happy New Year!"
         }
-      ],
+      ]
     };
   }
 };

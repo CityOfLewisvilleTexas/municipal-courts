@@ -15,20 +15,20 @@
 <script>
 //widgets
 import Navbar from "./components/widgets/Navbar";
-import Snackbar from './components/widgets/Snackbar';
+import Snackbar from "./components/widgets/Snackbar";
 //pages
-import Home from './components/pages/Home'
-import router from './router'
+import Home from "./components/pages/Home";
+import router from "./router";
 
 export default {
   components: {
-    "navbar": Navbar,
-    "home": Home,
-    "snackbar":Snackbar
+    navbar: Navbar,
+    home: Home,
+    snackbar: Snackbar
   },
   data() {
     return {
-      lang: 'en',
+      lang: "en",
       options: [
         "find the court hours",
         "find a lawyer",
@@ -71,18 +71,16 @@ export default {
   },
   methods: {
     setLang() {
-      this.lang = this.lang == 'en' ? this.lang = 'es' : this.lang = 'en'
-      this.$router.push(
-        { 
-          query: {
-        lang: this.lang
-          }
+      this.lang = this.lang == "en" ? (this.lang = "es") : (this.lang = "en");
+      this.$router.push({
+        query: {
+          lang: this.lang
         }
-      )
+      });
     }
   },
   created() {
-    this.$router.push({ query: {lang:this.lang}})
+    this.$router.push({ query: { lang: this.lang } });
   }
 };
 </script>
@@ -94,7 +92,7 @@ export default {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 body {
-  background-color:#FAFAFA;
+  background-color: #fafafa;
 }
 button {
   text-transform: capitalize !important;
@@ -104,7 +102,7 @@ hr {
   border-color: #ffffff42 !important;
 }
 div.application--wrap {
-  min-height:100px !important;
+  min-height: 100px !important;
 }
 @media only screen and (max-width: 750px) {
   #statement {

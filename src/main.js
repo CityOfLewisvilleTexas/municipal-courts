@@ -4,7 +4,7 @@ import App from "./App.vue";
 import router from "./router";
 import axios from "axios";
 import Vuetify from "vuetify";
-import FlagIcon from 'vue-flag-icon'
+import FlagIcon from "vue-flag-icon";
 
 Vue.config.productionTip = false;
 Vue.use(axios);
