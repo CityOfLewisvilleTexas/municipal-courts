@@ -1,9 +1,16 @@
 <template>
   <v-flex xs12 m12 lg5>
     <v-card class="court-updates">
-      <div class="headline updates">Court Updates</div>
+      <div class="headline updates">
+        <span v-if="$route.query.lang == 'es'">
+          Actualizaciones de la Corte
+        </span>
+        <span v-else>
+          Court Updates
+        </span>
+      </div>
       <v-spacer></v-spacer>
-      <v-container>
+      <v-container v-if="$route.query.lang == 'es'">
         <v-card
           v-for="(update, index) in updates"
           :key="index"
@@ -12,8 +19,24 @@
         >
           <v-card-title primary-title>
             <div text-xs-center text-md-left text-lg-left>
-              <span>{{ update.date }}</span>
-              <div class="headline">{{ update.slogan }}</div>
+              <span>{{ update.es.date }}</span>
+              <div class="headline">{{ update.es.slogan }}</div>
+            </div>
+          </v-card-title>
+          <hr />
+        </v-card>
+      </v-container>
+      <v-container v-else>
+        <v-card
+          v-for="(update, index) in updates"
+          :key="index"
+          id="update"
+          :class="'update' + ' ' + index"
+        >
+          <v-card-title primary-title>
+            <div text-xs-center text-md-left text-lg-left>
+              <span>{{ update.en.date }}</span>
+              <div class="headline">{{ update.en.slogan }}</div>
             </div>
           </v-card-title>
           <hr />
@@ -28,16 +51,28 @@ export default {
   props: [],
   data() {
     return {
-      updates: [
+       updates: [
         {
-          date: "Jan 21, 2019",
-          slogan: "All court forms are now available online"
+          en: { 
+            date: "Jan 21, 2019",
+            slogan: "All court forms are now available online"
+          },
+          es: {
+            date: "21 Enero 2019",
+            slogan: "Todos formularios de la corte están disponibles en línea"
+          }
         },
         {
-          date: "Jan 1, 2019",
-          slogan: "Happy New Year!"
+          en: {
+            date: "Jan 1, 2019",
+            slogan: "Happy New Year!"
+          },
+          es: {
+            date: "1 Enero 2019",
+            slogan: "¡Feliz año nuevo!"
+          }
         }
-      ]
+      ],
     };
   }
 };

@@ -1,6 +1,6 @@
 <template>
      <v-container>
-         <div class="py-3 text-xs-left" v-if="$router.history.current.query.lang == 'es'">
+         <div class="py-3 text-xs-left" v-if="$route.query.lang == 'es'">
             <h1 class="pt-3"> Teen Court </h1>
             <v-container>
                 <h2> ¿Qué es Teen Court? </h2>

@@ -1,5 +1,113 @@
 <template>
   <v-container text-xs-left>
+    <div v-if="$route.query.lang == 'es'">
+    <h1 class="my-3"> Alternativas a la versión de prueba </h1>
+    <h2> Motivos </h2>
+    <p> Bajo nuestro sistema de justicia estadounidense, se presume que todas las personas son Inocente hasta que se demuestre su culpabilidad. En una declaración de no culpabilidad, un juicio formal es retenida. Como en todos los juicios penales, el Estado debe probar la culpabilidad del acusado "más allá de una duda razonable" del delito imputado en el la queja ante un acusado puede ser declarada culpable por un juez o jurado.
+    </p>
+
+    <p> Su decisión con respecto a qué motivo de entrada es muy importante. Por favor Considere cada petición cuidadosamente antes de tomar una decisión. Si suplica "Culpable" o "Nolo Contendere" en audiencia pública, debe estar preparado para pagar La multa y los costos judiciales de inmediato. Usted debe comunicarse con el secretario de la corte Oficina sobre cómo realizar el pago.
+    </p>
+    <v-container>
+      <h2 class="mt-3"> Declaración de culpabilidad </h2>
+      <p> Al declararse culpable, usted admite que el acto está prohibido por ley, que Usted cometió el acto cargado, y que no tiene defensa ni excusa. por tu acto Antes de entrar en su declaración de culpabilidad usted debe entender el seguimiento:
+      </p>
+
+      <ol>
+        <li clas="my-1"> El Estado tiene la carga de probar que usted violó la ley (la ley no requiere que usted demuestre que no violó la ley);
+        </li>
+        <li clas="my-1"> Tiene derecho a escuchar las pruebas del Estado ya exigir la Estado para probar que violaste la ley; y
+        </li>
+        <li clas="my-1"> Una declaración de culpabilidad puede ser usada en su contra más adelante en una demanda civil si hubo un accidente de tráfico (otra parte puede decir que usted tuvo la culpa) O responsable del accidente porque se declaró culpable del tráfico. cargar).
+        </li>
+      </ol>
+
+      <h2 class="mt-3"> Petición de Nolo Contendere o No Contest </h2>
+      <p> Una declaración de no concurso significa que usted no impugna los cargos del estado contra ti. Es casi seguro que serás declarado culpable, a menos que seas Elegible y completar con éxito un curso de seguridad de conducción y / o libertad condicional ordenada por el tribunal. Un motivo de No Concurso no puede ser usado en tu contra En una demanda civil posterior.
+      </p>
+
+      <h2 class="mt-3"> Declaración de no culpable </h2>
+      <p> Una declaración de no culpable significa que usted está informando a la corte que niega la culpa o que tiene una defensa en su caso y que el Estado Debe probar lo que ha cargado contra usted. Si usted se declara inocente, usted Tendrá que decidir si contratar a un abogado para que lo represente. Si tu representarse a sí mismo, consulte la sección sobre procedimientos de prueba para obtener ayuda mejor entiendes el proceso de prueba
+      </p>
+
+      <p> Si es condenado por un delito menor que involucra violencia donde usted es o fue cónyuge, pareja íntima, padre o tutor de la víctima o están o estuvieron involucrados en otra relación similar con el víctima, puede ser ilegal que usted posea o compre un arma de fuego, Incluyendo una pistola manual o una pistola larga, o municiones, de conformidad con la ley federal menos de 18 U.S.C. Sección 922 (g) (9) o sección 46.04 (b). Penal de texas Código. Si tiene alguna pregunta sobre si estas leyes lo hacen ilegal para Para poseer o comprar un arma de fuego, debe consultar a un abogado.
+      </p>
+    </v-container>
+    <hr />
+    <h2> Disposición diferida </h2>
+    <v-container>
+      <h2> Disposición Diferida (Libertad Condicional) </h2>
+      <p> El tribunal tiene la discreción de "diferir" o posponer la disposición de su caso y lo colocará en libertad condicional por un período de tiempo específico durante el cual usted debe cumplir con ciertos términos y condiciones. Si tu cumplir con estos términos y condiciones, el caso es desestimado y no la condena se informa en su registro.
+      </p>
+
+      <p> Puede solicitar la Disposición Diferida antes del juicio de su caso. Debe presentar una declaración de culpabilidad o no participar en el concurso, pagar una tarifa por gastos especiales (por lo general igual al monto de la multa), no cometa ningún otro delito durante el período de prueba, y cumplir con cualquier otro término y / o Condiciones de libertad vigilada. Finalización exitosa de la Disposición Diferida. resultará en la desestimación de la citación. La tarifa especial se debe en La hora en que se realiza la solicitud. NOTA: Si tiene un conductor comercial Licencia (CDL), usted no es elegible para la Disposición Diferida.
+      </p>
+<p> Usted es elegible para Disposición Diferida si: </p>
+      <ol>
+        <li class="my-1">No se le ha otorgado Disposición Diferida en Lewisville dentro de los últimos 12 meses; y
+        </li>
+        <li class="my-1"> Actualmente no estás en Disposición Diferida en algún otro jurisdicción.
+        </li>
+      </ol>
+      <p class="my-2"> Al firmar el Acuerdo de Disposición Diferida, usted está atestiguando que Las condiciones anteriores son correctas. Las declaraciones falsas a la Corte serán considerado perjurio y referido a la Fiscalía de Distrito del Condado de Denton despacho de enjuiciamiento.
+      </p>
+    </v-container>
+    <hr />
+    <h2> Curso de seguridad en la conducción </h2>
+    <v-container>
+      <p> Si se le acusa de una infracción de mudanza bajo el Subtítulo C de Texas Código de transporte, puede preguntarle al juez antes de la fecha de comparecencia en la citación, ya sea oralmente o por escrito, para tomar una seguridad de conducción curso. NOTA: Si posee una licencia de conducir comercial (CDL), está No es elegible para el Curso de Seguridad en la Conducción.
+      </p>
+
+      <p> No tome un curso de seguridad para conducir sin obtener primero el permiso de la corte.
+      </p>
+
+      <p> Si estuvieras manejando una moto y solicitaste un seguro de conducción. Por supuesto, debe tomar un curso de formación de operador de motocicleta. En el En el momento de la solicitud, deberá:
+      </p>
+
+      <ol style="list-style-type:lower-alpha;">
+        <li class="my-1">presentar prueba de responsabilidad financiera (seguro de responsabilidad civil);
+        </li>
+        <li class="my-1"> presentar una licencia de conducir válida de Texas; </li>
+        <li class="my-1"> declararse culpable o no participar; </li>
+        <li class="my-1">pagar los costos judiciales y una tarifa de administración (por la infracción ofensas: $ 113 o $ 138 si están en una zona escolar
+        </li>
+        <li class="my-1">firme una declaración jurada jurando que es elegible para conducir curso de seguridad.
+        </li>
+      </ol>
+
+      <p> Usted es elegible para solicitar este curso si: </p>
+      <ol class="my-3">
+        <li class="my-1">No haber completado un curso de seguridad de manejo para el despido de un tráfico delito dentro de los 12 meses anteriores a la fecha del delito;
+        </li>
+        <li class="my-1"> Actualmente no estamos tomando el curso por otra infracción de tráfico;
+        </li>
+        <li class="my-1"> no han cometido el delito de exceso de velocidad de 25 mph o por encima de lo publicado Límite de velocidad; y
+        </li>
+        <li class="my-1"> no ha cometido uno de los siguientes delitos: </li>
+        <ol style="list-style-type:lower-alpha">
+          <li class="my-1"> no dar información en una escena del accidente;
+          </li>
+          <li class="my-1"> dejando la escena de un accidente; </li>
+          <li class="my-1"> huyendo o tratando de eludir a un oficial de policía; </li>
+          <li class="my-1"> manejo imprudente; </li>
+          <li class="my-1"> pasando un autobús escolar; o </li>
+          <li class="my-1"> una infracción de tráfico grave como se define en el Capítulo 522, código de transporte, que se aplica a los conductores con comerciales licencias de conducir
+          </li>
+        </ol>
+      </ol>
+      <p> Una vez que haya sido aprobado por el tribunal, tiene 90 días para completar y proporcionar un certificado de finalización a la corte. La seguridad de conducción El proveedor del curso debe ser aprobado por la Agencia de Educación de Texas y el El curso puede tomarse en línea, en un aula o por video / DVD. También debe proporcionar al tribunal una copia certificada de su registro de conducir como lo mantiene el Departamento de Seguridad Pública de Texas. Si no cumple con estas condiciones, recibirá un aviso de una audiencia de Causa por Demanda que requiere que regrese a la corte y explique por qué no pudo mostrar prueba de finalización Si tienes una buena razón por qué no pudo presentar su prueba en un plazo de 90 días, el juez puede, pero No es obligatorio, le conceda una prórroga.
+      </p>
+
+      <p>A continuación hay un enlace para descargar una aplicación para solicitar una copia de su registro de conducir Por favor, siga las instrucciones en la aplicación.
+      </p>
+
+      <p>
+        <a href="https://www.cityoflewisville.com/home/showdocument?id=332"> Formulario de solicitud de registro de conductor [PDF] </a>
+      </p>
+    </v-container>
+    </div>
+
+    <div v-else>
     <h1 class="my-3">Alternatives to Trial</h1>
     <h2>Pleas</h2>
     <p>
@@ -208,6 +316,7 @@
         >
       </p>
     </v-container>
+    </div>
   </v-container>
 </template>
 <script>

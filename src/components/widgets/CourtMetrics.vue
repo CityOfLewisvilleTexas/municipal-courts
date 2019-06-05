@@ -1,15 +1,22 @@
 <template>
   <v-layout row fluid wrap pa-5 class="metric-row">
     <v-flex xs12 lg4 text-xs-center>
-      <div class="metric-title">Number of Cases in Past 1 Year</div>
+      <div class="metric-title">
+          <span v-if="$route.query.lang == 'es'">Casos en el último año</span>
+          <span v-else>Number of Cases in Past 1 Year</span></div>
       <div class="metric-value">{{ metrics.CaseCountPast1Year }}</div>
     </v-flex>
     <v-flex xs12 m12 lg4 text-xs-center>
-      <div class="metric-title">Days to Case Resolution</div>
+      <div class="metric-title">
+          <span v-if="$route.query.lang == 'es'">Días para la resolución de casos
+</span>
+          <span v-else>Days to Case Resolution</span></div>
       <div class="metric-value">{{ metrics.DaysToCaseResolution }}</div>
     </v-flex>
     <v-flex xs12 lg4 text-xs-center>
-      <div class="metric-title">TBD</div>
+      <div class="metric-title">
+          <span v-if="$route.query.lang == 'es'">TBD</span>
+          <span v-else>TBD</span></div>
       <div class="metric-value">{{ metrics.CaseCountPast1Year }}</div>
     </v-flex>
   </v-layout>

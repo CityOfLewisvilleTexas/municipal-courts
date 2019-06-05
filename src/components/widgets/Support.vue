@@ -10,16 +10,16 @@
             ></v-img>
           </v-avatar>
           <v-card-text class="headline text-md-center py-0 white--text"
-            >Mr. Assitant</v-card-text
+            >Mr. Assistant</v-card-text
           >
           <v-card-text class="text-md-center pb-4 white--text"
-            >Customer Support</v-card-text
+            ><span v-if="$route.query.lang == 'es'">Atención al cliente</span><span v-else>Customer Support</span></v-card-text
           >
         </v-layout>
 
         <div class="speech-bubble">
-          Still have questions about the courtroom hours or rules? Give us a
-          call or chat online. We are here to help.
+          <span v-if="$route.query.lang == 'es'">¿Aún tiene preguntas sobre las horas o reglas de la corte? Llámanos o chatea en línea. Estamos aquí para ayudar.</span>
+          <span v-else>Still have questions about the courtroom hours or rules? Give us a call or chat online. We are here to help.</span>
         </div>
       </v-card>
     </v-flex>
@@ -36,7 +36,7 @@
       white--text
     >
       <p>
-        <b><u>Contact Us</u></b
+        <b><u><span v-if="$route.query.lang == 'es'">Contáctenos</span><span v-else>Contact Us</span></u></b
         ><br />
         1197 West Main Street<br />
         Lewisville, Texas<br />
@@ -44,7 +44,7 @@
       </p>
 
       <p>
-        <b><u>Hours of Operation</u></b
+        <b><u><span v-if="$route.query.lang == 'es'">Horas de operación</span><span v-else>Hours of Operation</span></u></b
         ><br />
         Monday - Thursday: 7:30 a.m. to 5:30 p.m.<br />
         Friday: 7:30 a.m. to 11:30 a.m.

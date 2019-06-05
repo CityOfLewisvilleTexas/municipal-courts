@@ -10,12 +10,12 @@
       <v-card-title id="statement">
         <div style="text-align: left;">
           <v-flex xs12 mb-2 align-end flexbox>
-            <span class="mission">Mission Statement</span>
+            <span class="mission"><span v-if="$route.query.lang == 'es'">Declaración de misión</span><span v-else>Mission Statement</span></span>
           </v-flex>
           <span style="font-size:1.5rem;"
-            >Our mission is to be neutral, courteous, helpful, and fair for all
-            members of the public.</span
-          ><br />
+            ><span v-if="$route.query.lang == 'es'">Nuestra misión es ser neutral, cortés, servicial y justo para todos los miembros del público.</span>
+            <span v-else>Our mission is to be neutral, courteous, helpful, and fair for all
+            members of the public.</span></span><br />
         </div>
       </v-card-title>
     </v-card>

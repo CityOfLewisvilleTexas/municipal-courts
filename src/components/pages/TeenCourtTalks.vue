@@ -1,6 +1,61 @@
 <template>
   <v-container>
-    <div class="py-3 text-xs-left">
+    <div
+      class="py-3 text-xs-left"
+      v-if="$route.query.lang == 'es'"
+    >
+      <h1 class="pt-3">Teen Talks</h1>
+      <p>
+        Presentaciones, videos y conversaciones con oficiales de policía y
+        otros. expertos en la materia en temas tales como la seguridad
+        del tráfico, distraído Conducir, menores de edad y alcohol,
+        abuso de alcohol y drogas, consumo excesivo de alcohol,
+        Conducción en estado de ebriedad y drogadicción, seguridad en
+        internet, robo en tiendas y otros Diversos temas relacionados
+        con los menores y la ley.
+      </p>
+
+      <p>
+        Teen Talks está patrocinado por Lewisville / Flower Mound Teen Court, y
+        ubicación alterna mensualmente entre Lewisville y Flower Mound
+        Juzgados Municipales. Vea el calendario y el folleto para la
+        ubicación.
+      </p>
+      <v-container>
+        <h2>
+          Recibir servicio comunitario para asistir: (marque con su organización Patrocinador para confirmar duplicación y triplicación de horas serán aceptadas)
+        </h2>
+
+        <p>Asista: reciba 2 horas de crédito</p>
+
+        <p>
+          Traiga a un padre o tutor: reciba 4 horas de crédito (el primer
+          invitado debe ser un padre o tutor)
+        </p>
+
+        <p>
+          Traiga 2 padres o tutores o un padre o tutor Y un hermano o amigo de la misma edad que no recibe servicio comunitario - recibir 6 horas de crédito (un invitado debe ser un padre o
+          tutor)
+        </p>
+
+        <p>
+          Es necesario registrarse en línea (ver folleto) o llamando 972.219.3671.
+        </p>
+
+        <p>Por favor, llegue unos minutos antes para registrarse.</p>
+
+        <p>
+          El tema de este mes es: Drogas y alcohol que afectan al desarrollo. Cerebro (siempre sujeto a cambio)
+        </p>
+
+        <p>
+          <a href="https://www.cityoflewisville.com/home/showdocument?id=18201">
+            Teen Talks junio 2019
+          </a>
+        </p>
+      </v-container>
+    </div>
+    <div class="py-3 text-xs-left" v-else>
       <h1 class="pt-3">Teen Talks</h1>
       <p>
         Presentations, videos and conversations with police officers and other

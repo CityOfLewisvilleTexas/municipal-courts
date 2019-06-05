@@ -2,15 +2,17 @@
   <v-flex pa-4 mb-5 mt-5>
     <v-container mt-5>
       <span style="display:inline-block;font-size:22px;">
-        <h1>I want to...&nbsp;&nbsp;</h1>
+        <h1>
+          <span v-if="$route.query.lang == 'es'">Necesito...&nbsp;&nbsp;</span>
+          <span v-else>I want to...&nbsp;&nbsp;</span></h1>
       </span>
       <v-select
-        :items="options"
+        :items="$route.query.lang == 'es' ? options.es : options.en"
         v-model="selectedOption"
         background-color="#E0B008"
         height="60"
         style="vertical-align:middle;margin-left:auto;margin-right:auto;display:inline-block;text-align:center;"
-        label="select an option"
+        :label="$route.query.lang == 'es' ? 'escoge un opcion' : 'select an option'"
         color="white--text"
         solo
       >
@@ -24,13 +26,22 @@ export default {
   props: [],
   data() {
     return {
-      options: [
+      options: {
+        en: [
         "find the court hours",
         "find a lawyer",
         "respond to a citation",
         "learn my rights",
         "know what to expect at court"
-      ],
+        ],
+        es: [
+        "encontrar las horas de corte",
+        "busco un abogado",
+        "responder a una cita",
+        "aprender mis derechos",
+        "saber qué esperar en la corte"
+        ]
+        },
       selectedOption: ""
     };
   }

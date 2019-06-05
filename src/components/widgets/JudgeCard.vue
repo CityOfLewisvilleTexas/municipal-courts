@@ -1,8 +1,8 @@
 <template>
   <v-flex lg5 pa-5 text-sm-left>
-    <h1 text-sm-left>Meet your Judge, Honorable Gavel Judge</h1>
+    <h1 text-sm-left><span v-if="$route.query.lang == 'es'">Conozca a su juez, honorable señor juez</span><span v-else>Meet your Judge, Honorable Gavel Judge</span></h1>
     <router-link to="/">
-      <h2 text-sm-left>Learn about the court</h2>
+      <h2 text-sm-left><span v-if="$route.query.lang == 'es'">Aprende sobre la corte</span><span v-else>Learn about the court</span></h2>
     </router-link>
   </v-flex>
 </template>

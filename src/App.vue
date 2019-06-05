@@ -77,6 +77,7 @@ export default {
           lang: this.lang
         }
       });
+      localStorage.setItem(lang, this.lang)
     }
   },
   created() {

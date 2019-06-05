@@ -1,5 +1,5 @@
 <template>
-  <v-container v-if="$router.history.current.query.lang == 'es'">
+  <v-container v-if="$route.query.lang == 'es'">
     <div class="py-3 text-xs-left">
       <h1 class="pt-3">Multas / Costos judiciales</h1>
       <p>

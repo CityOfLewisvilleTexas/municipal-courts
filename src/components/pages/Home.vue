@@ -54,7 +54,7 @@ import Feedback from "../widgets/Feedback";
 //import Map from '../widgets/Map'
 
 export default {
-  props: ["lang"],
+  // props: ["lang"],
   components: {
     "i-want-to": Select,
     "mission-statement": MissionCard,
@@ -66,6 +66,24 @@ export default {
     support: Support,
     feedback: Feedback
     // "court-map": Map
+  },
+  data() {
+    return {
+      lang: '',
+    }
+  },
+  methods: {
+    setLang() {
+      this.lang = this.$router.history.current.query.lang
+    }
+  },
+  created() {
+    this.setLang()
+  },
+  watch: {
+    '$route.query.lang'() {
+        this.setLang()
+    }
   }
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
   <v-flex xs12 m12 lg5>
     <v-card class="upcoming-events">
-      <div class="headline events">Upcoming Events</div>
+      <div class="headline events"><span v-if="$route.query.lang == 'es'">Próximos Eventos</span><span v-else>Upcoming Events</span></div>
       <v-spacer></v-spacer>
       <v-container>
         <v-card
@@ -20,8 +20,11 @@
                 <br />
                 <b>{{ event.date.substr(event.date.indexOf(" ")) }}</b>
               </span>
-              <div style="display:inline-block" class="headline">
-                {{ event.event }}
+              <div v-if="$route.query.lang == 'es'" style="display:inline-block" class="headline">
+                {{ event.event.es }}
+              </div>
+              <div v-else style="display:inline-block" class="headline">
+                {{ event.event.en }}
               </div>
             </div>
           </v-card-title>
@@ -39,15 +42,24 @@ export default {
       events: [
         {
           date: "Jan 30",
-          event: "Community Board Meeting"
+          event: {
+            en:"Community Board Meeting",
+            es: "Reunión del Consejo de la Comunidad"
+          }
         },
         {
           date: "Feb 1",
-          event: "Family Neighborhood Potluck"
+          event: {
+            en:"Family Neighborhood Potluck",
+            es: "Potluck vecindario"
+          }
         },
         {
           date: "Feb 12",
-          event: "Court Closed for Lincoln's Birthday"
+          event: {
+            en:"Court Closed for Lincoln's Birthday",
+            es: "Corte cerrada por el cumpleaños de Lincoln"
+          }
         }
       ]
     };

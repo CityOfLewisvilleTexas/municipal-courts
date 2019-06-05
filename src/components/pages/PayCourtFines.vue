@@ -3,7 +3,7 @@
     <div
       id="court-fines"
       class="py-5 text-xs-left"
-      v-if="$router.history.current.query.lang == 'es'"
+      v-if="$route.query.lang == 'es'"
     >
       <h1 class="py-3">Pagar multas en el tribunal</h1>
       <h2 class="py-3">
@@ -84,7 +84,7 @@
     </div>
     <div
       id="pay-online"
-      v-if="showPayOnline && $router.history.current.query.lang != 'es'"
+      v-if="showPayOnline && $route.query.lang != 'es'"
       class="text-xs-left"
     >
       <h1 class="py-3">Pay Municipal Court Fines Online</h1>
@@ -186,7 +186,7 @@
     </div>
     <div
       id="pay-online"
-      v-if="showPayOnline && $router.history.current.query.lang == 'es'"
+      v-if="showPayOnline && $route.query.lang == 'es'"
       class="text-xs-left"
     >
       <h1 class="py-3">Pago de multas de la corte municipal en línea</h1>

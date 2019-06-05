@@ -2,7 +2,7 @@
   <v-container>
     <div
       class="py-3 text-xs-left"
-      v-if="$router.history.current.query.lang == 'es'"
+      v-if="$route.query.lang == 'es'"
     >
       <h1 class="pt-3">
         Información de contacto de la corte para adolescentes
