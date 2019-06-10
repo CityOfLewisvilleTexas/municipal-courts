@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <v-app>
-      <v-container fixed grid-list-xl text-md-center>
-        <navbar :lang="lang" @change="setLang"></navbar>
+      <v-container fixed grid-list-xl text-md-center my-5>
+        <!-- <navbar :lang="lang" @change="setLang"></navbar> -->
         <router-view>
           <home :lang="lang"></home>
         </router-view>

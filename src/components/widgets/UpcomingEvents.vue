@@ -1,5 +1,5 @@
 <template>
-  <v-flex xs12 m12 lg5>
+  <v-flex xs12 m12 lg3>
     <v-card class="upcoming-events">
       <div class="headline events"><span v-if="$route.query.lang == 'es'">Próximos Eventos</span><span v-else>Upcoming Events</span></div>
       <v-spacer></v-spacer>

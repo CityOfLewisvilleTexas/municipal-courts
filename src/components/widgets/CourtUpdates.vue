@@ -1,5 +1,5 @@
 <template>
-  <v-flex xs12 m12 lg5>
+  <v-flex xs12 m12 lg4 pl-5 ml-5>
     <v-card class="court-updates">
       <div class="headline updates">
         <span v-if="$route.query.lang == 'es'">

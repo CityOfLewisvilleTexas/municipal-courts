@@ -1,5 +1,5 @@
 <template>
-  <v-flex pa-4 mb-5 mt-5>
+  <v-flex pa-4>
     <v-container mt-5>
       <span style="display:inline-block;font-size:22px;">
         <h1>
