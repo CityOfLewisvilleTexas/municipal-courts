@@ -4,7 +4,7 @@
       <v-img
         class="white--text"
         height="inherit"
-        src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+        :src="images.stock"
       >
       </v-img>
       <v-card-title id="statement">
@@ -23,7 +23,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      images: {
+        stock: require('../../assets/court.jpg')
+      }
+    }
+  }
+};
 </script>
 
 <style scoped>
