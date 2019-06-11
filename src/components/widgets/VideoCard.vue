@@ -1,24 +1,29 @@
 <template>
   <v-flex lg7 pa-5>
-    <iframe width="auto" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-    </iframe>
+    <v-img :src="images.stock"></v-img>
   </v-flex>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+        images: {
+        stock: require('../../assets/court_judge.jpg')
+      }
+    }
+  }
+};
 </script>
 
-<style>
+<style >
 #judge-card {
   background-color: #ddd;
 }
 a {
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
-}
+
 iframe {
   width: -webkit-fill-available;
   height: 325px;

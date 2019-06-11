@@ -1,5 +1,5 @@
 <template>
-  <v-flex xs12 m12 lg5>
+  <v-flex xs12 m12 lg5 id="events">
     <v-card class="upcoming-events">
       <div class="headline events"><span v-if="$route.query.lang == 'es'">Próximos Eventos</span><span v-else>Upcoming Events</span></div>
       <v-spacer></v-spacer>
@@ -73,7 +73,7 @@ export default {
   border: none;
   box-shadow: none;
   background-color: inherit !important;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
+  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
 }
 .headline.events {
   padding-top: 20px;
@@ -81,7 +81,7 @@ export default {
   text-align: left;
   padding-left: 45px;
   font-size: 2rem !important;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
+  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
 }
 .event {
   text-align: left;
@@ -91,7 +91,7 @@ export default {
   border: none !important;
   box-shadow: none !important;
   background-color: inherit !important;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
+  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
 }
 .date {
   margin-right: 25px;

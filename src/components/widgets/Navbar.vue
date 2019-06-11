@@ -1,14 +1,18 @@
 <template>
-  <v-app>
+  <v-app class="xs12"> 
     <v-navigation-drawer
-      v-model="sidebar"
+      :clipped="drawer.clipped"
+      :fixed="drawer.fixed"
+      :permanent="drawer.permanent"
+      :mini-variant="drawer.mini"
+      v-model="drawer.open"
       app
-      v-if="sidebar && window.width < 961"
+      dark
     >
-      <v-list class="white--text dark">
+     <v-list class="white--text dark">
         <v-list-tile>
           <v-list-tile-content>
-            <v-menu offset-y open-on-hover>
+            <v-menu bottom transition="scale-transition" origin="center center" open-on-click dark>
               <template v-slot:activator="{ on }">
                 <v-btn flat primary--text v-on="on">
                   <span v-if="$route.query.lang == 'es'">
@@ -49,7 +53,7 @@
         </v-list-tile>
         <v-list-tile>
           <v-list-tile-content>
-            <v-menu offset-y open-on-hover>
+            <v-menu bottom transition="scale-transition" origin="center center" open-on-click dark>
               <template v-slot:activator="{ on }">
                 <v-btn flat primary--text v-on="on">
                   <span v-if="$route.query.lang == 'es'">
@@ -89,7 +93,7 @@
         </v-list-tile>
         <v-list-tile>
           <v-list-tile-content>
-            <v-menu offset-y open-on-hover>
+            <v-menu bottom transition="scale-transition" origin="center center" open-on-click dark>
               <template v-slot:activator="{ on }">
                 <v-btn flat primary--text v-on="on">
                   <span v-if="$route.query.lang == 'es'">
@@ -130,7 +134,7 @@
         </v-list-tile>
         <v-list-tile>
           <v-list-tile-content>
-            <v-menu offset-y open-on-hover>
+            <v-menu bottom transition="scale-transition" origin="center center" open-on-click dark>
               <template v-slot:activator="{ on }">
                 <v-btn flat primary--text v-on="on">
                   <span v-if="$route.query.lang == 'es'">
@@ -238,10 +242,19 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar :height="125" dark color="#1855B0" fixed>
-      <v-toolbar-side-icon
-        class="hidden-lg-and-up"
-        @click="sidebar = !sidebar"
+    
+     <v-divider></v-divider>
+
+    <v-toolbar
+      app
+      :fixed="toolbar.fixed"
+      :clipped-left="toolbar.clippedLeft"
+      style="background-color:rebeccapurple;
+      padding-left:0;"
+      :height="120"
+    >
+      <v-toolbar-side-icon 
+        @click="toggleDrawer"
       ></v-toolbar-side-icon>
       <img
         class="hidden-md-and-down"
@@ -481,12 +494,28 @@
         </v-btn>
       </v-toolbar-items>
     </v-toolbar>
+    <v-content>
+      <v-container fluid fill-height>
+        <v-layout justify-center align-center>
+          <v-flex shrink>
+            <router-view>
+              <home :lang="lang"></home>
+            </router-view>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-content>
   </v-app>
 </template>
 
 <script>
+import home from '../pages/Home'
+//@TODO: CREATE FOOTER
 export default {
   props: ["lang"],
+  components: {
+    home
+  },
   data() {
     return {
       navItems: {
@@ -584,6 +613,21 @@ export default {
           }
         ]
       },
+      drawer: {
+      open: true,
+      clipped: true,
+      fixed: true,
+      permanent: true,
+      mini: false
+    },
+    toolbar: {
+      fixed: true,
+      clippedLeft: true
+    },
+    footer: {
+      fixed: true,
+      clippedLeft: true
+    },
       sidebar: false,
       window: {
         height: 0,
@@ -605,6 +649,17 @@ export default {
     },
     changeLang() {
       this.$emit("change", "es");
+    },
+    makeDrawerPermanent () {
+      this.drawer.permanent = true
+      // set the clipped state of the drawer and toolbar
+      this.drawer.clipped = false
+      this.toolbar.clippedLeft = false
+    },
+    // toggles the drawer type (permanent vs temporary) or shows/hides the drawer
+    toggleDrawer () {
+        this.drawer.open = !this.drawer.open
+        this.drawer.permanent = !this.drawer.permanent
     }
   },
   updated: {}
@@ -674,12 +729,19 @@ v-list-title > v-list-title-tile > a {
   color: #000;
 }
 #lmc {
-  font-family: Times New Roman, Serif;
   font-size: 24px;
   font-weight: 500;
   color: white;
 }
-#lmc:hover {
+a > #lmc:hover {
   text-decoration: none !important;
+}
+
+a {
+  color: white;
+}
+
+v-list-title:hover {
+    background-color: #2a2929;
 }
 </style>

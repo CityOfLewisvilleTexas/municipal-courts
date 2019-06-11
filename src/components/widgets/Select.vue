@@ -1,6 +1,6 @@
 <template>
-  <v-flex pa-4 mb-5 mt-5>
-    <v-container mt-5>
+  <v-flex pa-4>
+    <v-container text-md-center> 
       <span style="display:inline-block;font-size:22px;">
         <h1>
           <span v-if="$route.query.lang == 'es'">Necesito...&nbsp;&nbsp;</span>

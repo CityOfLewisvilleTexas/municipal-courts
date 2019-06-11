@@ -1,5 +1,5 @@
 <template>
-  <v-flex xs12 m12 lg5>
+  <v-flex xs12 m12 lg5 id="updates">
     <v-card class="court-updates">
       <div class="headline updates">
         <span v-if="$route.query.lang == 'es'">
@@ -83,7 +83,7 @@ export default {
   border: none;
   box-shadow: none;
   background-color: inherit !important;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
+  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
 }
 .headline.updates {
   padding-top: 20px;
@@ -91,7 +91,7 @@ export default {
   text-align: left;
   padding-left: 45px;
   font-size: 2rem !important;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
+  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
 }
 .update {
   text-align: left;
@@ -101,6 +101,6 @@ export default {
   border: none !important;
   box-shadow: none !important;
   background-color: inherit !important;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
+  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <v-flex pt-5 pr-5 pl-5 mt-5 mr-5 ml-5 id="mission-statement">
+  <v-flex mt-5 id="mission-statement">
     <v-card height="600px">
       <v-img
         class="white--text"

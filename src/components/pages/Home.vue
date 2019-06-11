@@ -2,42 +2,41 @@
   <v-layout row wrap>
     <v-container>
       <i-want-to></i-want-to>
+    </v-container>
+
+    <v-container id="mission-card">
       <mission-statement></mission-statement>
     </v-container>
 
-    <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
     <court-updates></court-updates>
     <upcoming-events></upcoming-events>
-    <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
+  
 
-    <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-    <v-flex xs12 sm12 md0 lg10 id="judge-card">
+    <v-container>
+    <v-flex xs12 sm12 md12 lg12 id="judge-card">
       <v-layout row fluid wrap>
         <judge-card></judge-card>
         <video-card></video-card>
       </v-layout>
     </v-flex>
-    <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
+    </v-container>
 
-    <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-    <v-flex xs12 sm12 m10 lg10>
+    <v-container>
+    <v-flex xs12 sm12 md12 lg12>
       <court-metrics></court-metrics>
     </v-flex>
-    <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
+    </v-container>
 
-    <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-    <v-flex xs12 sm12 m10 lg10>
+    <v-container>
+    <v-flex xs12 sm12 md12 lg12>
       <support></support>
     </v-flex>
-    <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
+    </v-container>
 
-    <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-    <feedback></feedback>
-    <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
+    <v-container>
+      <feedback></feedback>
+   </v-container>
 
-    <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
-
-    <v-flex xs0 md0 lg1 class="spacer"> </v-flex>
   </v-layout>
 </template>
 
@@ -88,4 +87,17 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+div#updates {
+  margin-left: 12% !important;
+}
+
+@media only screen and (max-width:1264px) {
+   div#updates {
+  margin-left:0 !important;
+} 
+  /* div#events {
+    margin-left: 6% !important;
+  } */
+}
+</style>

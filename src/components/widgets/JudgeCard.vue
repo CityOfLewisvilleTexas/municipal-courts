@@ -1,6 +1,6 @@
 <template>
   <v-flex lg5 pa-5 text-sm-left>
-    <h1 text-sm-left><span v-if="$route.query.lang == 'es'">Conozca a su juez, honorable señor juez</span><span v-else>Meet your Judge, Honorable Gavel Judge</span></h1>
+    <h1 text-sm-left><span v-if="$route.query.lang == 'es'">Conozca a su juez, honorable Brian Holman</span><span v-else>Meet your Judge, Honorable Brian Holman</span></h1>
     <router-link to="/">
       <h2 text-sm-left><span v-if="$route.query.lang == 'es'">Aprende sobre la corte</span><span v-else>Learn about the court</span></h2>
     </router-link>
@@ -11,7 +11,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 #judge-card {
   background-color: #ddd;
 }

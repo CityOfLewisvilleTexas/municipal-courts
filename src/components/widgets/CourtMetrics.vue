@@ -3,10 +3,10 @@
     <v-flex xs12 lg4 text-xs-center>
       <div class="metric-title">
           <span v-if="$route.query.lang == 'es'">Casos en el último año</span>
-          <span v-else>Number of Cases in Past 1 Year</span></div>
+          <span v-else>Cases in Past Year</span></div>
       <div class="metric-value">{{ metrics.CaseCountPast1Year }}</div>
     </v-flex>
-    <v-flex xs12 m12 lg4 text-xs-center>
+    <v-flex xs12 lg4 text-xs-center>
       <div class="metric-title">
           <span v-if="$route.query.lang == 'es'">Días para la resolución de casos
 </span>

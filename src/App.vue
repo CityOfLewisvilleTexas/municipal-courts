@@ -1,12 +1,7 @@
 <template>
   <div id="app">
-    <v-app>
-      <v-container fixed grid-list-xl text-md-center>
+    <v-app fixed grid-list-xl text-md-center>
         <navbar :lang="lang" @change="setLang"></navbar>
-        <router-view>
-          <home :lang="lang"></home>
-        </router-view>
-      </v-container>
       <snackbar :snackbar="snackbar"></snackbar>
     </v-app>
   </div>
@@ -87,10 +82,10 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 
 * {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 body {
   background-color: #fafafa;
