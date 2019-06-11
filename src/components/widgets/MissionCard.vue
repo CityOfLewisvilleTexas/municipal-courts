@@ -14,8 +14,7 @@
           </v-flex>
           <span style="font-size:1.5rem;"
             ><span v-if="$route.query.lang == 'es'">Nuestra misión es ser neutral, cortés, servicial y justo para todos los miembros del público.</span>
-            <span v-else>Our mission is to be neutral, courteous, helpful, and fair for all
-            members of the public.</span></span><br />
+            <span v-else>To ensure the fair, orderly and effective administration of justice by promoting and enhancing respect for the individual, our community and the judicial system.</span></span><br />
         </div>
       </v-card-title>
     </v-card>
