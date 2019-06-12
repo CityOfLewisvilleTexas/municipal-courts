@@ -101,12 +101,12 @@ div.application--wrap {
   min-height: 100px !important;
 }
 @media only screen and (max-width: 750px) {
-  #statement {
+  /* #statement {
     display: none;
-  }
+  } */
 
-  #mission-statement {
+  /* #mission-statement {
     display: none;
-  }
+  } */
 }
 </style>

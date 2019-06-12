@@ -4,7 +4,7 @@
       <span style="display:inline-block;font-size:22px;">
         <h1>
           <span v-if="$route.query.lang == 'es'">Necesito...&nbsp;&nbsp;</span>
-          <span v-else>I want to...&nbsp;&nbsp;</span></h1>
+          <span v-else>How do I...&nbsp;&nbsp;</span></h1>
       </span>
       <v-select
         :items="$route.query.lang == 'es' ? options.es : options.en"

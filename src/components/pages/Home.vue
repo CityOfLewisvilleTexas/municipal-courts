@@ -5,7 +5,7 @@
     </v-container>
 
     <v-container id="mission-card">
-      <mission-statement></mission-statement>
+      <mission-statement :window="window"></mission-statement>
     </v-container>
 
     <court-updates></court-updates>
@@ -53,7 +53,7 @@ import Feedback from "../widgets/Feedback";
 //import Map from '../widgets/Map'
 
 export default {
-  // props: ["lang"],
+   props: ["lang", "window"],
   components: {
     "i-want-to": Select,
     "mission-statement": MissionCard,

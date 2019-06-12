@@ -233,10 +233,10 @@
         <v-list-tile>
           <v-list-tile-content>
             <v-btn flat @click="changeLang">
-              <span v-if="lang == 'en'"
+              <span style="color:white" v-if="lang == 'en'"
                 >ESPA&#xd1;OL&nbsp;<flag iso="es"></flag
               ></span>
-              <span v-else>ENGLISH&nbsp;<flag iso="us"></flag>&nbsp;</span>
+              <span style="color:white" v-else>ENGLISH&nbsp;<flag iso="us"></flag>&nbsp;</span>
             </v-btn>
           </v-list-tile-content>
         </v-list-tile>
@@ -488,9 +488,10 @@
         >
         <v-btn flat @click="changeLang">
           <span v-if="lang == 'en'"
+          style="color:white"
             >ESPA&#xd1;OL&nbsp;<flag iso="es"></flag
           ></span>
-          <span v-else>ENGLISH&nbsp;<flag iso="us"></flag>&nbsp;</span>
+          <span style="color:white" v-else>ENGLISH&nbsp;<flag iso="us"></flag>&nbsp;</span>
         </v-btn>
       </v-toolbar-items>
     </v-toolbar>
@@ -499,7 +500,7 @@
         <v-layout justify-center align-center>
           <v-flex shrink>
             <router-view>
-              <home :lang="lang"></home>
+              <home :lang="lang" :window="window"></home>
             </router-view>
           </v-flex>
         </v-layout>
@@ -581,8 +582,8 @@ export default {
           },
           {
             title: {
-              en:"Teen Court Contact Information",
-              es: "Información de contacto para corte adolescentes"
+              en:"Teen Court Contact",
+              es: "Contacto para corte adolescentes"
             },              
             component: "TeenCourtContact",
             path: "/teen-court-contact"
@@ -704,11 +705,11 @@ v-list-title {
   margin-left: 4px;
   cursor: pointer;
 }
-v-list-title:hover {
+aside > v-list-title:hover {
   background-color: #ddd;
 }
 
-v-list-title > v-list-title-tile > a {
+aside > v-list-title > v-list-title-tile > a {
   text-decoration: none;
 }
 .v-btn__content > a {
@@ -733,15 +734,15 @@ v-list-title > v-list-title-tile > a {
   font-weight: 500;
   color: white;
 }
-a > #lmc:hover {
+aside > a > #lmc:hover {
   text-decoration: none !important;
 }
 
-a {
+aside > a {
   color: white;
 }
 
-v-list-title:hover {
+aside > v-list-title:hover {
     background-color: #2a2929;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
-  <v-layout row fluid wrap py-5 pr-5 class="support">
+  <v-layout row fluid wrap pt-5 pr-5 class="support">
     <v-flex class="support--left" xs12 lg6 py-5 mr-5 pl-5 text-xs-center>
       <v-card style="background-color:inherit;box-shadow:none;border:none;">
-        <v-layout column align-center justify-start ml-0>
-          <v-avatar :size="200" my-3>
+        <v-layout column align-center justify-start ml-0 mt-5>
+          <v-avatar :size="300" my-3>
             <v-img
               class="elevation-7"
               :src="images.stock"
@@ -50,12 +50,19 @@
         Monday - Thursday: 7:30 a.m. to 5:30 p.m.<br />
         Friday: 7:30 a.m. to 11:30 a.m.
       </p>
+      <div>
+        <citymap></citymap>
+      </div>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
+import citymap from './Map'
 export default {
+  components: {
+    citymap
+  },
   data() {
     return {
          images: {
@@ -67,11 +74,11 @@ export default {
 </script>
 
 <style>
-div#app {
+/* div#app {
     background: url(https://upload.wikimedia.org/wikipedia/commons/8/8d/Lewisville_City_Hall_2.jpg);
     background-repeat: no-repeat;
     background-position: -208px -54px;
-}
+} */
 .support {
   background-color: #1855b0;
 }

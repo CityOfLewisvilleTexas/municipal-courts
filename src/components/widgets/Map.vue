@@ -1,6 +1,4 @@
 <template>
-  <v-flex xs12 sm12 md12 lg10>
-    <v-flex xs12 sm12 md5 lg5>
       <div class="mapouter">
         <div class="gmap_canvas">
           <iframe
@@ -16,8 +14,6 @@
           </iframe>
         </div>
       </div>
-    </v-flex>
-  </v-flex>
 </template>
 
 <script>
@@ -28,13 +24,12 @@ export default {};
 .mapouter {
   position: relative;
   text-align: right;
-  height: 500px;
   width: auto;
+  margin-bottom: 24px;
 }
 .gmap_canvas {
   overflow: hidden;
   background: none !important;
-  height: 500px;
   width: auto;
 }
 </style>
