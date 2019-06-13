@@ -54,7 +54,8 @@ export default {
 
 <style scoped>
 #statement {
-  width: 520px;
+  width: 75%;
+  opacity: .85;
   height: 200px !important;
   position: absolute;
   bottom: 100px;

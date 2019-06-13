@@ -16,15 +16,15 @@
               <template v-slot:activator="{ on }">
                 <v-btn flat primary--text v-on="on">
                   <span v-if="$route.query.lang == 'es'">
-                    Costos & multas de la corte
+                    Responder a una cita
                   </span>
                   <span v-else>
-                    Court Costs & Fines</span>
+                    Respond to a Citation</span>
                     </v-btn>
               </template>
               <v-list v-if="$route.query.lang == 'es'">
                 <v-list-title
-                  v-for="(item, index) in navItems.costsOptions"
+                  v-for="(item, index) in navItems.citationOptions"
                   :key="index"
                   :id="index"
                 >
@@ -37,7 +37,7 @@
               </v-list>
               <v-list v-else>
                 <v-list-title
-                  v-for="(item, index) in navItems.costsOptions"
+                  v-for="(item, index) in navItems.citationOptions"
                   :key="index"
                   :id="index"
                 >
@@ -57,10 +57,106 @@
               <template v-slot:activator="{ on }">
                 <v-btn flat primary--text v-on="on">
                   <span v-if="$route.query.lang == 'es'">
-                    Opciones de juicio
+                    Llegando a la corte
                   </span>
                   <span v-else>
-                    Trial Options</span></v-btn>
+                    Coming to Court</span></v-btn>
+              </template>
+              <v-list v-if="$route.query.lang == 'es'">
+                <v-list-title
+                  v-for="(item, index) in navItems.courtOptions"
+                  :key="index"
+                  :id="index"
+                >
+                  <v-list-title-tile
+                    ><router-link :to="item.path + `?lang=${lang}`">{{
+                      item.title.es
+                    }}</router-link></v-list-title-tile
+                  >
+                </v-list-title>
+              </v-list>
+              <v-list v-else>
+                <v-list-title
+                  v-for="(item, index) in navItems.courtOptions"
+                  :key="index"
+                  :id="index"
+                >
+                  <v-list-title-tile
+                    ><router-link :to="item.path + `?lang=${lang}`">{{
+                      item.title.en
+                    }}</router-link></v-list-title-tile
+                  >
+                </v-list-title>
+              </v-list>
+              <v-list>
+                 <v-list-title>
+                  <v-list-title-tile>
+                    <span v-if="$route.query.lang == 'es'">
+                      <a href="http://eservices.cityoflewisville.com/courtsservices/dockets.html">
+                      ¿Cuándo es mi cita de corte?</a>
+                    </span>
+                    <span v-else>
+                      <a href="http://eservices.cityoflewisville.com/courtsservices/dockets.html">
+                      When is my Court Date?</a>
+                    </span>
+                  </v-list-title-tile>
+                </v-list-title>
+              </v-list>
+            </v-menu>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+          <v-list-tile-content>
+            <v-menu bottom transition="scale-transition" origin="center center" open-on-click dark>
+              <template v-slot:activator="{ on }">
+                <v-btn flat primary--text v-on="on">
+                  <span v-if="$route.query.lang == 'es'">
+                    Pague mi multa
+                  </span>
+                  <span v-else>
+                    Pay my Fine</span>
+                    </v-btn>
+              </template>
+              <v-list v-if="$route.query.lang == 'es'">
+                <v-list-title
+                  v-for="(item, index) in navItems.fineOptions"
+                  :key="index"
+                  :id="index"
+                >
+                  <v-list-title-tile
+                    ><router-link :to="item.path + `?lang=${lang}`">{{
+                      item.title.es
+                    }}</router-link></v-list-title-tile
+                  >
+                </v-list-title>
+              </v-list>
+              <v-list v-else>
+                <v-list-title
+                  v-for="(item, index) in navItems.fineOptions"
+                  :key="index"
+                  :id="index"
+                >
+                  <v-list-title-tile
+                    ><router-link :to="item.path + `?lang=${lang}`">{{
+                      item.title.en
+                    }}</router-link></v-list-title-tile
+                  >
+                </v-list-title>
+              </v-list>
+            </v-menu>
+          </v-list-tile-content>
+        </v-list-tile>
+         <v-list-tile>
+          <v-list-tile-content>
+            <v-menu bottom transition="scale-transition" origin="center center" open-on-click dark>
+              <template v-slot:activator="{ on }">
+                <v-btn flat primary--text v-on="on">
+                  <span v-if="$route.query.lang == 'es'">
+                    Llegando a juicio
+                  </span>
+                  <span v-else>
+                    Going to Trial</span>
+                    </v-btn>
               </template>
               <v-list v-if="$route.query.lang == 'es'">
                 <v-list-title
@@ -97,11 +193,50 @@
               <template v-slot:activator="{ on }">
                 <v-btn flat primary--text v-on="on">
                   <span v-if="$route.query.lang == 'es'">
-                    Corte de adolescentes
+                    Servicio de jurado
                   </span>
                   <span v-else>
-                    Teen Court</span>
+                    Jury Duty</span>
                     </v-btn>
+              </template>
+              <v-list v-if="$route.query.lang == 'es'">
+                <v-list-title
+                  v-for="(item, index) in navItems.juryDutyOptions"
+                  :key="index"
+                  :id="index"
+                >
+                  <v-list-title-tile
+                    ><router-link :to="item.path + `?lang=${lang}`">{{
+                      item.title.es
+                    }}</router-link></v-list-title-tile
+                  >
+                </v-list-title>
+              </v-list>
+              <v-list v-else>
+                <v-list-title
+                  v-for="(item, index) in navItems.juryDutyOptions"
+                  :key="index"
+                  :id="index"
+                >
+                  <v-list-title-tile
+                    ><router-link :to="item.path + `?lang=${lang}`">{{
+                      item.title.en
+                    }}</router-link></v-list-title-tile
+                  >
+                </v-list-title>
+              </v-list>
+            </v-menu>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+          <v-list-tile-content>
+            <v-menu bottom transition="scale-transition" origin="center center" open-on-click dark>
+              <template v-slot:activator="{ on }">
+                <v-btn flat primary--text v-on="on">
+                  <span>
+                    Teen Court
+                  </span>
+                </v-btn>
               </template>
               <v-list v-if="$route.query.lang == 'es'">
                 <v-list-title
@@ -138,98 +273,195 @@
               <template v-slot:activator="{ on }">
                 <v-btn flat primary--text v-on="on">
                   <span v-if="$route.query.lang == 'es'">
-                    Servicios adicionales
+                    ¿Tengo una orden?
                   </span>
                   <span v-else>
-                    Additional Services</span></v-btn>
+                    Do I Have a Warrant?</span>
+                    </v-btn>
+              </template>
+              <v-list v-if="$route.query.lang == 'es'">
+                <v-list-title
+                  v-for="(item, index) in navItems.warrantOptions"
+                  :key="index"
+                  :id="index"
+                >
+                  <v-list-title-tile
+                    ><router-link :to="item.path + `?lang=${lang}`">{{
+                      item.title.es
+                    }}</router-link></v-list-title-tile
+                  >
+                </v-list-title>
+              </v-list>
+              <v-list v-else>
+                <v-list-title
+                  v-for="(item, index) in navItems.warrantOptions"
+                  :key="index"
+                  :id="index"
+                >
+                  <v-list-title-tile
+                    ><router-link :to="item.path + `?lang=${lang}`">{{
+                      item.title.en
+                    }}</router-link></v-list-title-tile
+                  >
+                </v-list-title>
+              </v-list>
+            </v-menu>
+          </v-list-tile-content>
+        </v-list-tile>
+          <v-list-tile>
+          <v-list-tile-content>
+            <v-menu bottom transition="scale-transition" origin="center center" open-on-click dark>
+              <template v-slot:activator="{ on }">
+                <v-btn flat primary--text v-on="on">
+                  <span v-if="$route.query.lang == 'es'">
+                    Formularios de la corte
+                  </span>
+                  <span v-else>
+                    Court Forms</span>
+                    </v-btn>
+              </template>
+              <v-list v-if="$route.query.lang == 'es'">
+                <v-list-title
+                  v-for="(item, index) in navItems.courtForms"
+                  :key="index"
+                  :id="index"
+                >
+                  <v-list-title-tile
+                    ><router-link :to="item.path + `?lang=${lang}`">{{
+                      item.title.es
+                    }}</router-link></v-list-title-tile
+                  >
+                </v-list-title>
+              </v-list>
+              <v-list v-else>
+                <v-list-title
+                  v-for="(item, index) in navItems.courtForms"
+                  :key="index"
+                  :id="index"
+                >
+                  <v-list-title-tile
+                    ><router-link :to="item.path + `?lang=${lang}`">{{
+                      item.title.en
+                    }}</router-link></v-list-title-tile
+                  >
+                </v-list-title>
+              </v-list>
+              <v-list>
+                <v-list-title>
+                  <v-list-title-tile>
+                    <span v-if="$route.query.lang == 'es'">
+                      <a href="http://www.txdps.state.tx.us/driverlicense/driverrecords.htm">
+                      Ordene su registro de manejo</a>
+                    </span>
+                    <span v-else>
+                      <a href="http://www.txdps.state.tx.us/driverlicense/driverrecords.htm">
+                      Order Your Driving Record</a>
+                    </span>
+                  </v-list-title-tile>
+                </v-list-title>
+              </v-list>
+            </v-menu>
+          </v-list-tile-content>
+        </v-list-tile>
+
+         <v-list-tile>
+          <v-list-tile-content>
+            <v-menu bottom transition="scale-transition" origin="center center" open-on-click dark>
+              <template v-slot:activator="{ on }">
+                <v-btn flat primary--text v-on="on">
+                  <span v-if="$route.query.lang == 'es'">
+                    Ayuda de la corte Tejas
+                  </span>
+                  <span v-else>
+                   Texas Court Help</span>
+                    </v-btn>
               </template>
               <v-list>
                 <v-list-title>
                   <v-list-title-tile>
-                    <a
-                      href="https://www.cityoflewisville.com/about-us/departments-services/municipal-court/active-warrants"
-                      target="_blank"
-                      >
-                      <span v-if="$route.query.lang == 'es'">
-                       Órdenes activos
-                      </span>
-                      <span v-else>
-                        Active Warrants
-                      </span>
-                    </a
-                    >
+                    <span v-if="$route.query.lang == 'es'">
+                      <a href="https://www.tdlr.texas.gov/DESSearch">
+                      Encuentre un curso de seguridad para conducir aprobado por el estado</a>
+                    </span>
+                    <span v-else>
+                      <a href="https://www.tdlr.texas.gov/DESSearch">
+                      Find a State Approved Driving Safety Course</a>
+                    </span>
                   </v-list-title-tile>
                 </v-list-title>
                 <v-list-title>
                   <v-list-title-tile>
-                    <a
-                      href="http://eservices.cityoflewisville.com/courtsservices/dockets.html"
-                      target="_blank"
-                      >
-                      <span v-if="$route.query.lang == 'es'">
-                        Expendientes judiciales
-                      </span>
-                      <span v-else>
-                        Court Dockets</span>
-                        </a></v-list-title-tile>
+                    <span v-if="$route.query.lang == 'es'">
+                      <a href="https://lewisvillepl.driving-tests.org/texas/">
+                      Pruebas gratis de conducción DMV</a>
+                    </span>
+                    <span v-else>
+                      <a href="https://lewisvillepl.driving-tests.org/texas/">
+                      Free DMV Driving Tests</a>
+                    </span>
+                  </v-list-title-tile>
                 </v-list-title>
                 <v-list-title>
                   <v-list-title-tile>
-                    <a
-                      href="https://www.cityoflewisville.com/about-us/city-departments/information-technology-services/performance-dashboard-1841"
-                      target="_blank"
-                      >
-                      <span v-if="$route.query.lang == 'es'">
-                        Panel de rendimiento
-                      </span>
-                      <span v-else>
-                        Performance Dashboard
-                        </span></a>
-                        </v-list-title-tile>
+                    <span v-if="$route.query.lang == 'es'">
+                      <a href="http://www.txcourts.gov/programs-services/self-help/">
+                      Poder Judicial de Texas - Autoayuda</a>
+                    </span>
+                    <span v-else>
+                      <a href="http://www.txcourts.gov/programs-services/self-help/">
+                      Texas Judicial Branch - Self Help</a>
+                    </span>
+                  </v-list-title-tile>
                 </v-list-title>
                 <v-list-title>
                   <v-list-title-tile>
-                    <a
-                      href="https://www.cityoflewisville.com/about-us/city-departments/municipal-court/texas-court-help"
-                      target="_blank"
-                      >
-                      <span v-if="$route.query.lang == 'es'">
-                        Ayuda de la Corte Texas
-                      </span>
-                      <span v-else>
-                        Texas Court Help </span>
-                        </a>
-                      </v-list-title-tile
-                  >
+                    <span v-if="$route.query.lang == 'es'">
+                      <a href="https://www.sll.texas.gov/self-help/">
+                      Biblioteca de Leyes del Estado de Texas - Autoayuda</a>
+                    </span>
+                    <span v-else>
+                      <a href="https://www.sll.texas.gov/self-help/">
+                      Texas State Law Library – Self Help</a>
+                    </span>
+                  </v-list-title-tile>
                 </v-list-title>
                 <v-list-title>
                   <v-list-title-tile>
-                    <router-link
-                      :to="navItems.courtForms.path + `?lang=${lang}`"
-                      >
-                      <span v-if="$route.query.lang == 'es'">
-                        Formularios de la corte
-                      </span>
-                      <span v-else>
-                        Court Forms</span>
-                        </router-link>
-                        </v-list-title-tile>
+                    <span v-if="$route.query.lang == 'es'">
+                      <a href="http://texascourthelp.gov/">
+                      Ayuda de la Corte de Texas</a>
+                    </span>
+                    <span v-else>
+                      <a href="http://texascourthelp.gov/">
+                      Texas Court Help</a>
+                    </span>
+                  </v-list-title-tile>
                 </v-list-title>
               </v-list>
             </v-menu>
           </v-list-tile-content>
         </v-list-tile>
+        
+         <v-list-tile>
+          <v-list-tile-content>
+            <v-btn flat>
+              <span style="color:white" v-if="lang == 'en'"
+                ><a href="http://eservices.cityoflewisville.com/courtsservices/dockets.html">View Court Dockets</a></span>
+              <span style="color:white" v-else><a href="http://eservices.cityoflewisville.com/courtsservices/dockets.html">Expedientes de la corte</a></span>
+            </v-btn>
+          </v-list-tile-content>
+        </v-list-tile>
+
         <v-list-tile>
           <v-list-tile-content>
             <v-btn flat>
-              <router-link :to="navItems.jurySummons.path + `?lang=${lang}`">
-                <span v-if="$route.query.lang == 'es'">
-                  Citaciones del jurado
-                </span>
-                <span v-else>
-                  Jury Summons</span></router-link></v-btn>
+              <span style="color:white" v-if="lang == 'en'"
+                ><a href="http://metrics.cityoflewisville.com/d/#/dashboard/public/details/court">Performance Dashboard</a></span>
+              <span style="color:white" v-else><a href="http://metrics.cityoflewisville.com/d/#/dashboard/public/details/court">Panel de rendimiento</a></span>
+            </v-btn>
           </v-list-tile-content>
         </v-list-tile>
+
         <v-list-tile>
           <v-list-tile-content>
             <v-btn flat @click="changeLang">
@@ -253,247 +485,21 @@
       padding-left:0;"
       :height="120"
     >
-      <v-toolbar-side-icon 
+      <!-- <v-toolbar-side-icon 
         @click="toggleDrawer"
-      ></v-toolbar-side-icon>
-      <img
-        class="hidden-md-and-down"
+      ></v-toolbar-side-icon> -->
+      <v-toolbar-title class="white--text"
+        ><div class="center">
+          <router-link :to="navItems.home.path + `?lang=${lang}`"
+          >
+           <img
         src="http://metrics.cityoflewisville.com/assets/pmartin_dark.png"
-        style="color:white"
         width="75"
       />
-      <v-toolbar-title class="white--text hidden-md-only"
-        ><router-link :to="navItems.home.path + `?lang=${lang}`"
-          ><span id="lmc">Lewisville Municipal Court</span>
+      <span id="lmc">&nbsp;&nbsp;&nbsp;Lewisville Municipal Court</span>
         </router-link>
+        </div>
       </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-sm-and-down">
-        <v-menu text-xs-center offset-y open-on-hover>
-          <template v-slot:activator="{ on }">
-            <v-btn flat dark v-on="on">
-              <span v-if="$route.query.lang == 'es'">
-            Costos & multas de la corte
-              </span>
-              <span v-else>
-                Court Costs & Fines
-              </span>
-            </v-btn>
-          </template>
-          <v-list v-if="$route.query.lang == 'es'">
-            <v-list-title
-              v-for="(item, index) in navItems.costsOptions"
-              :key="index"
-              :id="index"
-            >
-              <v-list-title-tile
-                ><router-link :to="item.path + `?lang=${lang}`">{{
-                  item.title.es
-                }}</router-link></v-list-title-tile
-              >
-            </v-list-title>
-          </v-list>
-          <v-list v-else>
-            <v-list-title
-              v-for="(item, index) in navItems.costsOptions"
-              :key="index"
-              :id="index"
-            >
-              <v-list-title-tile
-                ><router-link :to="item.path + `?lang=${lang}`">{{
-                  item.title.en
-                }}</router-link></v-list-title-tile
-              >
-            </v-list-title>
-          </v-list>
-        </v-menu>
-        <v-menu text-xs-center offset-y open-on-hover>
-          <template v-slot:activator="{ on }">
-            <v-btn flat dark v-on="on">
-              <span v-if="$route.query.lang == 'es'">
-              Opciones de juicio
-              </span>
-              <span v-else>
-                Trial Options
-              </span>
-            </v-btn>
-          </template>
-          <v-list v-if="$route.query.lang == 'es'">
-            <v-list-title
-              v-for="(item, index) in navItems.trialOptions"
-              :key="index"
-              :id="index"
-            >
-              <v-list-title-tile
-                ><router-link :to="item.path + `?lang=${lang}`">{{
-                  item.title.es
-                }}</router-link></v-list-title-tile
-              >
-            </v-list-title>
-          </v-list>
-          <v-list v-else>
-            <v-list-title
-              v-for="(item, index) in navItems.trialOptions"
-              :key="index"
-              :id="index"
-            >
-              <v-list-title-tile
-                ><router-link :to="item.path + `?lang=${lang}`">{{
-                  item.title.en
-                }}</router-link></v-list-title-tile
-              >
-            </v-list-title>
-          </v-list>
-        </v-menu>
-        <v-menu text-xs-center offset-y open-on-hover>
-          <template v-slot:activator="{ on }">
-            <v-btn flat dark v-on="on">
-              <span v-if="$route.query.lang == 'es'">
-              Corte de adolescentes
-              </span>
-              <span v-else>
-                Teen Court
-              </span>
-            </v-btn>
-          </template>
-          <v-list v-if="$route.query.lang == 'es'">
-            <v-list-title
-              v-for="(item, index) in navItems.teenCourtOptions"
-              :key="index"
-              :id="index"
-            >
-              <v-list-title-tile
-                ><router-link :to="item.path + `?lang=${lang}`">{{
-                  item.title.es
-                }}</router-link></v-list-title-tile
-              >
-            </v-list-title>
-          </v-list>
-          <v-list v-else>
-            <v-list-title
-              v-for="(item, index) in navItems.teenCourtOptions"
-              :key="index"
-              :id="index"
-            >
-              <v-list-title-tile
-                ><router-link :to="item.path + `?lang=${lang}`">{{
-                  item.title.en
-                }}</router-link></v-list-title-tile
-              >
-            </v-list-title>
-          </v-list>
-        </v-menu>
-        <v-menu text-xs-center offset-y open-on-hover>
-          <template v-slot:activator="{ on }">
-            <v-btn flat dark v-on="on">
-              <span v-if="$route.query.lang == 'es'">
-              Servicios adicionales
-              </span>
-              <span v-else>
-                Additional Services
-              </span>
-            </v-btn>
-          </template>
-          <v-list>
-            <v-list-title>
-              <v-list-title-tile>
-                <a
-                  href="https://www.cityoflewisville.com/about-us/departments-services/municipal-court/active-warrants"
-                  target="_blank"
-                  >
-                  <span v-if="$route.query.lang == 'es'">
-              Órdenes activos
-                  </span>
-                  <span v-else>
-                    Active Warrants
-                  </span>
-                </a
-                >
-              </v-list-title-tile>
-            </v-list-title>
-            <v-list-title>
-              <v-list-title-tile>
-                <a
-                  href="http://eservices.cityoflewisville.com/courtsservices/dockets.html"
-                  target="_blank"
-                  >
-                  <span v-if="$route.query.lang == 'es'">
-              Expendientes judiciales
-                  </span>
-                  <span v-else>
-                    Court Dockets
-                  </span>
-                </a
-                ></v-list-title-tile
-              >
-            </v-list-title>
-            <v-list-title>
-              <v-list-title-tile>
-                <a
-                  href="https://www.cityoflewisville.com/about-us/city-departments/information-technology-services/performance-dashboard-1841"
-                  target="_blank"
-                  >
-                  <span v-if="$route.query.lang == 'es'">
-              Panel de rendimiento
-                  </span>
-                  <span v-else>
-                    Performance Dashboard
-                  </span>
-                </a
-                ></v-list-title-tile
-              >
-            </v-list-title>
-            <v-list-title>
-              <v-list-title-tile>
-                <a
-                  href="https://www.cityoflewisville.com/about-us/city-departments/municipal-court/texas-court-help"
-                  target="_blank"
-                  >
-                  <span v-if="$route.query.lang == 'es'">
-              Ayuda de la Corte Texas
-                  </span>
-                  <span v-else>
-                    Texas Court Help
-                  </span>
-                </a
-                ></v-list-title-tile
-              >
-            </v-list-title>
-            <v-list-title>
-              <v-list-title-tile>
-                <router-link :to="navItems.courtForms.path + `?lang=${lang}`"
-                  >
-                  <span v-if="$route.query.lang == 'es'">
-                  Formularios de la corte
-                  </span>
-                  <span v-else>
-                    Court Forms
-                    </span>
-                    </router-link>
-                </v-list-title-tile>
-            </v-list-title>
-          </v-list>
-        </v-menu>
-        <v-btn flat>
-          <router-link :to="navItems.jurySummons.path + `?lang=${lang}`"
-            >
-            <span v-if="$route.query.lang == 'es'">
-              Citaciones del jurado
-            </span>
-            <span v-else>
-              Jury Summons
-            </span>
-          </router-link>
-         </v-btn
-        >
-        <v-btn flat @click="changeLang">
-          <span v-if="lang == 'en'"
-          style="color:white"
-            >ESPA&#xd1;OL&nbsp;<flag iso="es"></flag
-          ></span>
-          <span style="color:white" v-else>ENGLISH&nbsp;<flag iso="us"></flag>&nbsp;</span>
-        </v-btn>
-      </v-toolbar-items>
     </v-toolbar>
     <v-content>
       <v-container fluid fill-height>
@@ -525,53 +531,169 @@ export default {
           component: "Home",
           path: `/`
         },
-        courtForms: {
-          title: "courtForms",
-          component: "CourtForms",
-          path: `/court-forms`
-        },
-        jurySummons: {
-          title: "jurySummons",
-          component: "JurySummons",
-          path: `/jury-summons`
-        },
-        costsOptions: [
+        citationOptions: [
           {
             title: {
-              en:"Pay Court Fines",
-              es:"Pague Multas de la corte"
+              en:"Know your Rights",
+              es:"Conoce tus derechos"
             },
-            component: "PayCourtFines",
-            path: "/pay-court-fines"
+            component: "KnowYourRights",
+            path: "/citation-rights"
           },
           {
             title: {
-              en: "Fines/Court Costs",
-              es: "Costos & Multas"
+              en: "Options",
+              es: "Opciones"
             },
+            component: "Options",
+            path: "/citation-options"
+          },
+          {
+            title: {
+              en: "Alternatives to Trial",
+              es: "Alternativas al trial"
+            },
+            component: "TrialAlternatives",
+            path: "/citation-alternatives"
+          }
+        ],
+        courtOptions: [
+          {
+            title: { 
+              en:"Hours and Directions",
+              es: "Horas y Direcciones"
+            },
+            component: "HoursDirections",
+            path: "/court-hours-directions"
+          },
+          {
+            title: {
+              en:"Dress Code & Decorum",
+              es:"Código de vestimenta y decoro"
+            },
+            component: "DressCode",
+            path: "/court-dress-code"
+          },
+          {
+            title: {
+              en:"Court Security",
+              es:"Seguridad de la corte"
+            },
+            component: "Security",
+            path: "/court-security"
+          },
+          {
+            title: {
+              en:"Mobile / Cell Phones",
+              es:"Móviles / Celulares"
+            },
+            component: "CellPhones",
+            path: "/court-phones"
+          }
+        ],
+        fineOptions: [
+          {
+            title: {
+              en:"Pay Fines Online",
+              es:"Pagar multas en línea"
+            },
+            component: "PayFinesOnline",
+            path: "/fines-pay-online"
+          },
+          {
+            title: {
+              en:"Fines/Court Costs",
+              es: "Multas / Costos de la Corte"
+            },              
             component: "CourtCosts",
-            path: "/court-costs"
+            path: "/fines-court-costs"
+          },
+          {
+            title: {
+              en:"Alternatives",
+              es: "Alternativas"
+            },
+            component: "Alternatives",
+            path: "/fines-alternatives"
           }
         ],
         trialOptions: [
           {
-            title: { 
-              en:"Trial Procedures",
-              es: "Procedimientos judiciales"
+            title: {
+              en: "Presenting your Case",
+              es: "Presentando su caso",
             },
-            component: "TrialProcedures",
-            path: "/trial-procedures"
+            component: "CasePresentation",
+            path: "/trial-case-presentation"
           },
           {
-            title: {
-              en:"Alternatives to Trial",
-              es:"Alternativas a trial"
+             title: {
+              en: "Continuances",
+              es: "Continuas",
             },
-            component: "TrialAlternatives",
-            path: "/trial-alternatives"
+            component: "Continuances",
+            path: "/trial-continuances"
+          },
+          {
+             title: {
+              en: "Court Appearances",
+              es: "Apariciones en la Corte",
+            },
+            component: "CourtAppearances",
+            path: "/trial-court-appearances"
+          },
+          {
+             title: {
+              en: "Judgements and Verdicts",
+              es: "Juicios y veredictos",
+            },
+            component: "JudgementsVerdicts",
+            path: "/trial-judgements"
           }
         ],
-        teenCourtOptions: [
+        juryDutyOptions: [
+          {
+            title: {
+              en: "What to Expect",
+              es: "Qué esperar"
+            },
+            component: "JurorExpectations",
+            path: "/juror-expectations"
+          },
+           {
+            title: {
+              en: "Juror Qualifications",
+              es: "Calificaciones de los jurados"
+            },
+            component: "JurorQualifications",
+            path: "/juror-qualifications"
+          },
+           {
+            title: {
+              en: "Juror Exemptions",
+              es: "Exenciones de Jurado"
+            },
+            component: "JurorExemptions",
+            path: "/juror-exemptions"
+          },
+           {
+            title: {
+              en: "Failure to Answer a Jury Summons",
+              es: "Fallas de responder a una citación"
+            },
+            component: "JurorSummonsFailure",
+            path: "/juror-summons-failure"
+          },
+           {
+            title: {
+              en: "Contact Us",
+              es: "Contáctenos"
+            },
+            component: "JurorContact",
+            path: "/juror-contact-us"
+          }
+        ],
+         teenCourtOptions: [
           {
             title: {
               en:"What is Teen Court?",
@@ -582,7 +704,7 @@ export default {
           },
           {
             title: {
-              en:"Teen Court Contact",
+              en:"Contact Information",
               es: "Contacto para corte adolescentes"
             },              
             component: "TeenCourtContact",
@@ -611,6 +733,74 @@ export default {
             },
             component: "TeenCourtTalks",
             path: "/teen-court-talks"
+          }
+        ],
+        warrantOptions: [
+          {
+            title: {
+              en: 'Clear a Warrant',
+              es: 'Borrar una orden'
+            },
+            component: "ClearWarrants",
+            path: "/warrants-clear"
+          },
+          {
+            title: {
+              en: "Active Warrants",
+              es: "Ordenes activas"
+            },
+            component: "ActiveWarrants",
+            path: "/warrants-active"
+          }
+        ],
+        courtForms: [
+          {
+            title: {
+              en: 'Request for Continuance',
+              es: 'Solicitud de continuidad'
+            },
+            component: "FormsContinuance",
+            path: "/court-forms-continuance"
+          },
+          {
+            title: {
+              en: 'Attorney Appearance Bond',
+              es: 'Bond de apariencia de abogado'
+            },
+            component: "FormsAttorneyAppearance",
+            path: "/court-forms-attorney-appearance"
+          },
+          {
+            title: {
+              en: 'Deferred Disposition Request by Mail',
+              es: 'Solicitud de Disposición Diferida por Correo'
+            },
+            component: "FormsDeferredDisposition",
+            path: "/court-forms-deferred-disposition"
+          },
+          {
+            title: {
+              en: 'Driving Safety Course Request by Mail',
+              es: 'Curso de seguridad en la conducción Solicitud de curso por correo'
+            },
+            component: "FormsDrivingSafety",
+            path: "/court-forms-driving-safety"
+          },
+          {
+            title: {
+              en: 'Financial Information Form (Indigency Questionnaire)',
+              es: 'Formulario de Información Financiera (Cuestionario de Indigencia)'
+            },
+            component: "FormsFinancialInformation",
+            path: "/court-forms-financial-information"
+          },
+          {
+            title: {
+              en: 'Plea Form',
+              es: 'Formulario de petición'
+            },
+            component: "FormsPleaForm",
+            path: "/court-forms-plea-form"
           }
         ]
       },
@@ -668,7 +858,7 @@ export default {
 </script>
 
 <style scoped>
-.router-link-exact-active.router-link-active {
+a.router-link-exact-active.router-link-active {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -737,12 +927,30 @@ aside > v-list-title > v-list-title-tile > a {
 aside > a > #lmc:hover {
   text-decoration: none !important;
 }
-
+a { 
+  color: white;
+}
 aside > a {
   color: white;
 }
-
-aside > v-list-title:hover {
+v-list-title:hover {
     background-color: #2a2929;
+}
+.v-list__tile__content {
+   border-bottom: 1px solid #81818169;
+}
+.center {
+    position: absolute;
+    bottom: 25%;
+    left: 33%;
+}
+button.v-btn.v-btn--flat.theme--dark {
+    width: -webkit-fill-available;
+}
+#app > div > aside > div.v-list.white--text.dark.theme--dark > div {
+  margin: 16px 0;
+}
+#app > div.v-menu__content.theme--dark.v-menu__content--fixed.menuable__content__active > div:nth-child(2) {
+    margin-top: -20px;
 }
 </style>

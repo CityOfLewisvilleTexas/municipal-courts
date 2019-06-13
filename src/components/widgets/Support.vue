@@ -106,21 +106,34 @@ export default {
     background-image: none;
   }
 }
+
+@media only screen and (max-width:1024px) {
+  .support--right {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+  .speech-bubble {
+    font-size: 20px;
+    line-height:38px;
+  }
+}
 @media only screen and (max-width: 1264px) {
   .speech-bubble {
     position: initial !important;
     padding: 15px;
     width: 100%;
   }
-
+  .support--left {
+    padding-bottom:0 !important;
+  }
   .support--right {
     border-left: none;
     margin-left: 0 !important;
   }
-
+/* 
   .support--left {
     padding-left: 48px;
     margin-left: 48px;
-  }
+  } */
 }
 </style>

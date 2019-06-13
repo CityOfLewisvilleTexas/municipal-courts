@@ -32,4 +32,10 @@ export default {};
   background: none !important;
   width: auto;
 }
+
+@media only screen and (max-width:1024px) {
+  .mapouter {
+    margin-left:30px;
+  }
+}
 </style>
