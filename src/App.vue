@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-app fixed grid-list-xl text-md-center>
-        <navbar :lang="lang" @change="setLang"></navbar>
+        <navbar :lang="lang" :window="window" @change="setLang"></navbar>
       <snackbar :snackbar="snackbar"></snackbar>
     </v-app>
   </div>
@@ -24,6 +24,10 @@ export default {
   data() {
     return {
       lang: "en",
+      window: {
+        height: 0,
+        width: 0
+      },
       options: [
         "find the court hours",
         "find a lawyer",
@@ -82,10 +86,10 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 
 * {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 body {
   background-color: #fafafa;
@@ -99,14 +103,5 @@ hr {
 }
 div.application--wrap {
   min-height: 100px !important;
-}
-@media only screen and (max-width: 750px) {
-  /* #statement {
-    display: none;
-  } */
-
-  /* #mission-statement {
-    display: none;
-  } */
 }
 </style>

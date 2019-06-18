@@ -73,7 +73,7 @@ export default {
   border: none;
   box-shadow: none;
   background-color: inherit !important;
-  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif !important;
 }
 .headline.events {
   padding-top: 20px;
@@ -81,7 +81,7 @@ export default {
   text-align: left;
   padding-left: 45px;
   font-size: 2rem !important;
-  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif !important;
 }
 .event {
   text-align: left;
@@ -91,12 +91,13 @@ export default {
   border: none !important;
   box-shadow: none !important;
   background-color: inherit !important;
-  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif !important;
 }
 .date {
   margin-right: 25px;
   font-size: 1.7rem;
-  background-color: #e0b008;
+  background-color: #54258a;
   width: 65px;
+  color:white;
 }
 </style>

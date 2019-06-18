@@ -62,7 +62,7 @@ export default {
     display:inline-block;
 } */
 .metric-row {
-  background-color: #e0b008;
+   background-color: #363131; /*#54258a */
 }
 /* .metric-col {
     display: inline-block;

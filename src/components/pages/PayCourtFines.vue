@@ -313,8 +313,6 @@ export default {
     };
   },
   methods: {},
-  mounted() {},
-  created() {}
 };
 </script>
 

@@ -1,13 +1,10 @@
 <template>
   <v-app class="xs12"> 
     <v-navigation-drawer
-      :clipped="drawer.clipped"
-      :fixed="drawer.fixed"
-      :permanent="drawer.permanent"
-      :mini-variant="drawer.mini"
-      v-model="drawer.open"
+     v-model="sidebar"
       app
       dark
+      hidden-sm-and-down
     >
      <v-list class="white--text dark">
         <v-list-tile>
@@ -16,10 +13,10 @@
               <template v-slot:activator="{ on }">
                 <v-btn flat primary--text v-on="on">
                   <span v-if="$route.query.lang == 'es'">
-                    Responder a una cita
+                    Responder a una cita&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon>
                   </span>
                   <span v-else>
-                    Respond to a Citation</span>
+                    Respond to a Citation&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon></span>
                     </v-btn>
               </template>
               <v-list v-if="$route.query.lang == 'es'">
@@ -57,10 +54,10 @@
               <template v-slot:activator="{ on }">
                 <v-btn flat primary--text v-on="on">
                   <span v-if="$route.query.lang == 'es'">
-                    Llegando a la corte
+                    Llegando a la corte&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon>
                   </span>
                   <span v-else>
-                    Coming to Court</span></v-btn>
+                    Coming to Court&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon></span></v-btn>
               </template>
               <v-list v-if="$route.query.lang == 'es'">
                 <v-list-title
@@ -93,11 +90,11 @@
                   <v-list-title-tile>
                     <span v-if="$route.query.lang == 'es'">
                       <a href="http://eservices.cityoflewisville.com/courtsservices/dockets.html">
-                      ¿Cuándo es mi cita de corte?</a>
+                      ¿Cuándo es mi cita de corte?&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon></a>
                     </span>
                     <span v-else>
                       <a href="http://eservices.cityoflewisville.com/courtsservices/dockets.html">
-                      When is my Court Date?</a>
+                      When is my Court Date?&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon></a>
                     </span>
                   </v-list-title-tile>
                 </v-list-title>
@@ -111,10 +108,10 @@
               <template v-slot:activator="{ on }">
                 <v-btn flat primary--text v-on="on">
                   <span v-if="$route.query.lang == 'es'">
-                    Pague mi multa
+                    Pague mi multa&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon>
                   </span>
                   <span v-else>
-                    Pay my Fine</span>
+                    Pay my Fine&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon></span>
                     </v-btn>
               </template>
               <v-list v-if="$route.query.lang == 'es'">
@@ -152,10 +149,10 @@
               <template v-slot:activator="{ on }">
                 <v-btn flat primary--text v-on="on">
                   <span v-if="$route.query.lang == 'es'">
-                    Llegando a juicio
+                    Llegando a juicio&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon>
                   </span>
                   <span v-else>
-                    Going to Trial</span>
+                    Going to Trial&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon></span>
                     </v-btn>
               </template>
               <v-list v-if="$route.query.lang == 'es'">
@@ -193,10 +190,10 @@
               <template v-slot:activator="{ on }">
                 <v-btn flat primary--text v-on="on">
                   <span v-if="$route.query.lang == 'es'">
-                    Servicio de jurado
+                    Servicio de jurado&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon>
                   </span>
                   <span v-else>
-                    Jury Duty</span>
+                    Jury Duty&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon></span>
                     </v-btn>
               </template>
               <v-list v-if="$route.query.lang == 'es'">
@@ -234,7 +231,7 @@
               <template v-slot:activator="{ on }">
                 <v-btn flat primary--text v-on="on">
                   <span>
-                    Teen Court
+                    Teen Court&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon>
                   </span>
                 </v-btn>
               </template>
@@ -273,10 +270,10 @@
               <template v-slot:activator="{ on }">
                 <v-btn flat primary--text v-on="on">
                   <span v-if="$route.query.lang == 'es'">
-                    ¿Tengo una orden?
+                    ¿Tengo una orden?&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon>
                   </span>
                   <span v-else>
-                    Do I Have a Warrant?</span>
+                    Do I Have a Warrant?&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon></span>
                     </v-btn>
               </template>
               <v-list v-if="$route.query.lang == 'es'">
@@ -314,10 +311,10 @@
               <template v-slot:activator="{ on }">
                 <v-btn flat primary--text v-on="on">
                   <span v-if="$route.query.lang == 'es'">
-                    Formularios de la corte
+                    Formularios de la corte&nbsp;<v-icon small dark>arrow_drop_down</v-icon>
                   </span>
                   <span v-else>
-                    Court Forms</span>
+                    Court Forms&nbsp;<v-icon small dark>arrow_drop_down</v-icon></span>
                     </v-btn>
               </template>
               <v-list v-if="$route.query.lang == 'es'">
@@ -370,10 +367,10 @@
               <template v-slot:activator="{ on }">
                 <v-btn flat primary--text v-on="on">
                   <span v-if="$route.query.lang == 'es'">
-                    Ayuda de la corte Tejas
+                    Ayuda de la corte Tejas&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon>
                   </span>
                   <span v-else>
-                   Texas Court Help</span>
+                   Texas Court Help&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon></span>
                     </v-btn>
               </template>
               <v-list>
@@ -446,8 +443,8 @@
           <v-list-tile-content>
             <v-btn flat>
               <span style="color:white" v-if="lang == 'en'"
-                ><a href="http://eservices.cityoflewisville.com/courtsservices/dockets.html">View Court Dockets</a></span>
-              <span style="color:white" v-else><a href="http://eservices.cityoflewisville.com/courtsservices/dockets.html">Expedientes de la corte</a></span>
+                ><a href="http://eservices.cityoflewisville.com/courtsservices/dockets.html">View Court Dockets&nbsp;<v-icon small>open_in_new</v-icon></a></span>
+              <span style="color:white" v-else><a href="http://eservices.cityoflewisville.com/courtsservices/dockets.html">Expedientes de la corte&nbsp;<v-icon small>open_in_new</v-icon></a></span>
             </v-btn>
           </v-list-tile-content>
         </v-list-tile>
@@ -456,8 +453,8 @@
           <v-list-tile-content>
             <v-btn flat>
               <span style="color:white" v-if="lang == 'en'"
-                ><a href="http://metrics.cityoflewisville.com/d/#/dashboard/public/details/court">Performance Dashboard</a></span>
-              <span style="color:white" v-else><a href="http://metrics.cityoflewisville.com/d/#/dashboard/public/details/court">Panel de rendimiento</a></span>
+                ><a href="http://metrics.cityoflewisville.com/d/#/dashboard/public/details/court">Performance Dashboard&nbsp;<v-icon small>open_in_new</v-icon></a></span>
+              <span style="color:white" v-else><a href="http://metrics.cityoflewisville.com/d/#/dashboard/public/details/court">Panel de rendimiento&nbsp;<v-icon small>open_in_new</v-icon></a></span>
             </v-btn>
           </v-list-tile-content>
         </v-list-tile>
@@ -481,32 +478,53 @@
       app
       :fixed="toolbar.fixed"
       :clipped-left="toolbar.clippedLeft"
-      style="background-color:rebeccapurple;
+      style="background-color:#54258a;
       padding-left:0;"
       :height="120"
     >
-      <!-- <v-toolbar-side-icon 
-        @click="toggleDrawer"
-      ></v-toolbar-side-icon> -->
+      <v-toolbar-side-icon 
+      style="color:white;"
+        @click="sidebar = !sidebar"
+      ></v-toolbar-side-icon>
       <v-toolbar-title class="white--text"
-        ><div class="center">
+        ><div>
           <router-link :to="navItems.home.path + `?lang=${lang}`"
           >
-           <img
+           <img v-if="window.width > 961"
         src="http://metrics.cityoflewisville.com/assets/pmartin_dark.png"
         width="75"
-      />
-      <span id="lmc">&nbsp;&nbsp;&nbsp;Lewisville Municipal Court</span>
+        :class="{'hide': $route.name != 'Home'}"
+      />&nbsp;
+      <span id="lmc" :class="{'smaller-text': window.width < 961}"><span v-if="window.width > 961"></span>
+      Lewisville
+      <span v-if="window.width < 420"><br/></span>
+      <span v-else> </span>Municipal
+      <span v-if="window.width < 420"><br/></span>
+      <span v-else> </span>Court</span>
         </router-link>
         </div>
       </v-toolbar-title>
+       <v-spacer></v-spacer>
+          <v-toolbar-items>
+            <v-list>
+              <v-list-title>
+                <v-list-title-tile>
+                   <router-link :to="navItems.home.path + `?lang=${lang}`"
+          >
+                  <v-icon style="color:white;">home</v-icon>
+                  Home
+                   </router-link>
+                </v-list-title-tile>
+              </v-list-title>
+            </v-list>
+          </v-toolbar-items>
     </v-toolbar>
     <v-content>
       <v-container fluid fill-height>
         <v-layout justify-center align-center>
           <v-flex shrink>
             <router-view>
-              <home :lang="lang" :window="window"></home>
+              <home :lang="lang" :window="windowObj"></home>
             </router-view>
           </v-flex>
         </v-layout>
@@ -518,13 +536,16 @@
 <script>
 import home from '../pages/Home'
 //@TODO: CREATE FOOTER
+
 export default {
-  props: ["lang"],
+  props: ["lang", "window"],
   components: {
     home
   },
   data() {
     return {
+      windowObj: this.window,
+      sidebar: true,
       navItems: {
         home: {
           title: "Home",
@@ -818,19 +839,16 @@ export default {
     footer: {
       fixed: true,
       clippedLeft: true
-    },
-      sidebar: false,
-      window: {
-        height: 0,
-        width: 0
-      }
-    };
+    }
+  };
   },
-  created() {
+  created: function() {
     window.addEventListener("resize", this.handleResize);
     this.handleResize();
+    this.checkWindowWidth()
+    console.log(this.$route)
   },
-  destroyed() {
+  destroyed: function() {
     window.removeEventListener("resize", this.handleResize);
   },
   methods: {
@@ -849,11 +867,24 @@ export default {
     },
     // toggles the drawer type (permanent vs temporary) or shows/hides the drawer
     toggleDrawer () {
+      this.drawer.clipped = !this.drawer.clipped
         this.drawer.open = !this.drawer.open
         this.drawer.permanent = !this.drawer.permanent
+    },
+    checkWindowWidth: function() {
+      if(this.window.width > 961) {
+        this.sidebar = true
+      }
+      else {
+        this.sidebar = false
+      }
     }
   },
-  updated: {}
+  watch: {
+    window: function() {
+      this.checkWindowWidth()
+    }
+  }
 };
 </script>
 
@@ -920,7 +951,6 @@ aside > v-list-title > v-list-title-tile > a {
   color: #000;
 }
 #lmc {
-  font-size: 24px;
   font-weight: 500;
   color: white;
 }
@@ -952,5 +982,28 @@ button.v-btn.v-btn--flat.theme--dark {
 }
 #app > div.v-menu__content.theme--dark.v-menu__content--fixed.menuable__content__active > div:nth-child(2) {
     margin-top: -20px;
+}
+.smaller-text {
+  font-size: smaller;
+}
+#app > div > aside > div.v-list.white--text.dark.theme--dark {
+    margin-top: 105px;
+}
+.hide {
+  display: none;
+}
+v-list-title {
+    margin-top: 34px !important;
+}
+.v-list.theme--light[data-v-1bd271a0] {
+    background-color: #54258a!important;
+    font-weight: 600;
+    color: white;
+}
+.v-list.theme--light[data-v-1bd271a0]:hover {
+  background-color:#2a2929 !important;
+}
+v-list-title[data-v-1bd271a0]:hover {
+  background-color:inherit;
 }
 </style>

@@ -24,7 +24,7 @@ export default {};
 .mapouter {
   position: relative;
   text-align: right;
-  width: auto;
+  /* width: auto; */
   margin-bottom: 24px;
 }
 .gmap_canvas {
@@ -34,8 +34,8 @@ export default {};
 }
 
 @media only screen and (max-width:1024px) {
-  .mapouter {
-    margin-left:30px;
+  .support--right {
+    margin-left: 30px !important;
   }
 }
 </style>

@@ -9,7 +9,7 @@
       <v-select
         :items="$route.query.lang == 'es' ? options.es : options.en"
         v-model="selectedOption"
-        background-color="#E0B008"
+        background-color="#54258a"
         height="60"
         style="vertical-align:middle;margin-left:auto;margin-right:auto;display:inline-block;text-align:center;"
         :label="$route.query.lang == 'es' ? 'escoge un opcion' : 'select an option'"
@@ -50,12 +50,12 @@ export default {
 
 <style>
 a.v-list__tile.v-list__tile--link.theme--light {
-  background-color: #e0b008;
+  background-color: #54258a;
   color: white;
   font-size: 1.5rem;
 }
 .v-list.theme--light {
-  background-color: #e0b008;
+  background-color: #54258a;
 }
 .v-select__selection.v-select__selection--comma {
   font-size: 1.5rem;

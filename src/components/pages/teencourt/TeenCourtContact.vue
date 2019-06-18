@@ -142,9 +142,7 @@ export default {
   data() {
     return {};
   },
-  methods: {},
-  mounted() {},
-  created() {}
+  methods: {}
 };
 </script>
 

@@ -237,8 +237,6 @@ export default {
     return {};
   },
   methods: {},
-  mounted() {},
-  created() {},
   watch: {}
 };
 </script>

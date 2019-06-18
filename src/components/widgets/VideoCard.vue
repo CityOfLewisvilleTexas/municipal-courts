@@ -1,6 +1,6 @@
 <template>
   <v-flex lg7 pa-5>
-    <v-img :src="images.stock"></v-img>
+    <img class="judge" :src="images.stock"/>
   </v-flex>
 </template>
 
@@ -23,9 +23,7 @@ export default {
 a {
   text-decoration: none;
 }
-
-iframe {
-  width: -webkit-fill-available;
-  height: 325px;
+img.judge {
+  width:100%;
 }
 </style>

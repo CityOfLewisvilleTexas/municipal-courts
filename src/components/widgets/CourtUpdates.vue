@@ -83,7 +83,7 @@ export default {
   border: none;
   box-shadow: none;
   background-color: inherit !important;
-  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif !important;
 }
 .headline.updates {
   padding-top: 20px;
@@ -91,7 +91,7 @@ export default {
   text-align: left;
   padding-left: 45px;
   font-size: 2rem !important;
-  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif !important;
 }
 .update {
   text-align: left;
@@ -101,6 +101,6 @@ export default {
   border: none !important;
   box-shadow: none !important;
   background-color: inherit !important;
-  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif !important;
 }
 </style>

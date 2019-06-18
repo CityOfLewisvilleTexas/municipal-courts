@@ -14,7 +14,7 @@
             <span class="mission"><span v-if="$route.query.lang == 'es'">Declaración de misión</span><span v-else>Mission Statement</span></span>
           </v-flex>
           <span style="font-size:1.5rem;"
-            ><span v-if="$route.query.lang == 'es'">Nuestra misión es ser neutral, cortés, servicial y justo para todos los miembros del público.</span>
+            ><span v-if="$route.query.lang == 'es'">Asegurar la administración justa, ordenada y efectiva de la justicia mediante la promoción y la mejora del respeto por el individuo, nuestra comunidad y el sistema judicial.</span>
             <span v-else>To ensure the fair, orderly and effective administration of justice by promoting and enhancing respect for the individual, our community and the judicial system.</span></span><br />
         </div>
       </v-card-title>
@@ -25,7 +25,7 @@
             <span class="mission"><span v-if="$route.query.lang == 'es'">Declaración de misión</span><span v-else>Mission Statement</span></span>
           </v-flex>
           <span style="font-size:1.5rem;"
-            ><span v-if="$route.query.lang == 'es'">Nuestra misión es ser neutral, cortés, servicial y justo para todos los miembros del público.</span>
+            ><span v-if="$route.query.lang == 'es'">Asegurar la administración justa, ordenada y efectiva de la justicia mediante la promoción y la mejora del respeto por el individuo, nuestra comunidad y el sistema judicial.</span>
             <span v-else>To ensure the fair, orderly and effective administration of justice by promoting and enhancing respect for the individual, our community and the judicial system.</span></span><br />
         </div>
     </div>
@@ -34,7 +34,7 @@
 
 <script>
 export default {
-  props: ["window"],
+  props: [],
   data() {
     return {
       images: {
@@ -42,13 +42,9 @@ export default {
       }
     }
   },
-  created() {
-    window.addEventListener("resize", this.handleResize);
-    this.handleResize();
-  },
-  destroyed() {
-    window.removeEventListener("resize", this.handleResize);
-  },
+  methods: {
+  
+  }
 };
 </script>
 
@@ -59,7 +55,7 @@ export default {
   height: 200px !important;
   position: absolute;
   bottom: 100px;
-  background: #1855b0 !important;
+  background: #54258a !important;
   color: white;
 }
 .mission {
@@ -82,7 +78,7 @@ export default {
   }
 
     #mission--card--mobile > div {
-    background-color: #1855b0 !important;
+    background-color: #54258a !important;
     padding: 32px;
     border-radius: 5px;
     color: white;

@@ -74,13 +74,8 @@ export default {
 </script>
 
 <style>
-/* div#app {
-    background: url(https://upload.wikimedia.org/wikipedia/commons/8/8d/Lewisville_City_Hall_2.jpg);
-    background-repeat: no-repeat;
-    background-position: -208px -54px;
-} */
 .support {
-  background-color: #1855b0;
+  background-color: #54258a;
 }
 .speech-bubble {
   position: absolute;
@@ -108,13 +103,18 @@ export default {
 }
 
 @media only screen and (max-width:1024px) {
-  .support--right {
+  /* .support--right {
     margin-left: 0 !important;
     padding-left: 0 !important;
-  }
+  } */
   .speech-bubble {
     font-size: 20px;
     line-height:38px;
+  }
+
+  .v-avatar {
+    width:200px !important;
+    height:200px !important;
   }
 }
 @media only screen and (max-width: 1264px) {
@@ -125,15 +125,12 @@ export default {
   }
   .support--left {
     padding-bottom:0 !important;
+    padding-top:0 !important;
+    /* margin-left: 6%; */
   }
   .support--right {
     border-left: none;
     margin-left: 0 !important;
   }
-/* 
-  .support--left {
-    padding-left: 48px;
-    margin-left: 48px;
-  } */
 }
 </style>
