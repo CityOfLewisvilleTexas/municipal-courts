@@ -23,19 +23,18 @@ export default {};
 <style>
 .mapouter {
   position: relative;
-  text-align: right;
-  /* width: auto; */
+  width: auto;
   margin-bottom: 24px;
 }
 .gmap_canvas {
   overflow: hidden;
   background: none !important;
-  width: auto;
+  width: 100%;
 }
 
-@media only screen and (max-width:1024px) {
-  .support--right {
-    margin-left: 30px !important;
+@media only screen and (max-width:757PX) {
+  .gmap_canvas {
+   width:auto !important;
   }
 }
 </style>

@@ -126,7 +126,7 @@ export default {
   .support--left {
     padding-bottom:0 !important;
     padding-top:0 !important;
-    /* margin-left: 6%; */
+    margin-left: 6%;
   }
   .support--right {
     border-left: none;

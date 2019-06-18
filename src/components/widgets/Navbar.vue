@@ -6,6 +6,7 @@
       dark
       hidden-sm-and-down
     >
+    <div id="menu--top">MENU</div>
      <v-list class="white--text dark">
         <v-list-tile>
           <v-list-tile-content>
@@ -1005,5 +1006,21 @@ v-list-title {
 }
 v-list-title[data-v-1bd271a0]:hover {
   background-color:inherit;
+}
+div#menu--top {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    text-decoration: underline;
+    -webkit-text-decoration-color: #54258a;
+    text-decoration-color: #54258a;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    -webkit-text-decoration-style: double;
+    text-decoration-style: double;
+    width: -webkit-fill-available;
+    text-align: center;
+    margin-top: 50px;
+    background: #54258a;
 }
 </style>
