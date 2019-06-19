@@ -91,11 +91,11 @@
                   <v-list-title-tile>
                     <span v-if="$route.query.lang == 'es'">
                       <a href="http://eservices.cityoflewisville.com/courtsservices/dockets.html">
-                      ¿Cuándo es mi cita de corte?&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon></a>
+                      ¿Cuándo es mi cita de corte?</a>
                     </span>
                     <span v-else>
                       <a href="http://eservices.cityoflewisville.com/courtsservices/dockets.html">
-                      When is my Court Date?&nbsp;<v-icon class="drop" small dark>arrow_drop_down</v-icon></a>
+                      When is my Court Date?</a>
                     </span>
                   </v-list-title-tile>
                 </v-list-title>
