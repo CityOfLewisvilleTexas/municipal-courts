@@ -993,15 +993,15 @@ button.v-btn.v-btn--flat.theme--dark {
 .hide {
   display: none;
 }
-v-list-title {
+#app > div > nav > div > div.v-toolbar__items > div > v-list-title {
     margin-top: 34px !important;
 }
-.v-list.theme--light[data-v-1bd271a0] {
+#app > div > nav > div > div.v-toolbar__items > div {
     background-color: #54258a!important;
     font-weight: 600;
     color: white;
 }
-.v-list.theme--light[data-v-1bd271a0]:hover {
+#app > div > nav > div > div.v-toolbar__items > div:hover {
   background-color:#2a2929 !important;
 }
 v-list-title[data-v-1bd271a0]:hover {
