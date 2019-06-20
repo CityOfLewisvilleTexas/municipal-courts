@@ -50,7 +50,7 @@ export default new Router({
       props: true
     },
     {
-      path: "/trial-alternatives", 
+      path: "/citation-alternatives", 
       name: "TrialAlternatives",
       component: TrialAlternatives,
       props: true
