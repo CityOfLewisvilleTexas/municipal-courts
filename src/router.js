@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./components/pages/Home.vue";
+import Home from "./components/pages/Home";
+import MeetYourJudge from "./components/widgets/MeetYourJudge";
 
 import TeenCourtInfo from "./components/pages/teencourt/TeenCourtInfo";
 import TeenCourtContact from "./components/pages/teencourt/TeenCourtContact";
@@ -22,6 +23,7 @@ import CasePresentation from './components/pages/trial/CasePresentation'
 import Continuances from './components/pages/trial/Continuances'
 import CourtAppearances from './components/pages/trial/CourtAppearances'
 import JudgementsVerdicts from './components/pages/trial/JudgementsVerdicts'
+import AdmittingExhibits from './components/pages/trial/AdmittingExhibits'
 import JurorExpectations from './components/pages/juror/JurorExpectations'
 import JurorQualifications from './components/pages/juror/JurorQualifications'
 import JurorExemptions from './components/pages/juror/JurorExemptions'
@@ -47,6 +49,12 @@ export default new Router({
       path: "/", 
       name: "Home",
       component: Home,
+      props: true
+    },
+    {
+      path: "/meet-your-judge", 
+      name: "Meet Your Judge",
+      component: MeetYourJudge,
       props: true
     },
     {
@@ -161,6 +169,12 @@ export default new Router({
       path: "/trial-judgements",
       name: "JudgementsVerdicts",
       component: JudgementsVerdicts,
+      props: true
+    },
+    {
+      path: "/trial-admitting-exhibits",
+      name: "AdmittingExhibits",
+      component: AdmittingExhibits,
       props: true
     },
     {

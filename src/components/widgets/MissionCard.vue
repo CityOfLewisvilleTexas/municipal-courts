@@ -11,7 +11,7 @@
        <v-card-title id="statement">
         <div style="text-align: left;">
           <v-flex xs12 mb-2 align-end flexbox>
-            <span class="mission"><span v-if="$route.query.lang == 'es'">Declaración de misión</span><span v-else>Mission Statement</span></span>
+            <span class="mission"><span v-if="$route.query.lang == 'es'">Nuestra misión</span><span v-else>Our Mission</span></span>
           </v-flex>
           <span style="font-size:1.5rem;"
             ><span v-if="$route.query.lang == 'es'">Asegurar la administración justa, ordenada y efectiva de la justicia mediante la promoción y la mejora del respeto por el individuo, nuestra comunidad y el sistema judicial.</span>
@@ -22,7 +22,7 @@
     <div id="mission--card--mobile">
        <div style="text-align: center;">
           <v-flex xs12 mb-2 align-end flexbox>
-            <span class="mission"><span v-if="$route.query.lang == 'es'">Declaración de misión</span><span v-else>Mission Statement</span></span>
+            <span class="mission"><span v-if="$route.query.lang == 'es'">Nuestra misión</span><span v-else>Our Mission</span></span>
           </v-flex>
           <span style="font-size:1.5rem;"
             ><span v-if="$route.query.lang == 'es'">Asegurar la administración justa, ordenada y efectiva de la justicia mediante la promoción y la mejora del respeto por el individuo, nuestra comunidad y el sistema judicial.</span>
@@ -54,7 +54,7 @@ export default {
   opacity: .85;
   height: 200px !important;
   position: absolute;
-  bottom: 100px;
+  bottom: 40px;
   background: #54258a !important;
   color: white;
 }

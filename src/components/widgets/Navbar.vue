@@ -49,6 +49,15 @@
             </v-menu>
           </v-list-tile-content>
         </v-list-tile>
+         <v-list-tile>
+          <v-list-tile-content>
+            <v-btn flat>
+              <span style="color:white" v-if="lang == 'en'"
+                ><a href="http://eservices.cityoflewisville.com/courtsservices/dockets.html">View Court Dockets&nbsp;<v-icon small>open_in_new</v-icon></a></span>
+              <span style="color:white" v-else><a href="http://eservices.cityoflewisville.com/courtsservices/dockets.html">Expedientes de la corte&nbsp;<v-icon small>open_in_new</v-icon></a></span>
+            </v-btn>
+          </v-list-tile-content>
+        </v-list-tile>
         <v-list-tile>
           <v-list-tile-content>
             <v-menu bottom transition="scale-transition" origin="center center" open-on-click dark>
@@ -439,16 +448,6 @@
             </v-menu>
           </v-list-tile-content>
         </v-list-tile>
-        
-         <v-list-tile>
-          <v-list-tile-content>
-            <v-btn flat>
-              <span style="color:white" v-if="lang == 'en'"
-                ><a href="http://eservices.cityoflewisville.com/courtsservices/dockets.html">View Court Dockets&nbsp;<v-icon small>open_in_new</v-icon></a></span>
-              <span style="color:white" v-else><a href="http://eservices.cityoflewisville.com/courtsservices/dockets.html">Expedientes de la corte&nbsp;<v-icon small>open_in_new</v-icon></a></span>
-            </v-btn>
-          </v-list-tile-content>
-        </v-list-tile>
 
         <v-list-tile>
           <v-list-tile-content>
@@ -495,8 +494,9 @@
         src="http://metrics.cityoflewisville.com/assets/pmartin_dark.png"
         width="75"
         :class="{'hide': $route.name != 'Home'}"
-      />&nbsp;
-      <span id="lmc" :class="{'smaller-text': window.width < 961}"><span v-if="window.width > 961"></span>
+      />
+      <span id="lmc" :class="{'smaller-text': window.width < 961}">
+      <span v-if="window.width > 961">&nbsp;</span>
       Lewisville
       <span v-if="window.width < 420"><br/></span>
       <span v-else> </span>Municipal
@@ -542,7 +542,7 @@ export default {
   props: ["lang", "window"],
   components: {
     home
-  },
+   },
   data() {
     return {
       windowObj: this.window,
@@ -671,6 +671,14 @@ export default {
             },
             component: "JudgementsVerdicts",
             path: "/trial-judgements"
+          },
+          {
+            title: {
+              en: "Admitting Exhibits",
+              es: "Admitir exhibiciones"
+            },
+            component: "AdmittingExhibits",
+            path: "/trial-admitting-exhibits"
           }
         ],
         juryDutyOptions: [

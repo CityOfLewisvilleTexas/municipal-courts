@@ -24,6 +24,17 @@ a {
   text-decoration: none;
 }
 img.judge {
-  width:100%;
+  width:60%;
+}
+  div.flex.lg7.pa-5 {
+    text-align:right;
+  }
+@media only screen and (max-width:1264px) {
+  div.flex.lg7.pa-5 {
+    text-align:center;
+  }
+  img.judge {
+  width:85%;
+}
 }
 </style>
