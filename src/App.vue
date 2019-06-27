@@ -70,30 +70,6 @@ export default {
     };
   },
   methods: {
-    authenticate() {
-      !window.location.host.includes('localhost') 
-      ? 
-      window.authenticate()
-      :
-      return
-    },
-    getUser() {
-      let that = this
-      if(this.user != '') {
-        return
-      }
-      else {
-        const checkForEmail = () => {
-          setTimeout(() => {
-            if(localStorage.colEmail) {
-              that.user = localStorage.colEmail
-              console.log(that.user)
-            }
-            else checkForMail()
-          }, 3000)
-        }
-      }
-    },
     setLang() {
       this.lang = this.lang == "en" ? (this.lang = "es") : (this.lang = "en");
       this.$router.push({
@@ -106,8 +82,6 @@ export default {
   },
   created() {
     this.$router.push({ query: { lang: this.lang } });
-    this.authenticate()
-    this.getUser()
   }
 };
 </script>
