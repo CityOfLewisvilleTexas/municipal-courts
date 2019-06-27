@@ -38,6 +38,9 @@ import FormsDrivingSafety from './components/pages/forms/FormsDrivingSafety'
 import FormsFinancialInformation from './components/pages/forms/FormsFinancialInformation'
 import FormsPleaForm from './components/pages/forms/FormsPleaForm'
 import FormsDrivingRecord from './components/pages/forms/FormsDrivingRecord'
+import AllCourtForms from './components/pages/forms/AllCourtForms'
+//features
+import NewUpdates from './components/features/NewUpdates.vue'
 
 Vue.use(Router);
 
@@ -238,7 +241,7 @@ export default new Router({
       props: true
     },
     {
-      path: "court-forms-driving-safety",
+      path: "/court-forms-driving-safety",
       name: "FormsDrivingSafety",
       component: FormsDrivingSafety,
       props: true
@@ -256,9 +259,21 @@ export default new Router({
       props: true
     },
     {
-      path: "court-forms-driving-record",
+      path: "/court-forms-driving-record",
       name: "FormsDrivingRecord",
       component: FormsDrivingRecord,
+      props: true
+    },
+    {
+      path: '/court-forms-all',
+      name: "AllCourtForms",
+      component: AllCourtForms,
+      props: true
+    },
+    {
+      path: '/features-updates',
+      name: "NewUpdates",
+      component: NewUpdates,
       props: true
     }
   ]

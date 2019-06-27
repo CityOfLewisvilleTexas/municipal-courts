@@ -21,6 +21,7 @@
             <div text-xs-center text-md-left text-lg-left>
               <span>{{ update.es.date }}</span>
               <div class="headline">{{ update.es.slogan }}</div>
+              <span v-if="update.es.link"><router-link :to="update.es.link + `?lang=${$route.query.lang}`">Aprende más</router-link></span>
             </div>
           </v-card-title>
           <hr />
@@ -37,6 +38,7 @@
             <div text-xs-center text-md-left text-lg-left>
               <span>{{ update.en.date }}</span>
               <div class="headline">{{ update.en.slogan }}</div>
+              <span v-if="update.en.link"><router-link :to="update.en.link + `?lang=${$route.query.lang}`">Learn more</router-link></span>
             </div>
           </v-card-title>
           <hr />
@@ -54,24 +56,28 @@ export default {
        updates: [
         {
           en: { 
-            date: "Jan 21, 2019",
-            slogan: "All court forms are now available online"
+            date: "May 21, 2019",
+            slogan: "All court forms are now available online",
+            link: '/court-forms-all'
           },
           es: {
-            date: "21 Enero 2019",
-            slogan: "Todos formularios de la corte están disponibles en línea"
+            date: "21 Mayo 2019",
+            slogan: "Todos formularios de la corte están disponibles en línea",
+            link: '/court-forms-all'
           }
         },
         {
           en: {
-            date: "Jan 1, 2019",
-            slogan: "Happy New Year!"
+            date: "June 24, 2019",
+            slogan: "DPS Surcharge Repealed",
+            link: "/features-updates"
           },
           es: {
-            date: "1 Enero 2019",
-            slogan: "¡Feliz año nuevo!"
+            date: "24 Junio 2019",
+            slogan: "Sobrecargo DPS derogado",
+            link: "/features-updates"
           }
-        }
+        },
       ],
     };
   }
