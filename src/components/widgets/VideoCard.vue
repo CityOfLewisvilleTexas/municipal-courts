@@ -1,5 +1,5 @@
 <template>
-  <v-flex lg7 pa-5>
+  <v-flex lg5 pa-5>
     <img class="judge" :src="images.stock"/>
   </v-flex>
 </template>
@@ -24,7 +24,7 @@ a {
   text-decoration: none;
 }
 img.judge {
-  width:60%;
+  width:85%;
 }
   div.flex.lg7.pa-5 {
     text-align:right;
@@ -34,7 +34,7 @@ img.judge {
     text-align:center;
   }
   img.judge {
-  width:85%;
+  width:100%;
 }
 }
 </style>
