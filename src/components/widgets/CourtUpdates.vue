@@ -6,12 +6,13 @@
           Actualizaciones de la Corte
         </span>
         <span v-else>
-          Court Updates
+          Court Updates 
         </span>
       </div>
       <v-spacer></v-spacer>
       <v-container v-if="$route.query.lang == 'es'">
         <v-card
+         
           v-for="(update, index) in updates"
           :key="index"
           id="update"
@@ -19,7 +20,9 @@
         >
           <v-card-title primary-title>
             <div text-xs-center text-md-left text-lg-left>
-              <span>{{ update.es.date }}</span>
+              <span>
+                {{ update.es.date }}
+              </span>
               <div class="headline">{{ update.es.slogan }}</div>
               <span v-if="update.es.link"><router-link :to="update.es.link + `?lang=${$route.query.lang}`">Aprende más</router-link></span>
             </div>
@@ -36,8 +39,8 @@
         >
           <v-card-title primary-title>
             <div text-xs-center text-md-left text-lg-left>
-              <span>{{ update.en.date }}</span>
-              <div class="headline">{{ update.en.slogan }}</div>
+              <span :ref="update.en.date">{{ update.en.date }}<edit-icon :content="update.en.date"></edit-icon></span>
+              <div :ref="update.en.slogan" class="headline">{{ update.en.slogan }}<edit-icon :content="update.en.slogan"></edit-icon></div>
               <span v-if="update.en.link"><router-link :to="update.en.link + `?lang=${$route.query.lang}`">Learn more</router-link></span>
             </div>
           </v-card-title>
@@ -49,8 +52,13 @@
 </template>
 
 <script>
+import EditIcon from './EditIcon'
+
 export default {
   props: [],
+  components: {
+    'edit-icon': EditIcon
+  },
   data() {
     return {
        updates: [
@@ -80,6 +88,14 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+   updateContent(e) {
+     this.contentForEditor = e.target.innerText
+   }
+  },
+  mounted() {
+    console.log('Refs',this.$refs)
   }
 };
 </script>

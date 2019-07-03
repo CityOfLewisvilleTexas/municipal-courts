@@ -12,25 +12,31 @@ import TeenCourtTalks from "./components/pages/teencourt/TeenCourtTalks";
 import KnowYourRights from './components/pages/citations/KnowYourRights'
 import Options from './components/pages/citations/Options'
 import TrialAlternatives from "./components/pages/citations/TrialAlternatives";
+
 import HoursDirections from './components/pages/court/HoursDirections'
 import DressCode from './components/pages/court/DressCode'
 import Security from './components/pages/court/Security'
 import CellPhones from './components/pages/court/CellPhones'
+
 import PayFinesOnline from './components/pages/fines/PayFinesOnline'
 import Alternatives from './components/pages/fines/Alternatives'
 import CourtCosts from './components/pages/fines/CourtCosts'
+
 import CasePresentation from './components/pages/trial/CasePresentation'
 import Continuances from './components/pages/trial/Continuances'
 import CourtAppearances from './components/pages/trial/CourtAppearances'
 import JudgementsVerdicts from './components/pages/trial/JudgementsVerdicts'
 import AdmittingExhibits from './components/pages/trial/AdmittingExhibits'
+
 import JurorExpectations from './components/pages/juror/JurorExpectations'
 import JurorQualifications from './components/pages/juror/JurorQualifications'
 import JurorExemptions from './components/pages/juror/JurorExemptions'
 import JurorSummonsFailure from './components/pages/juror/JurorSummonsFailure'
 import JurorContact from './components/pages/juror/JurorContact'
+
 import ClearWarrants from './components/pages/warrants/ClearWarrants'
 import ActiveWarrants from './components/pages/warrants/ActiveWarrants'
+
 import FormsContinuance from './components/pages/forms/FormsContinuance'
 import FormsAttorneyAppearance from './components/pages/forms/FormsAttorneyAppearance'
 import FormsDeferredDisposition from './components/pages/forms/FormsDeferredDisposition'
@@ -51,6 +57,12 @@ export default new Router({
     {
       path: "/", 
       name: "Home",
+      component: Home,
+      props: true
+    },
+    {
+      path: "/edit",
+      name: "Edit",
       component: Home,
       props: true
     },

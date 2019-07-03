@@ -12,6 +12,7 @@
         >
           <v-card-title primary-title>
             <div text-xs-center text-md-left text-lg-left>
+               <edit-icon :content="event.date"></edit-icon>
               <span
                 class="date"
                 style="display:inline-block;vertical-align:middle;text-align:center;"
@@ -22,9 +23,11 @@
               </span>
               <div v-if="$route.query.lang == 'es'" style="display:inline-block" class="headline">
                 {{ event.event.es }}
+                <edit-icon :content="event.event.es"></edit-icon>
               </div>
               <div v-else style="display:inline-block" class="headline">
                 {{ event.event.en }}
+                <edit-icon :content="event.event.en"></edit-icon>
               </div>
             </div>
           </v-card-title>
@@ -35,8 +38,13 @@
 </template>
 
 <script>
+import EditIcon from './EditIcon'
+
 export default {
   props: [],
+  components: {
+    'edit-icon': EditIcon
+  },
   data() {
     return {
       events: [

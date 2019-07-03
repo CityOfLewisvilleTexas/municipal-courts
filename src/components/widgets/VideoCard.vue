@@ -24,7 +24,7 @@ a {
   text-decoration: none;
 }
 img.judge {
-  width:85%;
+  width:100%;
 }
   div.flex.lg7.pa-5 {
     text-align:right;
