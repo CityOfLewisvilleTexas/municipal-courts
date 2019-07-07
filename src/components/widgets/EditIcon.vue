@@ -8,6 +8,11 @@
     <!-- @TODO: Create event listener to tag targeted element, grab its ID or something,
                 pass it as arg to edit-icon so it can then $emit/dispatch the correct element
                 on which to update the text. 
+                
+                Create test DB to contain dynamic text elements for each of the update / events components.
+                Have stored proc fetch incoming changes and update text, then send response and have respective
+                components handle text update(s). May or may not need to have each text string with its corresponding
+                html element.
      -->
 </span>
 </template>
