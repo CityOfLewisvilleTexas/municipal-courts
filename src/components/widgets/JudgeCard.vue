@@ -1,6 +1,13 @@
 <template>
   <v-flex id="judge-desc" lg6 px-5 ml-5 py-5 text-sm-left>
-    <h1 text-sm-left><span v-if="$route.query.lang == 'es'">Conozca a su juez, el honorable Brian Holman</span><span v-else>Meet your Judge, The Honorable Brian Holman</span></h1>
+    <h1 text-sm-left>
+      <span v-if="$route.query.lang == 'es'">
+        Conozca a su juez, el honorable Brian Holman
+      </span>
+      <span v-else>
+        Meet your Judge, The Honorable Brian Holman
+      </span>
+    </h1>
        <p v-if="$route.query.lang == 'es'">
       Brian Holman, juez presidente de la Corte Municipal de Lewisville, nació y se crió en San 
       Diego, california. Asistió a la Universidad Brigham Young, donde recibió una licenciatura 
@@ -31,16 +38,11 @@
 </template>
 
 <script>
-import MeetYourJudge from '../widgets/MeetYourJudge'
 
 export default {
   data() {
     return {
-      judge: {
-          title: "Meet Your Judge",
-          component: "MeetYourJudge",
-          path: "/meet-your-judge"
-        },
+     
     }
   }
 };
@@ -59,6 +61,12 @@ a:hover {
 iframe {
   width: -webkit-fill-available;
   height: 325px;
+}
+p {
+    line-height: 28px;
+    font-size: larger;
+    margin-top: 18px;
+    margin-bottom: 0;
 }
 @media only screen and (max-width:1264px) {
   #judge-desc {

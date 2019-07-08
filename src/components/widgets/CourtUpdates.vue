@@ -12,19 +12,18 @@
       <v-spacer></v-spacer>
       <v-container v-if="$route.query.lang == 'es'">
         <v-card
-         
-          v-for="(update, index) in updates"
+          v-for="(update, index) in updates.es"
           :key="index"
           id="update"
           :class="'update' + ' ' + index"
         >
           <v-card-title primary-title>
             <div text-xs-center text-md-left text-lg-left>
-              <span>
-                {{ update.es.date }}
+              <span :ref="update.date">{{ update.date }}<edit-icon :content="update.date"></edit-icon></span>
+              <div class="headline" :ref="update.headline">{{ update.headline }}<edit-icon :content="update.headline"></edit-icon></div>
+              <span v-if="update.description">
+                <modal :dialog="dialog" :data="update.description" @close="dialog = false"></modal>
               </span>
-              <div class="headline">{{ update.es.slogan }}</div>
-              <span v-if="update.es.link"><router-link :to="update.es.link + `?lang=${$route.query.lang}`">Aprende más</router-link></span>
             </div>
           </v-card-title>
           <hr />
@@ -32,16 +31,18 @@
       </v-container>
       <v-container v-else>
         <v-card
-          v-for="(update, index) in updates"
+          v-for="(update, index) in updates.en"
           :key="index"
           id="update"
           :class="'update' + ' ' + index"
         >
           <v-card-title primary-title>
-            <div text-xs-center text-md-left text-lg-left>
-              <span :ref="update.en.date">{{ update.en.date }}<edit-icon :content="update.en.date"></edit-icon></span>
-              <div :ref="update.en.slogan" class="headline">{{ update.en.slogan }}<edit-icon :content="update.en.slogan"></edit-icon></div>
-              <span v-if="update.en.link"><router-link :to="update.en.link + `?lang=${$route.query.lang}`">Learn more</router-link></span>
+           <div text-xs-center text-md-left text-lg-left>
+              <span :ref="update.date">{{ update.date }}<edit-icon :content="update.date"></edit-icon></span>
+              <div class="headline" :ref="update.headline">{{ update.headline }}<edit-icon :content="update.headline"></edit-icon></div>
+              <span v-if="update.description">
+                <modal :dialog="dialog" :data="update.description" @close="dialog = false"></modal>
+              </span>
             </div>
           </v-card-title>
           <hr />
@@ -53,49 +54,46 @@
 
 <script>
 import EditIcon from './EditIcon'
+import Modal from '../ui/Modal'
+import axios from 'axios'
 
 export default {
   props: [],
   components: {
-    'edit-icon': EditIcon
+    'edit-icon': EditIcon,
+    'modal': Modal
   },
   data() {
     return {
-       updates: [
-        {
-          en: { 
-            date: "May 21, 2019",
-            slogan: "All court forms are now available online",
-            link: '/court-forms-all'
-          },
-          es: {
-            date: "21 Mayo 2019",
-            slogan: "Todos formularios de la corte están disponibles en línea",
-            link: '/court-forms-all'
-          }
-        },
-        {
-          en: {
-            date: "June 24, 2019",
-            slogan: "DPS Surcharge Repealed",
-            link: "/features-updates"
-          },
-          es: {
-            date: "24 Junio 2019",
-            slogan: "Sobrecargo DPS derogado",
-            link: "/features-updates"
-          }
-        },
-      ],
+       updates: {
+         en: [],
+         es: []
+       },
+       dialog: false
     };
   },
   methods: {
-   updateContent(e) {
-     this.contentForEditor = e.target.innerText
+   getUpdates() {
+     var _this = this;
+
+      axios
+        .post(
+          "https://query.cityoflewisville.com/v2/?webservice=Courts/Municipal Courts Site/GET Court Updates"
+        )
+        .then(function(_results) {
+          if (typeof _results.data[0] != "undefined") {
+           _this.updates.en = _results.data[0].filter(item => item.language == 'en')
+           _this.updates.es = _results.data[0].filter(item => item.language == 'es')
+           console.log('Updates: ', _this.updates)
+          }
+        })
+        .catch(function(error) {
+          console.error(error);
+        });
    }
   },
   mounted() {
-    console.log('Refs',this.$refs)
+    this.getUpdates()
   }
 };
 </script>

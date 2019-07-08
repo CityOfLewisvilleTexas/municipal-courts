@@ -1,7 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./components/pages/Home";
-import MeetYourJudge from "./components/widgets/MeetYourJudge";
 
 import TeenCourtInfo from "./components/pages/teencourt/TeenCourtInfo";
 import TeenCourtContact from "./components/pages/teencourt/TeenCourtContact";
@@ -64,12 +63,6 @@ export default new Router({
       path: "/edit",
       name: "Edit",
       component: Home,
-      props: true
-    },
-    {
-      path: "/meet-your-judge", 
-      name: "Meet Your Judge",
-      component: MeetYourJudge,
       props: true
     },
     {

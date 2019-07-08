@@ -3,9 +3,9 @@
     <v-card class="upcoming-events">
       <div class="headline events"><span v-if="$route.query.lang == 'es'">Próximos Eventos</span><span v-else>Upcoming Events</span></div>
       <v-spacer></v-spacer>
-      <v-container>
+      <v-container v-if="$route.query.lang == 'es'">
         <v-card
-          v-for="(event, index) in events"
+          v-for="(event, index) in events.es"
           :key="index"
           id="event"
           :class="'event' + ' ' + index"
@@ -17,17 +17,39 @@
                 class="date"
                 style="display:inline-block;vertical-align:middle;text-align:center;"
               >
-                {{ event.date.substr(0, event.date.indexOf(" ")) }}
+                {{ event.date.substr(0, 3) }}
                 <br />
-                <b>{{ event.date.substr(event.date.indexOf(" ")) }}</b>
+                <b>{{ event.date.substr(event.date.indexOf(" "), 3) }}</b>
               </span>
-              <div v-if="$route.query.lang == 'es'" style="display:inline-block" class="headline">
-                {{ event.event.es }}
-                <edit-icon :content="event.event.es"></edit-icon>
+              <div style="display:inline-block" class="headline">
+                {{ event.headline }}
+                <edit-icon :content="event.headline"></edit-icon>
               </div>
-              <div v-else style="display:inline-block" class="headline">
-                {{ event.event.en }}
-                <edit-icon :content="event.event.en"></edit-icon>
+            </div>
+          </v-card-title>
+        </v-card>
+      </v-container>
+      <v-container v-else>
+        <v-card
+          v-for="(event, index) in events.en"
+          :key="index"
+          id="event"
+          :class="'event' + ' ' + index"
+        >
+          <v-card-title primary-title>
+            <div text-xs-center text-md-left text-lg-left>
+               <edit-icon :content="event.date"></edit-icon>
+              <span
+                class="date"
+                style="display:inline-block;vertical-align:middle;text-align:center;"
+              >
+                &nbsp;{{ event.date.substr(0, 3) }}
+                <br />
+                <b>{{ event.date.substr(event.date.indexOf(" "), 3) }}</b>
+              </span>
+              <div style="display:inline-block" class="headline">
+                {{ event.headline }}
+                <edit-icon :content="event.headline"></edit-icon>
               </div>
             </div>
           </v-card-title>
@@ -39,6 +61,7 @@
 
 <script>
 import EditIcon from './EditIcon'
+import axios from 'axios'
 
 export default {
   props: [],
@@ -47,32 +70,35 @@ export default {
   },
   data() {
     return {
-      events: [
-        {
-          date: "Jan 30",
-          event: {
-            en:"Community Board Meeting",
-            es: "Reunión del Consejo de la Comunidad"
-          }
-        },
-        {
-          date: "Feb 1",
-          event: {
-            en:"Family Neighborhood Potluck",
-            es: "Potluck vecindario"
-          }
-        },
-        {
-          date: "Feb 12",
-          event: {
-            en:"Court Closed for Lincoln's Birthday",
-            es: "Corte cerrada por el cumpleaños de Lincoln"
-          }
-        }
-      ]
+      events: {
+         en: [],
+         es: []
+       },
     };
   },
-  methods: {}
+  methods: {
+    getEvents() {
+     var _this = this;
+
+      axios
+        .post(
+          "https://query.cityoflewisville.com/v2/?webservice=Courts/Municipal Courts Site/GET Upcoming Events"
+        )
+        .then(function(_results) {
+          if (typeof _results.data[0] != "undefined") {
+           _this.events.en = _results.data[0].filter(item => item.language == 'en')
+           _this.events.es = _results.data[0].filter(item => item.language == 'es')
+           console.log('Events: ', _this.events)
+          }
+        })
+        .catch(function(error) {
+          console.error(error);
+        });
+   }
+  },
+  mounted() {
+    this.getEvents()
+  }
 };
 </script>
 
