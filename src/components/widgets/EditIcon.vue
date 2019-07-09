@@ -4,6 +4,7 @@
     <div v-if="showEditor">
         <vue-editor v-model="contentState"></vue-editor>
         <v-btn :ref="content" color="green" class="updateButton" @click="updateContent(contentState)">Update</v-btn>
+        <v-btn :ref="content" color="red" class="cancelButton" @click="toggleShowEditor">Cancel</v-btn>
     </div>
 </span>
 </template>
@@ -82,7 +83,8 @@ export default {
     content: ' ';
     white-space: pre;
 }
-.updateButton {
+.updateButton,
+.cancelButton {
     color:white;
 }
 </style>

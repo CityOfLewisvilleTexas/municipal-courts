@@ -36,30 +36,6 @@ export default {
         "know what to expect at court"
       ],
       selectedOption: "",
-      updates: [
-        {
-          date: "Jan 21, 2019",
-          slogan: "All court forms are now available online"
-        },
-        {
-          date: "Jan 1, 2019",
-          slogan: "Happy New Year!"
-        }
-      ],
-      events: [
-        {
-          date: "Jan 30",
-          event: "Community Board Meeting"
-        },
-        {
-          date: "Feb 1",
-          event: "Family Neighborhood Potluck"
-        },
-        {
-          date: "Feb 12",
-          event: "Court Closed for Lincoln's Birthday"
-        }
-      ],
       snackbar: {
         show: false,
         text: "",
@@ -103,5 +79,9 @@ hr {
 }
 div.application--wrap {
   min-height: 100px !important;
+}
+.ql-editor {
+    max-height: 250px !important;
+    font-size: 16px;
 }
 </style>
