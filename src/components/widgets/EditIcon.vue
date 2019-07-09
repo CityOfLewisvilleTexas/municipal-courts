@@ -2,23 +2,15 @@
 <span v-if="$route.path.includes('/edit')">
     <v-icon class="edit-icon" small @click="toggleShowEditor">edit</v-icon>
     <div v-if="showEditor">
-        <vue-editor v-model="content"></vue-editor>
-        <v-btn color="green" class="updateButton" @click="updateContent(content, element)">Update</v-btn>
+        <vue-editor v-model="contentState"></vue-editor>
+        <v-btn :ref="content" color="green" class="updateButton" @click="updateContent(contentState)">Update</v-btn>
     </div>
-    <!-- @TODO: Create event listener to tag targeted element, grab its ID or something,
-                pass it as arg to edit-icon so it can then $emit/dispatch the correct element
-                on which to update the text. 
-                
-                Create test DB to contain dynamic text elements for each of the update / events components.
-                Have stored proc fetch incoming changes and update text, then send response and have respective
-                components handle text update(s). May or may not need to have each text string with its corresponding
-                html element.
-     -->
 </span>
 </template>
 
 <script>
 import { VueEditor } from 'vue2-editor'
+import axios from 'axios'
 
 export default {
     components: {
@@ -27,15 +19,49 @@ export default {
     props: ['content'],
     data() {
         return {
-            showEditor: false
+            showEditor: false,
+            state: ''
         }
     },
     methods: {
         toggleShowEditor() {
             return this.showEditor = !this.showEditor
         },
-        updateContent(content, element) {
+        updateContent(content) {
+            let _this = this
 
+           axios.post("https://query.cityoflewisville.com/v2/", {
+               webservice: 'Courts/Municipal Courts Site/POST Update Dynamic Text',
+               OriginalState: _this.content,
+               NewState: _this.state,
+               Language: _this.$route.query.lang
+           })
+           .then( () =>  {
+               _this.toggleShowEditor()
+               window.location.reload()
+           })
+           .then(_this.$emit('refresh'))
+
+        }
+    },
+    computed: {
+        contentState: {
+            get: function() {
+               return this.content
+            },
+            set: function(val) {
+                //silly, but need to sanitize <p></p> tags, trim whitespace
+                this.state = val.replace('<p>', '<span>').replace('</p>', '</span>').trim()
+            }
+            
+        }
+    },
+    watch: {
+        state: function() {
+            console.log('state: ', this.state)
+        },
+        contentState: function() {
+            console.log('contentState: ', this.contentState)
         }
     }
 }
@@ -51,6 +77,10 @@ export default {
   vertical-align:initial;
   color:green !important;
   display:inline-block;
+}
+.edit-icon::after {
+    content: ' ';
+    white-space: pre;
 }
 .updateButton {
     color:white;

@@ -17,12 +17,12 @@
                 class="date"
                 style="display:inline-block;vertical-align:middle;text-align:center;"
               >
-                {{ event.date.substr(0, 3) }}
-                <br />
-                <b>{{ event.date.substr(event.date.indexOf(" "), 3) }}</b>
+              &nbsp;{{ event.date.replace(/(<[^>]*>)/g, ' ').trim().substr(0,3) }}
+                <br/>
+                <b>{{ event.date.replace(/[^0-9]+/g, "") }}</b>
               </span>
               <div style="display:inline-block" class="headline">
-                {{ event.headline }}
+                <span v-html="event.headline"></span>
                 <edit-icon :content="event.headline"></edit-icon>
               </div>
             </div>
@@ -43,12 +43,12 @@
                 class="date"
                 style="display:inline-block;vertical-align:middle;text-align:center;"
               >
-                &nbsp;{{ event.date.substr(0, 3) }}
-                <br />
-                <b>{{ event.date.substr(event.date.indexOf(" "), 3) }}</b>
+              &nbsp;{{ event.date.replace(/(<[^>]*>)/g, ' ').trim().substr(0,3) }}
+                <br/>
+                <b>{{ event.date.replace(/[^0-9]+/g, "") }}</b>
               </span>
               <div style="display:inline-block" class="headline">
-                {{ event.headline }}
+                 <span v-html="event.headline"></span>
                 <edit-icon :content="event.headline"></edit-icon>
               </div>
             </div>
@@ -94,7 +94,10 @@ export default {
         .catch(function(error) {
           console.error(error);
         });
-   }
+   },
+   cleanMarkup(content) {
+        return content.replace(/(<[^>]*>)/g, ' ')
+    }
   },
   mounted() {
     this.getEvents()

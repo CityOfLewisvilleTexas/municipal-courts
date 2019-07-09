@@ -19,9 +19,7 @@
         </template>
 
         <v-card>
-            <v-card-text>
-                {{ data }}
-            </v-card-text>
+            <v-card-text v-html="data"></v-card-text>
 
             <v-divider></v-divider>
 

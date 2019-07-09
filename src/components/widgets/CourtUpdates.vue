@@ -19,8 +19,8 @@
         >
           <v-card-title primary-title>
             <div text-xs-center text-md-left text-lg-left>
-              <span :ref="update.date">{{ update.date }}<edit-icon :content="update.date"></edit-icon></span>
-              <div class="headline" :ref="update.headline">{{ update.headline }}<edit-icon :content="update.headline"></edit-icon></div>
+              <span :ref="update.date" v-html="update.date"></span><edit-icon :content="update.date"></edit-icon>
+              <div class="headline"><span :ref="update.headline" v-html="update.headline"></span><edit-icon :content="update.headline"></edit-icon></div>              
               <span v-if="update.description">
                 <modal :dialog="dialog" :data="update.description" @close="dialog = false"></modal>
               </span>
@@ -38,8 +38,8 @@
         >
           <v-card-title primary-title>
            <div text-xs-center text-md-left text-lg-left>
-              <span :ref="update.date">{{ update.date }}<edit-icon :content="update.date"></edit-icon></span>
-              <div class="headline" :ref="update.headline">{{ update.headline }}<edit-icon :content="update.headline"></edit-icon></div>
+              <span :ref="update.date" v-html="update.date"></span><edit-icon :content="update.date"></edit-icon>
+              <div class="headline"><span :ref="update.headline" v-html="update.headline"></span><edit-icon :content="update.headline"></edit-icon></div>
               <span v-if="update.description">
                 <modal :dialog="dialog" :data="update.description" @close="dialog = false"></modal>
               </span>
