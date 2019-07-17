@@ -14,7 +14,7 @@
             <span class="mission"><span v-if="$route.query.lang == 'es'">Nuestra misión</span><span v-else>Our Mission</span></span>
           </v-flex>
           <span style="font-size:1.5rem;"
-            ><span v-if="$route.query.lang == 'es'">Asegurar la administración justa, ordenada y efectiva de la justicia mediante la promoción y la mejora del respeto por el individuo, nuestra comunidad y el sistema judicial.</span>
+            ><span v-if="$route.query.lang == 'es'">Asegurar que la administración de justicia es justa, ordenada y eficaz mediante la promoción y la mejora del respeto por el individuo, nuestra comunidad y el sistema judicial.</span>
             <span v-else>To ensure the fair, orderly and effective administration of justice by promoting and enhancing respect for the individual, our community and the judicial system.</span></span><br />
         </div>
       </v-card-title>
@@ -25,7 +25,7 @@
             <span class="mission"><span v-if="$route.query.lang == 'es'">Nuestra misión</span><span v-else>Our Mission</span></span>
           </v-flex>
           <span style="font-size:1.5rem;"
-            ><span v-if="$route.query.lang == 'es'">Asegurar la administración justa, ordenada y efectiva de la justicia mediante la promoción y la mejora del respeto por el individuo, nuestra comunidad y el sistema judicial.</span>
+            ><span v-if="$route.query.lang == 'es'">Asegurar que la administración de justicia es justa, ordenada y eficaz mediante la promoción y la mejora del respeto por el individuo, nuestra comunidad y el sistema judicial.</span>
             <span v-else>To ensure the fair, orderly and effective administration of justice by promoting and enhancing respect for the individual, our community and the judicial system.</span></span><br />
         </div>
     </div>

@@ -298,6 +298,14 @@
                     }}</router-link></v-list-title-tile
                   >
                 </v-list-title>
+                <v-list-title>
+                <v-list-title-tile>
+                    <span>
+                      <a href="http://eservices.cityoflewisville.com/courtsservices/warrants.aspx">
+                      Ordenes Activas</a>
+                    </span>
+                  </v-list-title-tile>
+                </v-list-title>
               </v-list>
               <v-list v-else>
                 <v-list-title
@@ -310,6 +318,14 @@
                       item.title.en
                     }}</router-link></v-list-title-tile
                   >
+                </v-list-title>
+                <v-list-title>
+                <v-list-title-tile>
+                    <span>
+                      <a href="http://eservices.cityoflewisville.com/courtsservices/warrants.aspx">
+                      Active Warrants</a>
+                    </span>
+                  </v-list-title-tile>
                 </v-list-title>
               </v-list>
             </v-menu>
@@ -493,7 +509,7 @@
            <img v-if="window.width > 961"
         src="http://metrics.cityoflewisville.com/assets/pmartin_dark.png"
         width="75"
-        :class="{'hide': $route.name != 'Home'}"
+        :class="{'hide': $route.name != 'Home' && $route.name != 'Edit'}"
       />
       <span id="lmc" :class="{'smaller-text': window.width < 961}">
       <span v-if="window.width > 961">&nbsp;</span>
@@ -616,8 +632,8 @@ export default {
         fineOptions: [
           {
             title: {
-              en:"Pay Fines Online",
-              es:"Pagar multas en línea"
+              en:"Pay Court Fines",
+              es:"Pagar multas"
             },
             component: "PayFinesOnline",
             path: "/fines-pay-online"
@@ -774,14 +790,14 @@ export default {
             component: "ClearWarrants",
             path: "/warrants-clear"
           },
-          {
-            title: {
-              en: "Active Warrants",
-              es: "Ordenes activas"
-            },
-            component: "ActiveWarrants",
-            path: "/warrants-active"
-          }
+          // {
+          //   title: {
+          //     en: "Active Warrants",
+          //     es: "Ordenes activas"
+          //   },
+          //   component: "ActiveWarrants",
+          //   path: "/warrants-active"
+          // }
         ],
         courtForms: [
           {

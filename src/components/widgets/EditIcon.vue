@@ -31,17 +31,19 @@ export default {
         updateContent(content) {
             let _this = this
 
-           axios.post("https://query.cityoflewisville.com/v2/", {
-               webservice: 'Courts/Municipal Courts Site/POST Update Dynamic Text',
+           axios
+           .post("https://query.cityoflewisville.com/v2/?webservice=Courts/Municipal Courts Site/POST Update Dynamic Text", {
                OriginalState: _this.content,
                NewState: _this.state,
                Language: _this.$route.query.lang
            })
-           .then( () =>  {
+           .then(function() {
                _this.toggleShowEditor()
                window.location.reload()
            })
-           .then(_this.$emit('refresh'))
+           .then(function() {
+               _this.$emit('refresh')
+           })
 
         }
     },
@@ -54,7 +56,6 @@ export default {
                 //silly, but need to sanitize <p></p> tags, trim whitespace
                 this.state = val.replace('<p>', '<span>').replace('</p>', '</span>').trim()
             }
-            
         }
     },
     watch: {

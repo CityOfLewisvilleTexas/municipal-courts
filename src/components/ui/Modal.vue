@@ -19,8 +19,10 @@
         </template>
 
         <v-card>
-            <v-card-text v-html="data"></v-card-text>
-
+            <!-- <v-card-text v-if="data.match(/<[^>]*>/g).length > 0"></v-card-text>
+            <v-card-text v-else>{{data}}</v-card-text> -->
+            <v-card-text v-if="data.match(/<[^>]*>/g).length > 0" v-html="noSpanData"></v-card-text>
+            <v-card-text v-else v-html="data"></v-card-text>
             <v-divider></v-divider>
 
             <v-card-actions>
@@ -48,6 +50,12 @@ export default {
     data() {
         return {
 
+        }
+    },
+    computed: {
+        noSpanData() {
+            //don't ask
+            return this.data.replace('<span>', '').replace('</span>', '')
         }
     }
 }
