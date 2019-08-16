@@ -489,7 +489,18 @@
     </v-navigation-drawer>
     
      <v-divider></v-divider>
-
+    
+    <v-btn v-if="$route.fullPath.includes('edit')"
+      fixed
+      dark
+      top
+      right
+      pink
+      id="close-edit"
+    >
+      <a :href="routeToExitEditor"><v-icon style="vertical-align:middle;">close</v-icon>&nbsp;Close Editor</a>
+    </v-btn>
+   
     <v-toolbar
       app
       :fixed="toolbar.fixed"
@@ -871,7 +882,8 @@ export default {
     window.addEventListener("resize", this.handleResize);
     this.handleResize();
     this.checkWindowWidth()
-    console.log(this.$route)
+    console.log('route', this.$route)
+    console.log('route to exit editor', this.routeToExitEditor)
   },
   destroyed: function() {
     window.removeEventListener("resize", this.handleResize);
@@ -903,6 +915,11 @@ export default {
       else {
         this.sidebar = false
       }
+    }
+  },
+  computed: {
+    routeToExitEditor: function() {
+      return window.location.href.includes('localhost') ? '/' : `/eservices/municipalcourts/#/?lang=${lang}`
     }
   },
   watch: {
@@ -1046,5 +1063,13 @@ div#menu--top {
     text-align: center;
     margin-top: 50px;
     background: #54258a;
+}
+
+#close-edit {
+  top: 40px;
+  right: 180px;
+  z-index: 10;
+  background-color: green;
+  color: white;
 }
 </style>
