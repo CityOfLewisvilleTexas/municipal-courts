@@ -919,7 +919,7 @@ export default {
   },
   computed: {
     routeToExitEditor: function() {
-      return window.location.href.includes('localhost') ? '/' : `/eservices/municipalcourts/#/?lang=${lang}`
+      return window.location.href.includes('localhost') ? `/#/?lang=${this.$route.query.lang}` : `/eservices/municipalcourts/#/?lang=${this.$route.query.lang}`
     }
   },
   watch: {
