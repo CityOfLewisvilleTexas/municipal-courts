@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     authenticate() {
-      if(window.location.host.includes('localhost')) {
+      if(!window.location.host.includes('localhost')) {
         window.authenticate()
       } else return
     },
