@@ -8,44 +8,44 @@ import TeenCourtVolunteer from "./components/pages/teencourt/TeenCourtVolunteer"
 import TeenCourtDocket from "./components/pages/teencourt/TeenCourtDocket";
 import TeenCourtTalks from "./components/pages/teencourt/TeenCourtTalks";
 
-import KnowYourRights from './components/pages/citations/KnowYourRights'
-import Options from './components/pages/citations/Options'
+import KnowYourRights from "./components/pages/citations/KnowYourRights";
+import Options from "./components/pages/citations/Options";
 import TrialAlternatives from "./components/pages/citations/TrialAlternatives";
 
-import HoursDirections from './components/pages/court/HoursDirections'
-import DressCode from './components/pages/court/DressCode'
-import Security from './components/pages/court/Security'
-import CellPhones from './components/pages/court/CellPhones'
+import HoursDirections from "./components/pages/court/HoursDirections";
+import DressCode from "./components/pages/court/DressCode";
+import Security from "./components/pages/court/Security";
+import CellPhones from "./components/pages/court/CellPhones";
 
-import PayFinesOnline from './components/pages/fines/PayFinesOnline'
-import Alternatives from './components/pages/fines/Alternatives'
-import CourtCosts from './components/pages/fines/CourtCosts'
+import PayFinesOnline from "./components/pages/fines/PayFinesOnline";
+import Alternatives from "./components/pages/fines/Alternatives";
+import CourtCosts from "./components/pages/fines/CourtCosts";
 
-import CasePresentation from './components/pages/trial/CasePresentation'
-import Continuances from './components/pages/trial/Continuances'
-import CourtAppearances from './components/pages/trial/CourtAppearances'
-import JudgementsVerdicts from './components/pages/trial/JudgementsVerdicts'
-import AdmittingExhibits from './components/pages/trial/AdmittingExhibits'
+import CasePresentation from "./components/pages/trial/CasePresentation";
+import Continuances from "./components/pages/trial/Continuances";
+import CourtAppearances from "./components/pages/trial/CourtAppearances";
+import JudgementsVerdicts from "./components/pages/trial/JudgementsVerdicts";
+import AdmittingExhibits from "./components/pages/trial/AdmittingExhibits";
 
-import JurorExpectations from './components/pages/juror/JurorExpectations'
-import JurorQualifications from './components/pages/juror/JurorQualifications'
-import JurorExemptions from './components/pages/juror/JurorExemptions'
-import JurorSummonsFailure from './components/pages/juror/JurorSummonsFailure'
-import JurorContact from './components/pages/juror/JurorContact'
+import JurorExpectations from "./components/pages/juror/JurorExpectations";
+import JurorQualifications from "./components/pages/juror/JurorQualifications";
+import JurorExemptions from "./components/pages/juror/JurorExemptions";
+import JurorSummonsFailure from "./components/pages/juror/JurorSummonsFailure";
+import JurorContact from "./components/pages/juror/JurorContact";
 
-import ClearWarrants from './components/pages/warrants/ClearWarrants'
-import ActiveWarrants from './components/pages/warrants/ActiveWarrants'
+import ClearWarrants from "./components/pages/warrants/ClearWarrants";
+import ActiveWarrants from "./components/pages/warrants/ActiveWarrants";
 
-import FormsContinuance from './components/pages/forms/FormsContinuance'
-import FormsAttorneyAppearance from './components/pages/forms/FormsAttorneyAppearance'
-import FormsDeferredDisposition from './components/pages/forms/FormsDeferredDisposition'
-import FormsDrivingSafety from './components/pages/forms/FormsDrivingSafety'
-import FormsFinancialInformation from './components/pages/forms/FormsFinancialInformation'
-import FormsPleaForm from './components/pages/forms/FormsPleaForm'
-import FormsDrivingRecord from './components/pages/forms/FormsDrivingRecord'
-import AllCourtForms from './components/pages/forms/AllCourtForms'
+import FormsContinuance from "./components/pages/forms/FormsContinuance";
+import FormsAttorneyAppearance from "./components/pages/forms/FormsAttorneyAppearance";
+import FormsDeferredDisposition from "./components/pages/forms/FormsDeferredDisposition";
+import FormsDrivingSafety from "./components/pages/forms/FormsDrivingSafety";
+import FormsFinancialInformation from "./components/pages/forms/FormsFinancialInformation";
+import FormsPleaForm from "./components/pages/forms/FormsPleaForm";
+import FormsDrivingRecord from "./components/pages/forms/FormsDrivingRecord";
+import AllCourtForms from "./components/pages/forms/AllCourtForms";
 //features
-import NewUpdates from './components/features/NewUpdates.vue'
+import NewUpdates from "./components/features/NewUpdates.vue";
 
 Vue.use(Router);
 
@@ -54,7 +54,7 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/", 
+      path: "/",
       name: "Home",
       component: Home,
       props: true
@@ -66,25 +66,25 @@ export default new Router({
       props: true
     },
     {
-      path: "/citation-alternatives", 
+      path: "/citation-alternatives",
       name: "TrialAlternatives",
       component: TrialAlternatives,
       props: true
     },
     {
-      path: "/teen-court-info", 
+      path: "/teen-court-info",
       name: "TeenCourtInfo",
       component: TeenCourtInfo,
       props: true
     },
     {
-      path: "/teen-court-contact", 
+      path: "/teen-court-contact",
       name: "TeenCourtContact",
       component: TeenCourtContact,
       props: true
     },
     {
-      path: "/teen-court-volunteer", 
+      path: "/teen-court-volunteer",
       name: "TeenCourtVolunteer",
       component: TeenCourtVolunteer,
       props: true
@@ -96,7 +96,7 @@ export default new Router({
       props: true
     },
     {
-      path: "/teen-court-talks", 
+      path: "/teen-court-talks",
       name: "TeenCourtTalks",
       component: TeenCourtTalks,
       props: true
@@ -270,13 +270,13 @@ export default new Router({
       props: true
     },
     {
-      path: '/court-forms-all',
+      path: "/court-forms-all",
       name: "AllCourtForms",
       component: AllCourtForms,
       props: true
     },
     {
-      path: '/features-updates',
+      path: "/features-updates",
       name: "NewUpdates",
       component: NewUpdates,
       props: true
