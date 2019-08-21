@@ -35,7 +35,9 @@ export default {
            .post("https://query.cityoflewisville.com/v2/?webservice=Courts/Municipal Courts Site/POST Update Dynamic Text", {
                OriginalState: _this.content,
                NewState: _this.state,
-               Language: _this.$route.query.lang
+               Language: _this.$route.query.lang,
+               last_edited_by: localStorage.colEmail || 'no user',
+               last_edited_date: new Date().toISOString().slice(0, 19).replace('T', ' ')
            })
            .then(function() {
                _this.toggleShowEditor()

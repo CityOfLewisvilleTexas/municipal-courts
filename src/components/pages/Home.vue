@@ -8,10 +8,9 @@
       <mission-statement></mission-statement>
     </v-container>
 
-    <court-updates></court-updates>
-    <upcoming-events></upcoming-events>
+    <court-updates :user="user" :token="token"></court-updates>
+    <upcoming-events :user="user" :token="token"></upcoming-events>
   
-
     <v-container>
     <v-flex xs12 sm12 md12 lg12 id="judge-card">
       <v-layout row fluid wrap>
@@ -53,7 +52,7 @@ import Feedback from "../widgets/Feedback";
 //import Map from '../widgets/Map'
 
 export default {
-  props: ["window"],
+  props: ["window", "user", "token"],
   components: {
     "i-want-to": Select,
     "mission-statement": MissionCard,

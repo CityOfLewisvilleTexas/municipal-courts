@@ -58,7 +58,7 @@ import Modal from '../ui/Modal'
 import axios from 'axios'
 
 export default {
-  props: [],
+  props: ['user', 'token'],
   components: {
     'edit-icon': EditIcon,
     'modal': Modal

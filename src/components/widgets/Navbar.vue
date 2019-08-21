@@ -500,6 +500,16 @@
     >
       <a :href="routeToExitEditor"><v-icon style="vertical-align:middle;">close</v-icon>&nbsp;Close Editor</a>
     </v-btn>
+
+    <v-btn v-if="user && $route.fullPath.includes('edit')"
+      fixed
+      top
+      right
+      pink
+      id="user-button"
+    >
+      {{user.toLowerCase()}}
+    </v-btn>
    
     <v-toolbar
       app
@@ -552,7 +562,7 @@
         <v-layout justify-center align-center>
           <v-flex shrink>
             <router-view>
-              <home :lang="lang" :window="windowObj"></home>
+              <home :lang="lang" :window="windowObj" :user="user" :token="token"></home>
             </router-view>
           </v-flex>
         </v-layout>
@@ -566,7 +576,7 @@ import home from '../pages/Home'
 //@TODO: CREATE FOOTER
 
 export default {
-  props: ["lang", "window"],
+  props: ["lang", "window", "user", "token"],
   components: {
     home
    },
@@ -919,7 +929,7 @@ export default {
   },
   computed: {
     routeToExitEditor: function() {
-      return window.location.href.includes('localhost') ? `/#/?lang=${this.$route.query.lang}` : `/eservices/municipalcourts/#/?lang=${this.$route.query.lang}`
+      return window.location.href.includes('localhost') ? `/#/?lang=${this.$route.query.lang}` : `/municipalcourts/#/?lang=${this.$route.query.lang}`
     }
   },
   watch: {
@@ -1071,5 +1081,14 @@ div#menu--top {
   z-index: 10;
   background-color: green;
   color: white;
+}
+button#user-button {
+    top: 105px;
+    right: 216px;
+    background-color: rgb(245, 27, 92);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 25px;
+    line-height: 42px;
 }
 </style>

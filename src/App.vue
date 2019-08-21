@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-app fixed grid-list-xl text-md-center>
-      <navbar :lang="lang" :window="window" @change="setLang"></navbar>
+      <navbar :lang="lang" :window="window" @change="setLang" :user="user" :token="authToken"></navbar>
       <snackbar :snackbar="snackbar"></snackbar>
     </v-app>
   </div>
@@ -23,7 +23,8 @@ export default {
   },
   data() {
     return {
-      user: localStorage.colEmail,
+      user: '',
+      authToken: '',
       lang: "en",
       window: {
         height: 0,
@@ -62,6 +63,10 @@ export default {
               that.user = localStorage.colEmail
               console.log(that.user)
             }
+            if(localStorage.colAuthToken) {
+              that.authToken = localStorage.colAuthToken
+              console.log(that.authToken)
+            }
             else checkForEmail()
           }, 3000)
         }
@@ -79,8 +84,20 @@ export default {
   },
   created() {
     this.$router.push({ query: { lang: this.lang } });
-    this.authenticate()
-    this.getUser()
+  },
+  watch: {
+    '$route.name'() {
+      let that = this
+      if(this.$route.name === 'Edit') {
+          try {
+            that.authenticate()
+            that.getUser()
+          } 
+          catch(err) {
+            console.log('Error authenticating user, redirecting...', err)
+          }
+      }
+    }
   }
 };
 </script>
